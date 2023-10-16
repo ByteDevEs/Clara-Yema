@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Boss.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/FollowTargets.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/FollowTargets.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Slam.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slam.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/StartAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/StartAttack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mantequilla.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mantequilla.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox-Alejandro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox-Alejandro.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +23,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/00/a09deceb/GOAction.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2WZBOVIs0A8RvIMlrLcpOoMAhyw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,6 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,6 +99,8 @@
       <option name="presentableId" value="Default" />
       <updated>1696930204309</updated>
       <workItem from="1696930217387" duration="1645000" />
+      <workItem from="1697467828538" duration="2000" />
+      <workItem from="1697467856842" duration="2311000" />
     </task>
     <servers />
   </component>
