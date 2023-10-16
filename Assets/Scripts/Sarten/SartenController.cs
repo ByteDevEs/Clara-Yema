@@ -14,6 +14,7 @@ public class SartenController : MonoBehaviour
     public bool bothInside = false;
     
     public int playerCount = 0;
+    float timer = 0;
     
     private void Start()
     {
@@ -23,16 +24,20 @@ public class SartenController : MonoBehaviour
     
     private void Update()
     {
-        if (!bothInside)
-        {
-            pala1.transform.position = Vector3.Lerp(pala1.transform.position, pala1Pos, Time.deltaTime);
-            pala2.transform.position = Vector3.Lerp(pala2.transform.position, pala2Pos, Time.deltaTime);
-        }
-        else
-        {
-            pala1.transform.position = Vector3.Lerp(pala1.transform.position, players[0].transform.position + new Vector3(0, 0.25f, 0), Time.deltaTime);
-            pala2.transform.position = Vector3.Lerp(pala2.transform.position, players[1].transform.position + new Vector3(0, 0.25f, 0), Time.deltaTime);
-        }
+        // if (!bothInside)
+        // {
+        //     pala1.transform.position = Vector3.Lerp(pala1.transform.position, pala1Pos, Time.deltaTime);
+        //     pala2.transform.position = Vector3.Lerp(pala2.transform.position, pala2Pos, Time.deltaTime);
+        //     
+        //     
+        // }
+        // else
+        // {
+        //     pala1.transform.position = Vector3.Lerp(pala1.transform.position, players[0].transform.position + new Vector3(0, 0.25f, 0), Time.deltaTime);
+        //     pala1.transform.rotation = Quaternion.Lerp(pala1.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime);
+        //     pala2.transform.position = Vector3.Lerp(pala2.transform.position, players[1].transform.position + new Vector3(0, 0.25f, 0), Time.deltaTime);
+        //     pala2.transform.rotation = Quaternion.Lerp(pala2.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime);
+        // }
     }
 
     private void OnTriggerEnter(Collider other)

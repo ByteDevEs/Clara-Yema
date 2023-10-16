@@ -123,6 +123,79 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &81496347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 81496350}
+  - component: {fileID: 81496349}
+  - component: {fileID: 81496348}
+  m_Layer: 0
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &81496348
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81496347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d75b4f5f569e988459579685246f5592, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &81496349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81496347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f4ddfbae689e04d9800927b1b90765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pala1: {fileID: 352349289}
+  pala2: {fileID: 1650349428}
+  bothInside: 0
+  playerCount: 0
+--- !u!4 &81496350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81496347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23, y: -2, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1208206472}
+  - {fileID: 352349293}
+  - {fileID: 1650349432}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &220677180
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +211,7 @@ GameObject:
   - component: {fileID: 220677183}
   - component: {fileID: 220677182}
   - component: {fileID: 220677181}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pj (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -178,7 +251,7 @@ MonoBehaviour:
   explosionRadius: 5
   objectsToPush:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!54 &220677183
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -392,11 +465,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352349289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.6}
-  m_LocalScale: {x: 0.1, y: 0.5, z: 0.1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 12.5}
+  m_LocalScale: {x: 2, y: 10, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1208206472}
+  m_Father: {fileID: 81496350}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
@@ -1117,7 +1190,6 @@ GameObject:
   - component: {fileID: 1208206472}
   - component: {fileID: 1208206471}
   - component: {fileID: 1208206470}
-  - component: {fileID: 1208206467}
   - component: {fileID: 1208206473}
   - component: {fileID: 1208206474}
   m_Layer: 0
@@ -1127,22 +1199,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1208206467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208206466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f4ddfbae689e04d9800927b1b90765, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pala1: {fileID: 352349289}
-  pala2: {fileID: 1650349428}
-  bothInside: 0
-  playerCount: 0
 --- !u!23 &1208206470
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1200,15 +1256,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208206466}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0.54, z: -7.11}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 352349293}
-  - {fileID: 1650349432}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Children: []
+  m_Father: {fileID: 81496350}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1208206473
 CapsuleCollider:
@@ -1217,7 +1271,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208206466}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fab72819d37378f4ea963b6213be2762, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1353,11 +1407,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650349428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6}
-  m_LocalScale: {x: 0.1, y: 0.5, z: 0.1}
+  m_LocalPosition: {x: 0, y: 1.5, z: -12.5}
+  m_LocalScale: {x: 2, y: 10, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1208206472}
+  m_Father: {fileID: 81496350}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021251861
@@ -1375,7 +1429,7 @@ GameObject:
   - component: {fileID: 2021251864}
   - component: {fileID: 2021251863}
   - component: {fileID: 2021251862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pj
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1415,7 +1469,7 @@ MonoBehaviour:
   explosionRadius: 5
   objectsToPush:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!54 &2021251864
 Rigidbody:
   m_ObjectHideFlags: 0
