@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Beat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Beat.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Boss.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Orbit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Orbit.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Slam.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Slam.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox-Alejandro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox-Alejandro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +92,7 @@
       <workItem from="1696930217387" duration="1645000" />
       <workItem from="1697467828538" duration="2000" />
       <workItem from="1697467856842" duration="2311000" />
-      <workItem from="1697535266701" duration="825000" />
+      <workItem from="1697535266701" duration="1423000" />
     </task>
     <servers />
   </component>
