@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class SartenController : MonoBehaviour
 {
     [Header("HealthSystem")]
     public int maxHealth = 100;
+    public float health = 100;
+    public Slider healthBar;
     [Header("Animations")]
     Animator animator;
     
@@ -33,6 +36,7 @@ public class SartenController : MonoBehaviour
                 animator.SetInteger("Stage", Random.Range(0, 3));
             }
         }
+        healthBar.value = health/maxHealth;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -57,5 +61,15 @@ public class SartenController : MonoBehaviour
                 bothInside = false;
             }
         }
+    }
+
+    public void TakeDamage(float deltaTime)
+    {
+        health -= deltaTime;
+    }
+    
+    public float GetHealth()
+    {
+        return health;
     }
 }
