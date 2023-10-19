@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Boss.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/StartAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/StartAttack.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sandbox-Alejandro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Sandbox-Alejandro.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenHealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenHealthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,8 @@
       <workItem from="1697467828538" duration="2000" />
       <workItem from="1697467856842" duration="2311000" />
       <workItem from="1697535266701" duration="1423000" />
-      <workItem from="1697705483286" duration="823000" />
+      <workItem from="1697705483286" duration="1439000" />
+      <workItem from="1697721086801" duration="1081000" />
     </task>
     <servers />
   </component>
