@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BUM : MonoBehaviour
 {
@@ -11,12 +12,12 @@ public class BUM : MonoBehaviour
 
     void Update()
     {
-        // Comprueba si se ha presionado el botón "X" del mando.
-        if (Input.GetButtonDown("Fire1")) 
-        {
-            // Haz que el personaje explote.
-            Explode();
-        }
+
+    }
+
+    public void SkillSquare(InputAction.CallbackContext context)
+    {
+        Explode();
     }
 
     void Explode()

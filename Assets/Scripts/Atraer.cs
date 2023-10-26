@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class Atraer : MonoBehaviour
 {
@@ -9,52 +11,63 @@ public class Atraer : MonoBehaviour
     public float attractionDistance = 1f;  // Distancia a la que se desmarca el objeto.
     public LayerMask shootableLayer;       // Capa de objetos que se pueden disparar.
     public Color markedColor = Color.green; // Color cuando se marca el objeto.
-    public string attractButton = "Fire1"; // Botón para atraer (cambia según tu configuración).
-
+    public float distanceStop = 1f;
     private GameObject markedObject;       // Objeto actualmente marcado.
     private Color originalColor;           // Color original del objeto marcado.
     private bool isMarked = false;         // Estado de marcado.
     private bool isAttracting = false;     // Estado de atracción.
 
+
+    public void SkillSquare(InputAction.CallbackContext context)
+    {
+        if (isAttracting)
+        {
+            // Si se está atrayendo, detén la atracción y el objeto en seco.
+            StopAttraction();
+        }
+        else if (isMarked)
+        {
+            // Si ya se ha marcado un objeto, activa la atracción.
+            StartAttraction();
+        }
+        else
+        {
+            // Si no se ha marcado un objeto, dispara un rayo y marca el objeto más cercano en la dirección del rayo.
+            Shoot();
+        }
+    }
+
+
     void Update()
     {
-        // Disparar un rayo desde la posición del personaje para detectar objetos en el rango de disparo.
-        if (Input.GetButtonDown(attractButton))
-        {
-            // Si ya se ha marcado un objeto, activa o desactiva la atracción.
-            if (isMarked)
-            {
-                ToggleAttraction();
-            }
-            else
-            {
-                Shoot();
-            }
-        }
-
+       
         // Atraer el objeto marcado hacia el personaje si se activa la atracción.
         if (isAttracting && markedObject != null)
         {
             AttractObject();
 
-            // Comprueba si el objeto está lo suficientemente cerca para desmarcarlo.
+            // Comprueba si el objeto está lo suficientemente cerca para desmarcarlo y detenerlo en seco.
             if (Vector3.Distance(transform.position, markedObject.transform.position) <= attractionDistance)
             {
-                UnmarkObject();
+                StopAttraction();
             }
         }
     }
 
     void Shoot()
     {
-        // Lanza un rayo desde la posición del personaje hacia adelante.
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        // Comprueba si el rayo golpea un objeto en la capa shootableLayer dentro del rango de disparo.
         if (Physics.Raycast(ray, out hit, shootingRange, shootableLayer))
         {
-            MarkObject(hit.transform.gameObject);
+            GameObject hitObject = hit.transform.gameObject;
+            Rigidbody rb = hitObject.GetComponent<Rigidbody>();
+
+            if (rb != null)
+            {
+                MarkObject(hitObject);
+            }
         }
     }
 
@@ -73,30 +86,30 @@ public class Atraer : MonoBehaviour
         isMarked = true;
     }
 
-    void UnmarkObject()
+    void StartAttraction()
     {
-        // Restaura el color original del objeto marcado.
-        if (markedObject != null)
-        {
-            markedObject.GetComponent<Renderer>().material.color = originalColor;
-
-            // Limpia la referencia al objeto marcado y desactiva el estado de marcado.
-            markedObject = null;
-            isMarked = false;
-        }
+        isAttracting = true;
     }
 
-    void ToggleAttraction()
+    void StopAttraction()
+{
+    if (markedObject != null)
     {
-        // Cambia el estado de atracción.
-        isAttracting = !isAttracting;
-
-        // Si se desactiva la atracción, restablece la velocidad del objeto marcado.
-        if (!isAttracting && markedObject != null)
+        // Comprueba si el objeto está a una distancia 'distanceStop' del personaje antes de detenerlo en seco.
+        float distanceToPlayer = Vector3.Distance(transform.position, markedObject.transform.position);
+        if (distanceToPlayer <= distanceStop)
         {
             markedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            // Restaura el color original del objeto marcado y desactiva el estado de marcado y atracción.
+            markedObject.GetComponent<Renderer>().material.color = originalColor;
+            markedObject = null;
+            isMarked = false;
+            isAttracting = false;
         }
+
+
     }
+}
 
     void AttractObject()
     {
@@ -105,8 +118,10 @@ public class Atraer : MonoBehaviour
             // Calcula la dirección desde el objeto marcado hacia el personaje.
             Vector3 direction = transform.position - markedObject.transform.position;
 
-            // Aplica una fuerza para atraer el objeto hacia el personaje.
+            // Aplica la fuerza de atracción.
             markedObject.GetComponent<Rigidbody>().AddForce(direction.normalized * attractionForce, ForceMode.Force);
         }
     }
 }
+
+

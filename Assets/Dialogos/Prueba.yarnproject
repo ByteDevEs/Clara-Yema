@@ -1,0 +1,10 @@
+{
+  "projectFileVersion": 2,
+  "sourceFiles": [
+    "Prueba.yarn"
+  ],
+  "excludeFiles": [],
+  "localisation": {},
+  "baseLanguage": "es",
+  "compilerOptions": {}
+}
