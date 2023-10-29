@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu-Alejandro.unity
+    guid: 56eee04fe6636724a822f6217008a562
+  - enabled: 1
+    path: Assets/Scenes/EscenaHistoria.unity
+    guid: 4e989e7e534eeae4e801ae3592c150b3
+  - enabled: 1
+    path: Assets/Scenes/Sandbox-Alejandro.unity
+    guid: 30ebd7259a1bd1a45b7ae14561122fba
   m_configObjects: {}

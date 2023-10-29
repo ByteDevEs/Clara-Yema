@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 8591975940134689435}
   - component: {fileID: 800554065944782435}
   - component: {fileID: 2036630841985191367}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Clara
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 5804739427116056159}
   - component: {fileID: 4266988285871703233}
   - component: {fileID: 7905338322306541622}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
