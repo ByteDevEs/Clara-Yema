@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(CharacterController), typeof(HealthController))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public Vector3 move;
     private Vector2 movementInput = Vector2.zero;
     private bool jumped = false;
+    
+    [Header("HealthSystem")]
+    [SerializeField] protected HealthController healthController;
 
     private void Start()
     {
@@ -57,5 +60,14 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Damager"))
+        {
+            print("TriggerStay");
+            healthController.TakeDamage(Time.deltaTime);
+        }
     }
 }

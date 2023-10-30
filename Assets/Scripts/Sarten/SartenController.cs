@@ -6,12 +6,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(HealthController))]
 public class SartenController : MonoBehaviour
 {
-    [Header("HealthSystem")]
-    [SerializeField] int maxHealth = 100;
-    float health = 100;
-    [SerializeField] Slider healthBar;
+    public HealthController healthController;
+    
     [Header("Animations")]
     Animator animator;
     
@@ -34,7 +33,7 @@ public class SartenController : MonoBehaviour
             if (timer >= 1)
             {
                 timer = 0;
-                if (health > maxHealth / 2f)
+                if (healthController.GetHealth() > healthController.GetMaxHealth() / 2f)
                 {
                     animator.SetInteger("Stage", Random.Range(0, 2));
                 }
@@ -43,12 +42,6 @@ public class SartenController : MonoBehaviour
                     animator.SetInteger("Stage", Random.Range(0, 3));
                 }
             }
-        }
-        healthBar.value = health/maxHealth;
-        
-        if(health <= 0)
-        {
-            Destroy(gameObject);
         }
     }
 
@@ -74,15 +67,5 @@ public class SartenController : MonoBehaviour
                 bothInside = false;
             }
         }
-    }
-
-    public void TakeDamage(float deltaTime)
-    {
-        health -= deltaTime;
-    }
-    
-    public float GetHealth()
-    {
-        return health;
     }
 }

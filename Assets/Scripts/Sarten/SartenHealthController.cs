@@ -14,11 +14,11 @@ public class SartenHealthController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Pala"))
+        if (other.gameObject.CompareTag("Damager"))
         {
             if (sartenController.bothInside)
             {
-                sartenController.TakeDamage(Time.deltaTime);
+                sartenController.healthController.TakeDamage(Time.deltaTime);
             }
         }
     }
