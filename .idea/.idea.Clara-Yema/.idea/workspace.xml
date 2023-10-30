@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EscenaHistoria.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EscenaHistoria.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenHealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenHealthController.cs" afterDir="false" />
-    </list>
+    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +99,7 @@
       <workItem from="1697705483286" duration="1439000" />
       <workItem from="1697721086801" duration="1681000" />
       <workItem from="1698326305536" duration="1831000" />
-      <workItem from="1698686087079" duration="960000" />
+      <workItem from="1698686087079" duration="1194000" />
     </task>
     <servers />
   </component>
