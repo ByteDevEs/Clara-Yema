@@ -45,9 +45,8 @@ public class PlayerController : MonoBehaviour
         }
 
         move = new Vector3(movementInput.x, 0, movementInput.y);
-        controller.Move(move * Time.unscaledDeltaTime * playerSpeed);
-        print("Move: " + move + "Time: " + Time.unscaledDeltaTime + "Speed: " + playerSpeed);
-            
+        controller.Move(move * Time.deltaTime * playerSpeed);
+
         if (move != Vector3.zero)
         {
             gameObject.transform.forward = move;
@@ -59,8 +58,8 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
-        playerVelocity.y += gravityValue * Time.unscaledDeltaTime;
-        controller.Move(playerVelocity * Time.unscaledDeltaTime);
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
     
     private void OnTriggerStay(Collider other)

@@ -14,7 +14,8 @@ public class SartenController : MonoBehaviour
     [Header("Animations")]
     Animator animator;
     
-    public bool bothInside { get; private set; } = false;
+    
+    public bool bothInside = false;
     
     [SerializeField] [ReadOnly] int playerCount = 0;
     [SerializeField] [ReadOnly] float timer = 0;
