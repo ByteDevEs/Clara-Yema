@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8591975940134689435}
   - component: {fileID: 800554065944782435}
   - component: {fileID: 2036630841985191367}
+  - component: {fileID: 2740748757481017427}
   m_Layer: 10
   m_Name: Clara
   m_TagString: Player
@@ -250,10 +251,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  jumpHeight: 1
-  gravityValue: -9.81
-  controller: {fileID: 0}
+  jumpHeight: 2
+  gravityValue: -39.24
+  controller: {fileID: 3006661740864700225}
   move: {x: 0, y: 0, z: 0}
+  healthController: {fileID: 2740748757481017427}
 --- !u!114 &800554065944782435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +290,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 10
   dashTime: 0.25
+--- !u!114 &2740748757481017427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111311077764254347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d37e243de4fcaa47ba423268a6decf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &9188234792535317681
 GameObject:
   m_ObjectHideFlags: 0

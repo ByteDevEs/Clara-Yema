@@ -26,12 +26,12 @@ public class MainMenuController : MonoBehaviour
     
     public void LoadHistoria()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
     }
     
     public void LoadArcade()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
 
     public void AbrirOpciones()
