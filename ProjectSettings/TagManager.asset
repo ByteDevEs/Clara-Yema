@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Damager
   - OutOfRange
-  - Water
   layers:
   - Default
   - TransparentFX
