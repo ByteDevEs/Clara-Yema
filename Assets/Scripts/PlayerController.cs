@@ -43,6 +43,9 @@ public class PlayerController : MonoBehaviour
         jumped = context.action.triggered;
     }
 
+    // Para el script de caer al agua o fuera del mapa
+    public bool Grounded() { return groundedPlayer; }
+
     void Update()
     {
         groundedPlayer = controller.isGrounded;
