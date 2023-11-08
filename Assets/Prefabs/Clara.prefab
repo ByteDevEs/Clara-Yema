@@ -37,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 785207743111383804}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1360719557397732787
 CapsuleCollider:
@@ -205,7 +205,7 @@ MonoBehaviour:
   move: {x: 0, y: 0, z: 0}
   healthController: {fileID: 2740748757481017427}
   animator: {fileID: 8418619677724832109}
-  idleClip: {fileID: 7400000, guid: 32c5bd17540ab96459cba04f817d5cd5, type: 2}
+  idleClip: {fileID: 7400000, guid: b8b7a965ccde00f44b22dd6e47273159, type: 2}
   andarClip: {fileID: 7400000, guid: 32c5bd17540ab96459cba04f817d5cd5, type: 2}
   correrClip: {fileID: 7400000, guid: eebd69f1f63f3474ca9400bb9d27f0ed, type: 2}
   saltarClip: {fileID: 7400000, guid: e26d5d4fd92777f43b7fe9933f243cf0, type: 2}

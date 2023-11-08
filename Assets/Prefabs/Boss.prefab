@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 8234702817503641040}
   - component: {fileID: 608904698680178295}
   m_Layer: 0
-  m_Name: Pala
+  m_Name: PalaIzq
   m_TagString: Damager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +363,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 6c8febc24f0e27f4e8625dc7cfde7c62, type: 3}
+  - {fileID: 2100000, guid: 9ef9c5da71e7a234583d03d99c45c09f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 8987366947612971309}
   - component: {fileID: 5860160852829290101}
   m_Layer: 0
-  m_Name: Pala
+  m_Name: PalaDrc
   m_TagString: Damager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
