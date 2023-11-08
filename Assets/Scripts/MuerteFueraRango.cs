@@ -31,7 +31,7 @@ public class MuerteFueraRango : MonoBehaviour
             if (Vector3.Distance(transform.position, lastPosition) > 1f)
             {
                 lastPosition = transform.position;
-                Debug.Log("Última posición válida actualizada: " + lastPosition);
+                //Debug.Log("Última posición válida actualizada: " + lastPosition);
             }
         }
 
