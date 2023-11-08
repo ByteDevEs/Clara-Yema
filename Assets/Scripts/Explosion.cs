@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BUM : MonoBehaviour
+public class Explosion : MonoBehaviour
 {
     public float explosionForce = 20f;     // Fuerza de la explosión.
     public float verticalForce = 10f;       // Fuerza vertical adicional.
