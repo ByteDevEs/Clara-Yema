@@ -135,22 +135,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 802095904902061748, guid: aa6df4afc8a2cb140a08c3b59b2f935b, type: 3}
-      propertyPath: m_Name
-      value: PalaIzq
-      objectReference: {fileID: 0}
-    - target: {fileID: 802095904902061748, guid: aa6df4afc8a2cb140a08c3b59b2f935b, type: 3}
-      propertyPath: m_TagString
-      value: Damager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2279639700015903623, guid: aa6df4afc8a2cb140a08c3b59b2f935b, type: 3}
-      propertyPath: m_Name
-      value: PalaDrc
-      objectReference: {fileID: 0}
-    - target: {fileID: 2279639700015903623, guid: aa6df4afc8a2cb140a08c3b59b2f935b, type: 3}
-      propertyPath: m_TagString
-      value: Damager
-      objectReference: {fileID: 0}
     - target: {fileID: 3546440206880421417, guid: aa6df4afc8a2cb140a08c3b59b2f935b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
