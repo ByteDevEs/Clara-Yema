@@ -155,7 +155,7 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ec916b4f-f26e-4dad-aae5-6faed4de2653
     m_ActionName: Player/DashCircle[/DualShock4GamepadHID/buttonEast,/DualShock4GamepadHID1/buttonEast,/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast,/Keyboard/leftShift]
-  m_NeverAutoSwitchControlSchemes: 1
+  m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Controller 1
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
@@ -204,6 +204,11 @@ MonoBehaviour:
   controller: {fileID: 3006661740864700225}
   move: {x: 0, y: 0, z: 0}
   healthController: {fileID: 2740748757481017427}
+  animator: {fileID: 8418619677724832109}
+  idleClip: {fileID: 7400000, guid: 32c5bd17540ab96459cba04f817d5cd5, type: 2}
+  andarClip: {fileID: 7400000, guid: 32c5bd17540ab96459cba04f817d5cd5, type: 2}
+  correrClip: {fileID: 7400000, guid: eebd69f1f63f3474ca9400bb9d27f0ed, type: 2}
+  saltarClip: {fileID: 7400000, guid: e26d5d4fd92777f43b7fe9933f243cf0, type: 2}
 --- !u!114 &800554065944782435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +228,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   markedColor: {r: 0, g: 1, b: 0, a: 1}
-  distanceStop: 5
+  distanceStop: 3
 --- !u!114 &2036630841985191367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93ca2d9afc9b149458a8e51e85bc058f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.965
+      value: -1.035
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 93ca2d9afc9b149458a8e51e85bc058f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -326,8 +331,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 93ca2d9afc9b149458a8e51e85bc058f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8418619677724832109}
   m_SourcePrefab: {fileID: 100100000, guid: 93ca2d9afc9b149458a8e51e85bc058f, type: 3}
+--- !u!1 &121120983858417734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 93ca2d9afc9b149458a8e51e85bc058f, type: 3}
+  m_PrefabInstance: {fileID: 968035554664328471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8418619677724832109
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121120983858417734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3db2d51ce1670b4f871b3f3398c44ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &785207743111383804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93ca2d9afc9b149458a8e51e85bc058f, type: 3}

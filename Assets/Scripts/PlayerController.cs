@@ -19,6 +19,13 @@ public class PlayerController : MonoBehaviour
     
     [Header("HealthSystem")]
     [SerializeField] protected HealthController healthController;
+    
+    [Header("Animations")]
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected AnimationClip idleClip;
+    [SerializeField] protected AnimationClip andarClip;
+    [SerializeField] protected AnimationClip correrClip;
+    [SerializeField] protected AnimationClip saltarClip;
 
     private void Start()
     {
@@ -52,10 +59,29 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.forward = move;
         }
 
-        // Changes the height position of the player..
-        if (jumped && groundedPlayer)
+        if (!groundedPlayer)
+        {
+            
+            animator.Play(saltarClip.name);
+        }
+        else if (jumped && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+        else if (move != Vector3.zero && !jumped)
+        {
+            if (move.magnitude > 0.5f)
+            {
+                animator.Play(correrClip.name);
+            }
+            else
+            {
+                animator.Play(andarClip.name);
+            }
+        }
+        else
+        {
+            animator.Play(idleClip.name);
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
