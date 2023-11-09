@@ -11,7 +11,8 @@ public class Dash : MonoBehaviour
 
     public float dashSpeed;
     public float dashTime;
-
+    public float dashCooldown = 1;
+    float timer;
 
     //Guarda en moveScript el script de PlayerController
     private void Start()
@@ -23,11 +24,15 @@ public class Dash : MonoBehaviour
     //Cuando se le da al círculo comienza la subrutina de dash
     public void CircleDash(InputAction.CallbackContext context)
     {
-        StartCoroutine(DashI());
+        if(timer >= dashCooldown)
+        {
+            StartCoroutine(DashI());
+            timer = 0;
+        }
     }
     private void Update()
     {
-
+        timer += Time.deltaTime;
     }
 
     IEnumerator DashI()

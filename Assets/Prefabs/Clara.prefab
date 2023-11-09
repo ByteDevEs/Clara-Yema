@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingRange: 1
-  attractionForce: 20
+  attractionForce: 40
   attractionDistance: 20
   shootableLayer:
     serializedVersion: 2
@@ -241,8 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0504b183b56efbc43a4698371ce274da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 10
+  dashSpeed: 30
   dashTime: 0.25
+  dashCooldown: 1
 --- !u!114 &2740748757481017427
 MonoBehaviour:
   m_ObjectHideFlags: 0
