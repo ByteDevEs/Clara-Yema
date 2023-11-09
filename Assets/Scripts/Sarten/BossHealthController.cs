@@ -13,6 +13,7 @@ public class BossHealthController : HealthController
 
     private void Start()
     {
+        base.Start();
         bossCanvas = Instantiate(bossCanvasPrefab);
         healthBar = bossCanvas.GetComponentInChildren<Slider>();
     }

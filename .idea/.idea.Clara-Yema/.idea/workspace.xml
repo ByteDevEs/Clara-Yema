@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Jump.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Jump.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Jump.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yema.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yema.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/REMIfinal.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/REMIfinal.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BossCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BossCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/BossHealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/BossHealthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/HealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/HealthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ActivarCercania.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sarten/BossHealthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,6 +57,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\Clara Yema.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Dev\Unity\Clara-Yema\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Dev\Unity\Clara-Yema -debugCodeOptimization" />
@@ -108,7 +119,7 @@
       <workItem from="1698326305536" duration="1831000" />
       <workItem from="1698686087079" duration="1194000" />
       <workItem from="1699517619910" duration="753000" />
-      <workItem from="1699529828418" duration="687000" />
+      <workItem from="1699529828418" duration="2084000" />
     </task>
     <servers />
   </component>

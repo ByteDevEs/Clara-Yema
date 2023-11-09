@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,13 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
     [Header("HealthSystem")]
-    [SerializeField] protected int maxHealth = 100;
-    protected float health = 100;
+    public int maxHealth = 100;
+    public float health = 100;
+
+    public virtual void Start()
+    {
+        health = maxHealth;
+    }
 
     // Update is called once per frame
     void Update()
