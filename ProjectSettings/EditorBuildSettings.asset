@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu-Alejandro.unity
+    path: Assets/Scenes/MenuPrincipal.unity
     guid: 56eee04fe6636724a822f6217008a562
   - enabled: 1
     path: Assets/Scenes/Primer-Nivel.unity
