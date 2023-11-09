@@ -5,6 +5,7 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(HealthController))]
 public class SartenController : MonoBehaviour
@@ -43,6 +44,11 @@ public class SartenController : MonoBehaviour
                     animator.SetInteger("Stage", Random.Range(0, 3));
                 }
             }
+        }
+        if(healthController.GetHealth() <= 0)
+        {
+            //TEMP
+            SceneManager.LoadScene(0);
         }
     }
 
