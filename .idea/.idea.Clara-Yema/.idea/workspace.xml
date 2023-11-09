@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="" />
+    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Jump.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Jump.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Jump.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yema.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yema.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dash.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,6 +108,7 @@
       <workItem from="1698326305536" duration="1831000" />
       <workItem from="1698686087079" duration="1194000" />
       <workItem from="1699517619910" duration="753000" />
+      <workItem from="1699529828418" duration="687000" />
     </task>
     <servers />
   </component>
