@@ -23,6 +23,7 @@ public class MainMenuController : MonoBehaviour
     public Toggle isVSync;
 
     [SerializeField] GameObject opciones;
+    [SerializeField] GameObject mainCanvas;
     
     public void LoadHistoria()
     {
@@ -39,11 +40,13 @@ public class MainMenuController : MonoBehaviour
     public void AbrirOpciones()
     {
         opciones.SetActive(true);
+        mainCanvas.SetActive(false);
     }
     
     public void CerrarOpciones()
     {
         opciones.SetActive(false);
+        mainCanvas.SetActive(true);
     }
     private void Start()
     {
