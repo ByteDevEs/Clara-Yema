@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -8,69 +11,104 @@ public class MenuAutoSeleccion : MonoBehaviour
 {
     public List<Selectable> botones;
     [SerializeField] int index = 0;
-    public float tiempoEntreBotones = 0.2f;
-    float tiempo;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        botones[0].Select();
-    }
-
-    private Vector2 input;
-    
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        input = context.ReadValue<Vector2>();
-    }
-    
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        if (context.action.triggered)
-        {
-            //If is a button
-            if (botones[index] is Button)
-            {
-                Button boton = botones[index] as Button;
-                boton.onClick.Invoke();
-            }
-            //If is a toggle
-            else if (botones[index] is Toggle)
-            {
-                Toggle toggle = botones[index] as Toggle;
-                toggle.isOn = !toggle.isOn;
-            }
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        botones[index].Select();
-        if(tiempo > 0)
-        {
-            tiempo -= Time.unscaledDeltaTime;
-        }
-        if(Mathf.Abs(input.y) < 0.2f)
-            return;
-        
         if(botones.Count == 0)
             return;
-        int dir = input.y > 0 ? -1 : 1;
-        if (input.y != 0 && tiempo <= 0)
+
+        if (botones[index] is TMP_Dropdown)
         {
-            //Deseleccionar el boton actual
-            //botones[index].OnDeselect(null);
-            tiempo = tiempoEntreBotones;
-            index += dir;
-            if (index < 0)
+            TMP_Dropdown dropdown = botones[index] as TMP_Dropdown;
+            if(dropdown.IsExpanded)
             {
-                index = botones.Count - 1;
+                dropdown.RefreshShownValue();
+                //Get the scrollbar
+                Scrollbar scrollBar = dropdown.GetComponentInChildren<Scrollbar>();
+                //Set the vertical scroll position to the selected option
+                scrollBar.value = 1f - (float)dropdown.value / (dropdown.options.Count - 1);
+                return;
             }
-            else if (index >= botones.Count)
+        }
+        botones[index].Select();
+    }
+
+    public void Select()
+    {
+        print("Select");
+        //If is a button
+        if (botones[index] is Button)
+        {
+            Button boton = botones[index] as Button;
+            boton.onClick.Invoke();
+        }
+        //If is a toggle
+        else if (botones[index] is Toggle)
+        {
+            Toggle toggle = botones[index] as Toggle;
+            toggle.isOn = !toggle.isOn;
+        }
+        else if (botones[index] is TMP_Dropdown)
+        {
+            TMP_Dropdown dropdown = botones[index] as TMP_Dropdown;
+
+            // Simulate a click on the dropdown by opening it after a short delay
+            if (dropdown.IsExpanded)
             {
-                index = 0;
+                // If it's open, simulate a click to close it
+                dropdown.Hide();
             }
+            else
+            {
+                // If it's closed, simulate a click to open it
+                StartCoroutine(OpenDropdownAfterDelay(dropdown));
+            }
+        }
+    }
+
+    private IEnumerator OpenDropdownAfterDelay(TMP_Dropdown dropdown)
+    {
+        // Wait for the end of the frame
+        yield return null;
+
+        // Open the dropdown
+        dropdown.Show();
+    }
+    
+    // Update is called once per frame
+    public void Mover(int mod)
+    {
+        if(botones.Count == 0)
+            return;
+
+        if (botones[index] is TMP_Dropdown)
+        {
+            TMP_Dropdown dropdown = botones[index] as TMP_Dropdown;
+            if(dropdown.IsExpanded)
+            {
+                dropdown.value += mod;
+                if (dropdown.value < 0)
+                {
+                    dropdown.value = dropdown.options.Count - 1;
+                }
+                else if (dropdown.value >= dropdown.options.Count)
+                {
+                    dropdown.value = 0;
+                }
+                return;
+            }
+        }
+        
+        //Deseleccionar el boton actual
+        //botones[index].OnDeselect(null);
+        index += mod;
+        if (index < 0)
+        {
+            index = botones.Count - 1;
+        }
+        else if (index >= botones.Count)
+        {
+            index = 0;
         }
     }
 }
