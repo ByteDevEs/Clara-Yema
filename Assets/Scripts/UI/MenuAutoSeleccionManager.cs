@@ -6,18 +6,12 @@ using UnityEngine.InputSystem;
 public class MenuAutoSeleccionManager : MonoBehaviour
 {
     public MenuAutoSeleccion[] menus;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public float tiempoEntreBotones = 0.2f;
     public float tiempo;
     
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if(tiempo > 0)
         {

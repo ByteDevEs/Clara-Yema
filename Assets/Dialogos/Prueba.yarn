@@ -7,4 +7,5 @@ Narrator: ¿Qué tal?
 Clara: Ho- Hola (?
 
 Yema: ¿QUÉ HA SIDO ESO?
+<<close_dialogue InteraccionMando-Dialogo>>
 ===

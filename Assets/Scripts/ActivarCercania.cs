@@ -7,6 +7,7 @@ public class ActivarCercania : MonoBehaviour
     public GameObject toActivate;
 
     public float cercania = 5;
+    bool activated = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,11 @@ public class ActivarCercania : MonoBehaviour
             if(Vector3.Distance(player.transform.position, transform.position) < cercania)
             {
                 if(toActivate.activeSelf == false)
-                    toActivate.SetActive(true);
+                    if(!activated)
+                    {
+                        activated = true;
+                        toActivate.SetActive(true);
+                    }
             }
         }
     }
