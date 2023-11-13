@@ -36,6 +36,22 @@ public class MenuAutoSeleccionManager : MonoBehaviour
         }
     }
     
+    public void OnBack(InputAction.CallbackContext context)
+    {
+        if (context.action.triggered && tiempo <= 0)
+        {
+            tiempo = tiempoEntreBotones;
+            foreach (var menu in menus) 
+            {
+                if(menu.gameObject.activeSelf)
+                {
+                    menu.Volver();
+                    break;
+                }
+            }
+        }
+    }
+    
     private Vector2 input;
     
     public void OnMove(InputAction.CallbackContext context)

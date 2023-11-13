@@ -24,6 +24,7 @@ public class MainMenuController : MonoBehaviour
 
     [SerializeField] GameObject opciones;
     [SerializeField] GameObject mainCanvas;
+    [SerializeField] GameObject selectCanvas;
     
     public void LoadHistoria()
     {
@@ -48,6 +49,19 @@ public class MainMenuController : MonoBehaviour
         opciones.SetActive(false);
         mainCanvas.SetActive(true);
     }
+    
+    public void AbrirSeleccion()
+    {
+        selectCanvas.SetActive(true);
+        mainCanvas.SetActive(false);
+    }
+    
+    public void CerrarSeleccion()
+    {
+        selectCanvas.SetActive(false);
+        mainCanvas.SetActive(true);
+    }
+    
     private void Start()
     {
         GameSettings.LoadGameSettings();
@@ -94,7 +108,7 @@ public class MainMenuController : MonoBehaviour
 
     public void Play()
     {
-        MusicManager.Instance.PlayGameMusic();
+        //MusicManager.Instance.PlayGameMusic();
     }
 
     public void SetMasterVolume()

@@ -12,8 +12,16 @@ public class MenuAutoSeleccion : MonoBehaviour
     public List<Selectable> botones;
     [SerializeField] int index = 0;
 
+    public Button botonVolver;
+    
     private void Update()
     {
+        
+        if(botones[index].gameObject.activeSelf)
+            botones[index].Select();
+        else
+            Mover(1);
+        
         if(botones.Count == 0)
             return;
 
@@ -75,6 +83,14 @@ public class MenuAutoSeleccion : MonoBehaviour
         dropdown.Show();
     }
     
+    public void Volver()
+    {
+        if (botonVolver != null)
+        {
+            botonVolver.onClick.Invoke();
+        }
+    }
+    
     // Update is called once per frame
     public void Mover(int mod)
     {
@@ -110,5 +126,10 @@ public class MenuAutoSeleccion : MonoBehaviour
         {
             index = 0;
         }
+        
+        if(botones[index].gameObject.activeSelf)
+            botones[index].Select();
+        else
+            Mover(mod);
     }
 }

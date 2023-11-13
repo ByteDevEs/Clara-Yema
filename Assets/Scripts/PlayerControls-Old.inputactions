@@ -54,6 +54,17 @@
             "bindings": [
                 {
                     "name": "",
+                    "id": "7cc29e4f-7bac-4d3f-8f57-1a02c0c76598",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e979fffb-6021-4675-9efb-926545740c95",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -73,6 +84,61 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "WASD",
+                    "id": "aa535bd1-fc4c-4492-a1e4-da4be7361b4f",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "7acca415-132f-4170-85db-02d314b0f1ce",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "cbbdf2f9-40a6-4dbd-8431-30d3ee681ac1",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "1f09892b-69f2-4e3d-aff0-a789fbddb3c2",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b1cc72f7-0771-4f73-b3d0-029944fc4b5a",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -120,6 +186,17 @@
                 },
                 {
                     "name": "",
+                    "id": "573065b5-3ffe-427b-bcb3-292f610cfef4",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "SkillSquare",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c5e035d5-2a43-42dc-90df-61e5cb96f32f",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
@@ -142,6 +219,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d9b1032e-f2b5-4c62-8cae-557face4de54",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller 2",
+                    "action": "TalkTriangle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6e360d85-fc2d-4fa0-9eb0-4a3fb2a5a344",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -158,6 +246,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller 2",
+                    "action": "DashCircle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aac406aa-bfef-402f-b3a9-a24deba2c2bf",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "DashCircle",
                     "isComposite": false,
                     "isPartOfComposite": false
