@@ -50,7 +50,6 @@ public class MainMenuController : MonoBehaviour
     }
     private void Start()
     {
-        Time.timeScale = 0;
         GameSettings.LoadGameSettings();
         masterVolumeText.text = GameSettings.masterVolume.ToString("0.00");
         masterVolumeSlider.value = GameSettings.masterVolume;
@@ -95,7 +94,6 @@ public class MainMenuController : MonoBehaviour
 
     public void Play()
     {
-        Time.timeScale = 1;
         MusicManager.Instance.PlayGameMusic();
     }
 
