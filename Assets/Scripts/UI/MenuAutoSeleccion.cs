@@ -117,6 +117,7 @@ public class MenuAutoSeleccion : MonoBehaviour
         
         //Deseleccionar el boton actual
         //botones[index].OnDeselect(null);
+        int oldIndex = index;
         index += mod;
         if (index < 0)
         {
@@ -126,6 +127,8 @@ public class MenuAutoSeleccion : MonoBehaviour
         {
             index = 0;
         }
+        if(oldIndex == index)
+            return;
         
         if(botones[index].gameObject.activeSelf)
             botones[index].Select();

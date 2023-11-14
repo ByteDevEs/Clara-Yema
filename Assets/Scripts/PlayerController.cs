@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private Transform cameraTransform;
+    
+    [SerializeField]
     private float playerSpeed = 2.0f;
     [SerializeField]
     private float jumpHeight = 1.0f;
@@ -30,7 +33,18 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        movementInput = context.ReadValue<Vector2>();
+        Vector3 input = context.ReadValue<Vector2>();
+        //Get the forward direction of the camera on the x-z plane
+        Vector3 forward = cameraTransform.forward;
+        forward.y = 0;
+        forward.Normalize();
+        
+        //Change movement input to be relative to camera
+        Vector3 right = cameraTransform.right;
+        right.y = 0;
+        right.Normalize();
+        
+        movementInput = new Vector2(input.x * right.x + input.y * forward.x, input.x * right.z + input.y * forward.z);
     }
 
     public void OnJump(InputAction.CallbackContext context)
