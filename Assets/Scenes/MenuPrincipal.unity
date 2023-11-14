@@ -4820,7 +4820,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 2477820b-1290-4ffd-9e91-fda570b95819
-    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/DualShock4GamepadHID/leftStick]
+    m_ActionName: Player/Movement
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 530020016}
@@ -4836,15 +4836,15 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: c4279fa0-c592-4bea-b7f9-2d12a997c49b
-    m_ActionName: Player/Jump[/Keyboard/space,/DualShock4GamepadHID/buttonSouth]
+    m_ActionName: Player/Jump
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 207d7dea-57c9-45cb-b8ae-3383c7b67989
-    m_ActionName: Player/SkillSquare[/DualShock4GamepadHID/buttonWest,/Keyboard/e]
+    m_ActionName: Player/SkillSquare
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 33cc7f4f-ab62-4f15-9ee8-f3e7e644ea87
-    m_ActionName: Player/TalkTriangle[/DualShock4GamepadHID/buttonNorth,/Keyboard/r]
+    m_ActionName: Player/TalkTriangle
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 530020016}
@@ -4860,7 +4860,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: ec916b4f-f26e-4dad-aae5-6faed4de2653
-    m_ActionName: Player/DashCircle[/DualShock4GamepadHID/buttonEast,/Keyboard/leftShift]
+    m_ActionName: Player/DashCircle
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Controller 2
   m_DefaultActionMap: Player
@@ -12606,7 +12606,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 2477820b-1290-4ffd-9e91-fda570b95819
-    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/DualShock4GamepadHID/leftStick]
+    m_ActionName: Player/Movement
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 530020016}
@@ -12622,15 +12622,15 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: c4279fa0-c592-4bea-b7f9-2d12a997c49b
-    m_ActionName: Player/Jump[/Keyboard/space,/DualShock4GamepadHID/buttonSouth]
+    m_ActionName: Player/Jump
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 207d7dea-57c9-45cb-b8ae-3383c7b67989
-    m_ActionName: Player/SkillSquare[/DualShock4GamepadHID/buttonWest,/Keyboard/e]
+    m_ActionName: Player/SkillSquare
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 33cc7f4f-ab62-4f15-9ee8-f3e7e644ea87
-    m_ActionName: Player/TalkTriangle[/DualShock4GamepadHID/buttonNorth,/Keyboard/r]
+    m_ActionName: Player/TalkTriangle
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 530020016}
@@ -12646,7 +12646,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: ec916b4f-f26e-4dad-aae5-6faed4de2653
-    m_ActionName: Player/DashCircle[/DualShock4GamepadHID/buttonEast,/Keyboard/leftShift]
+    m_ActionName: Player/DashCircle
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Controller 1
   m_DefaultActionMap: Player

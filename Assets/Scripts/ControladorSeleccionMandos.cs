@@ -92,11 +92,13 @@ public class ControladorSeleccionMandos : MonoBehaviour
         }
         
         State playerState1 = players[0].state;
-        P1Animator.SetInteger("State",(int)playerState1);
+        if(P1Animator.isActiveAndEnabled)
+            P1Animator.SetInteger("State",(int)playerState1);
         
         
         State playerState2 = players[1].state;
-        P2Animator.SetInteger("State",(int)playerState2);
+        if(P2Animator.isActiveAndEnabled)
+            P2Animator.SetInteger("State",(int)playerState2);
 
         if (players.Count >= 2 && playerState1 != State.None && playerState2 != State.None)
         {

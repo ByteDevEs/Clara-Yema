@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         }
 
         move = new Vector3(movementInput.x, 0, movementInput.y);
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        controller.Move(move * (Time.deltaTime * playerSpeed));
 
         if (move != Vector3.zero)
         {
