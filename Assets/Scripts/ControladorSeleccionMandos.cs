@@ -39,41 +39,23 @@ public class ControladorSeleccionMandos : MonoBehaviour
         {
             this.players.Add((player, State.None));
         }
+    }
+
+    private void OnEnable()
+    {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
-    public void OnMoveP1(InputAction.CallbackContext context)
-    {
-        if(SceneManager.GetActiveScene().buildIndex != 0)
-            return;
-        
-        Vector2 input = context.ReadValue<Vector2>();
-
-        if(tiempo > 0)
-            return;
-        
-        int dir = 0;
-        if (input.x > 0.5f)
-        {
-            dir = -1;
-        }
-        else if (input.x < -0.5f)
-        {
-            dir = 1;
-        }
-        
-        if(dir == 0)
-            return;
-
-        State savedState = State.None;
-        players[0] = (players[0].input, (State)Mathf.Clamp((int)players[0].state - dir, 0, 2));
-        tiempo = tiempoEntreBotones;
-    }
     
-    public void OnMoveP2(InputAction.CallbackContext context)
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
     {
         if(SceneManager.GetActiveScene().buildIndex != 0)
             return;
+        int index = players.FindIndex(x => x.input.devices.Contains(context.control.device));
         
         Vector2 input = context.ReadValue<Vector2>();
 
@@ -94,7 +76,8 @@ public class ControladorSeleccionMandos : MonoBehaviour
             return;
 
         State savedState = State.None;
-        players[1] = (players[1].input, (State)Mathf.Clamp((int)players[1].state - dir, 0, 2));
+        players[index] = (players[index].input, (State)Mathf.Clamp((int)players[index].state - dir, 0, 2));
+        print("Selected " + players[index].state);
         tiempo = tiempoEntreBotones;
     }
 
@@ -132,19 +115,19 @@ public class ControladorSeleccionMandos : MonoBehaviour
         }
     }
 
-    private string claraScheme;
+    private string claraScheme = "";
     private InputDevice claraDevice;
     
-    private string yemaScheme;
+    private string yemaScheme = "";
     private InputDevice yemaDevice;
     public void StartGame()
     {
         PlayerInput clara = players[0].state == State.Clara ? players[0].input : players[1].input;
         claraScheme = clara.currentControlScheme;
-        claraDevice = clara.devices[0];
+        claraDevice = clara.GetDevice<Gamepad>();
         PlayerInput yema = players[0].state == State.Yema ? players[0].input : players[1].input;
         yemaScheme = yema.currentControlScheme;
-        yemaDevice = yema.devices[0];
+        yemaDevice = yema.GetDevice<Gamepad>();
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
@@ -154,7 +137,9 @@ public class ControladorSeleccionMandos : MonoBehaviour
         
         //Set the device to the player
         print(claraScheme + " " + yemaScheme);
-        FindObjectOfType<ClaraEncoger>().gameObject.GetComponent<PlayerInput>().SwitchCurrentControlScheme(claraScheme, claraDevice);
-        FindObjectOfType<Dash>().gameObject.GetComponent<PlayerInput>().SwitchCurrentControlScheme(yemaScheme, yemaDevice);
+        if(claraScheme == "" || yemaScheme == "")
+            return;
+        GameObject.Find("Clara").GetComponent<PlayerInput>().SwitchCurrentControlScheme(claraScheme, claraDevice);
+        GameObject.Find("Yema").GetComponent<PlayerInput>().SwitchCurrentControlScheme(yemaScheme, yemaDevice);
     }
 }
