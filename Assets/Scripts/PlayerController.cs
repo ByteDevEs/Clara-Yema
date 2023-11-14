@@ -22,10 +22,6 @@ public class PlayerController : MonoBehaviour
     
     [Header("Animations")]
     [SerializeField] protected Animator animator;
-    [SerializeField] protected AnimationClip idleClip;
-    [SerializeField] protected AnimationClip andarClip;
-    [SerializeField] protected AnimationClip correrClip;
-    [SerializeField] protected AnimationClip saltarClip;
 
     private void Start()
     {
@@ -64,28 +60,19 @@ public class PlayerController : MonoBehaviour
 
         if (!groundedPlayer)
         {
-            
-            animator.Play(saltarClip.name);
-        }
-        else if (jumped && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-        }
-        else if (move != Vector3.zero && !jumped)
-        {
-            if (move.magnitude > 0.5f)
-            {
-                animator.Play(correrClip.name);
-            }
-            else
-            {
-                animator.Play(andarClip.name);
-            }
+            animator.SetBool("Jump", true);
         }
         else
         {
-            animator.Play(idleClip.name);
+            animator.SetBool("Jump", false);
         }
+        
+        if (groundedPlayer && jumped)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+        
+        animator.SetFloat("Speed", move.sqrMagnitude);
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
