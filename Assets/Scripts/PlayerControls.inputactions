@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "193c1325-ac7b-4a8e-bf08-a8d69eb1a0c4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -175,7 +184,7 @@
                 },
                 {
                     "name": "",
-                    "id": "c5e035d5-2a43-42dc-90df-61e5cb96f32f",
+                    "id": "0ba34dbc-9c43-41b8-86ef-e5cefa21f097",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
@@ -186,11 +195,11 @@
                 },
                 {
                     "name": "",
-                    "id": "0ba34dbc-9c43-41b8-86ef-e5cefa21f097",
+                    "id": "afe59532-1213-4636-a81f-8f73a654d880",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controller 1",
+                    "groups": "Controller 2",
                     "action": "TalkTriangle",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -214,6 +223,28 @@
                     "processors": "",
                     "groups": "Controller 2",
                     "action": "DashCircle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "01e2c07e-12c1-4cf9-9ad3-a86c637b1a21",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller 1",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30b1c8ee-5be7-4c96-aab2-15e07c70eb06",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller 2",
+                    "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
