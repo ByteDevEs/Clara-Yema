@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        // Asegúrate de desactivar el menú de pausa al inicio
+        // Nos aseguramos de desactivar el menú de pausa al inicio
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(false);
@@ -25,12 +25,10 @@ public class PauseMenu : MonoBehaviour
         {
             if (isPaused)
             {
-                // Si ya está en pausa, reanudar el juego
                 ResumeGame();
             }
             else
             {
-                // Si no está en pausa, pausar el juego y abrir el menú
                 PauseGame();
             }
         }
@@ -42,11 +40,7 @@ public class PauseMenu : MonoBehaviour
         // Controlar el menú si está abierto
         if (isMenuOpen)
         {
-            // Aquí puedes agregar lógica para controlar el menú con el jugador que pulsó "Start"
-            // Puedes usar Input.GetAxis, Input.GetButton, etc., según tus necesidades
-            // Por ejemplo:
-            // float menuInput = Input.GetAxis("Vertical");
-            // Mover el cursor del menú en consecuencia
+            //Provisional
         }
     }
 
