@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/DeathCanvasAnim/DeathAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DeathCanvasAnim/DeathAnimation.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/MuerteFueraRango.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/MuerteFueraRango.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Editor/CamaraCambioDeAnguloEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camaras/CamaraCambioDeAngulo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ControladorSeleccionMandos.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/ParticlePlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sarten/BossHealthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -122,7 +122,7 @@
       <workItem from="1699890515834" duration="3301000" />
       <workItem from="1699894465940" duration="645000" />
       <workItem from="1699947808976" duration="10457000" />
-      <workItem from="1700145357438" duration="715000" />
+      <workItem from="1700145357438" duration="1923000" />
     </task>
     <servers />
   </component>

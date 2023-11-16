@@ -7096,6 +7096,7 @@ GameObject:
   - component: {fileID: 2740748757481017427}
   - component: {fileID: 5683027931318189333}
   - component: {fileID: 2769924150670816791}
+  - component: {fileID: 2645035940518218170}
   m_Layer: 0
   m_Name: Clara
   m_TagString: Player
@@ -7117,7 +7118,7 @@ Transform:
   m_Children:
   - {fileID: 785207743111383804}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!136 &1360719557397732787
 CapsuleCollider:
@@ -7235,8 +7236,24 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ec916b4f-f26e-4dad-aae5-6faed4de2653
     m_ActionName: Player/DashCircle[/DualShock4GamepadHID/buttonEast,/DualShock4GamepadHID1/buttonEast,/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast,/Keyboard/leftShift]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Controller 1
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2645035940518218170}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnStart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 193c1325-ac7b-4a8e-bf08-a8d69eb1a0c4
+    m_ActionName: Player/Start[/DualShock4GamepadHID1/start,/XInputControllerWindows/start,/XInputControllerWindows1/start,/DualShock4GamepadHID/start]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Controller 2
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -7278,6 +7295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e4f12a47e44b44aa44e5564303dfb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
   playerSpeed: 10
   jumpHeight: 2
   gravityValue: -39.24
@@ -7285,10 +7303,6 @@ MonoBehaviour:
   move: {x: 0, y: 0, z: 0}
   healthController: {fileID: 2740748757481017427}
   animator: {fileID: 8418619677724832109}
-  idleClip: {fileID: 7400000, guid: b8b7a965ccde00f44b22dd6e47273159, type: 2}
-  andarClip: {fileID: 7400000, guid: 32c5bd17540ab96459cba04f817d5cd5, type: 2}
-  correrClip: {fileID: 7400000, guid: eebd69f1f63f3474ca9400bb9d27f0ed, type: 2}
-  saltarClip: {fileID: 7400000, guid: e26d5d4fd92777f43b7fe9933f243cf0, type: 2}
 --- !u!114 &800554065944782435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7350,6 +7364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2695271346ee8141a09ef8163503f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackScreenGameObject: {fileID: 7033673792546539063, guid: 2c2d144e62832f74d9a8121125f13f6e, type: 3}
 --- !u!114 &2769924150670816791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7363,6 +7378,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalScale: 0.5
+--- !u!114 &2645035940518218170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111311077764254347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b369e9e205f0c46b5c28eed83fb444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
 --- !u!1 &5167471048567886108
 GameObject:
   m_ObjectHideFlags: 0
