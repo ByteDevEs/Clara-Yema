@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,7 +12,8 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        // Nos aseguramos de desactivar el menú de pausa al inicio
+
+        // Nos aseguramos de desactivar el menÃº de pausa al inicio
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(false);
@@ -37,7 +38,7 @@ public class PauseMenu : MonoBehaviour
     {
         
 
-        // Controlar el menú si está abierto
+        // Controlar el menÃº si estÃ¡ abierto
         if (isMenuOpen)
         {
             //Provisional
@@ -48,7 +49,7 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = true;
 
-        // Pausar el tiempo y mostrar el menú
+        // Pausar el tiempo y mostrar el menÃº
         Time.timeScale = 0f;
 
         if (pauseMenu != null)
@@ -62,7 +63,7 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = false;
 
-        // Reanudar el tiempo y cerrar el menú
+        // Reanudar el tiempo y cerrar el menÃº
         Time.timeScale = 1f;
 
         if (pauseMenu != null)
