@@ -1,37 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
+using ProjectDawn.SplitScreen;
 using UnityEngine;
 
 public class MuerteFueraRango : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject blackScreenGameObject;
+    
     private PlayerController playerController;
-    private Vector3 lastPosition; // Almacena la última posición válida del personaje.
+    private Vector3 lastPosition; // Almacena la ï¿½ltima posiciï¿½n vï¿½lida del personaje.
+    private bool dead;
 
     void Start()
     {
         playerController = GetComponent<PlayerController>();
-        lastPosition = transform.position; // Inicializa la última posición con la posición inicial del personaje.
+        lastPosition = transform.position; // Inicializa la ï¿½ltima posiciï¿½n con la posiciï¿½n inicial del personaje.
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("OutOfRange")) //Este es el tag del agua, si se cambia a otro, renombrarlo
         {
-            // El personaje ha caído al agua, así que lo teleportamos a la última posición válida.
-            transform.position = lastPosition;
+            // El personaje ha caï¿½do al agua, asï¿½ que lo teleportamos a la ï¿½ltima posiciï¿½n vï¿½lida.
+            Respawn();
             //Debug.Log("TP fuera del agua");
         }
+    }
+    
+    private void Respawn()
+    {
+        dead = true;
+        GameObject gO = Instantiate(blackScreenGameObject, transform.position, Quaternion.identity);
+        gO.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
+        gO.GetComponent<Canvas>().worldCamera = FindObjectOfType<SplitScreenEffect>().Screens.Find(x => x.Target == transform).Camera;
+        gO.GetComponent<DeathCamera>().muerteFueraRango = this;
+    }
+    
+    public void ResetPosition()
+    {
+        transform.position = lastPosition;
+        dead = false;
     }
 
     void Update()
     {
-        // Actualizamos la última posición válida en cada frame, pero evitamos actualizarla en el borde.
-        if (playerController.Grounded())
+        // Actualizamos la ï¿½ltima posiciï¿½n vï¿½lida en cada frame, pero evitamos actualizarla en el borde.
+        if (playerController.Grounded() && !dead)
         {
             if (Vector3.Distance(transform.position, lastPosition) > 1f)
             {
                 lastPosition = transform.position;
-                //Debug.Log("Última posición válida actualizada: " + lastPosition);
+                //Debug.Log("ï¿½ltima posiciï¿½n vï¿½lida actualizada: " + lastPosition);
             }
         }
 
