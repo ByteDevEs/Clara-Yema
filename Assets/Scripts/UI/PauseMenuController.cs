@@ -13,9 +13,10 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] GameObject mainCanvas;
     public void LoadMainMenu()
     {
-        if (mainCanvas)
-        {
+        if (mainCanvas) { 
             SceneManager.LoadScene(0);
+            Time.timeScale = 1f;
+
         }
     }
 

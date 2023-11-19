@@ -19,6 +19,7 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenu.SetActive(false);
         }
+
     }
 
     public void OnStart(InputAction.CallbackContext context)
