@@ -10,8 +10,18 @@ using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
 {
+    [SerializeField] GameObject mainCanvas;
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(0);
+        if (mainCanvas)
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    private void Start()
+    {
+        GameSettings.LoadGameSettings();
+       
     }
 }
