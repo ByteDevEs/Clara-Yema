@@ -7,7 +7,8 @@ public class PauseMenu : MonoBehaviour
 {
     private bool isPaused = false;
     private bool isMenuOpen = false;
-
+    public PlayerController playerController1;
+    public PlayerController playerController2;
     public GameObject pauseMenu;
 
     void Start()
@@ -42,6 +43,7 @@ public class PauseMenu : MonoBehaviour
         if (isMenuOpen)
         {
             //Provisional
+
         }
     }
 
@@ -57,6 +59,12 @@ public class PauseMenu : MonoBehaviour
             pauseMenu.SetActive(true);
             isMenuOpen = true;
         }
+        // Desactivar el script de movimiento del personaje
+        if (playerController1 != null && playerController2 != null)
+        {
+            playerController1.enabled = false;
+            playerController2.enabled = false;
+        }
     }
 
     void ResumeGame()
@@ -70,6 +78,12 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenu.SetActive(false);
             isMenuOpen = false;
+        }
+
+        if (playerController1 != null && playerController1 != null)
+        {
+            playerController1.enabled = true;
+            playerController2.enabled = true;
         }
     }
 }
