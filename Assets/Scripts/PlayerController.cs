@@ -74,11 +74,7 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.forward = move;
         }
 
-        if (!groundedPlayer)
-        {
-            animator.SetBool("Jump", true);
-        }
-        else
+        if (groundedPlayer)
         {
             animator.SetBool("Jump", false);
         }
@@ -86,6 +82,7 @@ public class PlayerController : MonoBehaviour
         if (groundedPlayer && jumped)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            animator.SetBool("Jump", true);
         }
         
         animator.SetFloat("Speed", move.sqrMagnitude);
