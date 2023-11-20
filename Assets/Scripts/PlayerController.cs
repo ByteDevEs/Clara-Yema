@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        if(cameraTransform == null)
+            return;
         Vector3 input = context.ReadValue<Vector2>();
         //Get the forward direction of the camera on the x-z plane
         Vector3 forward = cameraTransform.forward;

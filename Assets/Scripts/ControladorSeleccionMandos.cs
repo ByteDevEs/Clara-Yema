@@ -28,10 +28,12 @@ public class ControladorSeleccionMandos : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        StartButton.SetActive(false);
+        if(StartButton != null)
+            StartButton.SetActive(false);
         DontDestroyOnLoad(this.gameObject);
         // StartButton add listener
-        StartButton.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(StartGame);
+        if(StartButton != null)
+            StartButton.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(StartGame);
         
         //Find all the players
         PlayerInput[] players = FindObjectsOfType<PlayerInput>();
@@ -143,5 +145,8 @@ public class ControladorSeleccionMandos : MonoBehaviour
             return;
         GameObject.Find("Clara").GetComponent<PlayerInput>().SwitchCurrentControlScheme(claraScheme, claraDevice);
         GameObject.Find("Yema").GetComponent<PlayerInput>().SwitchCurrentControlScheme(yemaScheme, yemaDevice);
+        
+        //Destroy this object
+        Destroy(this.gameObject);
     }
 }

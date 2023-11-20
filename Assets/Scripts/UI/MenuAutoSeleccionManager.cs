@@ -67,7 +67,7 @@ public class MenuAutoSeleccionManager : MonoBehaviour
             tiempo = tiempoEntreBotones;
             foreach (var menu in menus) 
             {
-                if(menu.gameObject.activeSelf)
+                if(menu.gameObject.activeInHierarchy)
                 {
                     menu.Select();
                     break;
