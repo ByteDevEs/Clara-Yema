@@ -116,7 +116,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2773118797532085810}
   - component: {fileID: 8234702817503641040}
-  - component: {fileID: 608904698680178295}
   m_Layer: 0
   m_Name: PalaIzq
   m_TagString: Damager
@@ -161,33 +160,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2319198, y: 0.5298371, z: 0.47787905}
   m_Center: {x: 0, y: 1.0674536, z: -0.2610605}
---- !u!54 &608904698680178295
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802095904902061748}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 1
-  m_Constraints: 126
-  m_CollisionDetection: 1
 --- !u!1 &2096267028493120146
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +276,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5076649122448433344}
   - component: {fileID: 8987366947612971309}
-  - component: {fileID: 5860160852829290101}
   m_Layer: 0
   m_Name: PalaDrc
   m_TagString: Damager
@@ -349,33 +320,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2319198, y: 0.5298371, z: 0.47787905}
   m_Center: {x: 0, y: 1.0674536, z: 0.26106048}
---- !u!54 &5860160852829290101
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2279639700015903623}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 1
-  m_Constraints: 126
-  m_CollisionDetection: 1
 --- !u!1 &4392493695588418716
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +333,7 @@ GameObject:
   - component: {fileID: 3875539143855405439}
   - component: {fileID: 2425429780463785433}
   - component: {fileID: 3541408048815571570}
+  - component: {fileID: 4876817121828669135}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -430,6 +375,8 @@ MonoBehaviour:
   bothInside: 0
   playerCount: 0
   timer: 0
+  attackDelay: 3
+  dashSpeed: 20
 --- !u!95 &3875539143855405439
 Animator:
   serializedVersion: 5
@@ -489,6 +436,32 @@ MonoBehaviour:
   maxHealth: 50
   health: 100
   bossCanvasPrefab: {fileID: 424601668254599780, guid: 8839f8f09747e0a4396e14840fa6a053, type: 3}
+--- !u!143 &4876817121828669135
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4392493695588418716}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7086298020612063507
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +683,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4210132615948397974}
-  - component: {fileID: 6124615167361170399}
   - component: {fileID: 6928290873296126107}
   m_Layer: 0
   m_Name: Sarten
@@ -736,33 +708,6 @@ Transform:
   m_Father: {fileID: 8367294067329261973}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &6124615167361170399
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8449192431230548476}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 1
-  m_Constraints: 126
-  m_CollisionDetection: 1
 --- !u!114 &6928290873296126107
 MonoBehaviour:
   m_ObjectHideFlags: 0

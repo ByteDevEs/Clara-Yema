@@ -71,7 +71,6 @@ public class CamaraCambioDeAngulo : MonoBehaviour
         //Interpolate between them
         float t = Mathf.InverseLerp(a.porciento, b.porciento, porciento);
         Vector3 rotacion = Vector3.Lerp(a.rotacion, b.rotacion, t);
-        print(b.rotacion);
         transform.rotation = Quaternion.Euler(rotacion);
     }
 
