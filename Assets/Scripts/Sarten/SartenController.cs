@@ -12,6 +12,10 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(HealthController), typeof(CharacterController))]
 public class SartenController : MonoBehaviour
 {
+    [Header("Forks")]
+    [SerializeField] private GameObject leftFork;
+    [SerializeField] private GameObject rightFork;
+    
     public HealthController healthController;
     private CharacterController cController;
     private Animator animator;
@@ -74,7 +78,7 @@ public class SartenController : MonoBehaviour
                             Stomp();
                             break;
                         case OuterAttack.LauchFork:
-                            LauchFork();
+                            LaunchFork();
                             break;
                     }
                     break;
@@ -111,22 +115,69 @@ public class SartenController : MonoBehaviour
         }
     }
 
-    private void LauchFork()
+    private void LaunchFork()
     {
-        throw new NotImplementedException();
+        GameObject playerNearest = GetNearestPlayer();
+        GameObject playerFurthest = GetFurthestPlayer();
+        
+        
+        if (playerNearest != null)
+        {
+            Vector3 direction = playerNearest.transform.position - leftFork.transform.position;
+            direction.Normalize();
+            leftFork.transform.forward = direction;
+            leftFork.transform.Rotate(90, 0, 0);
+            StartCoroutine(MoveForkTime(leftFork, attackDelay/1.5f, playerNearest.transform.position));
+        }
+        
+        if (playerFurthest != null)
+        {
+            Vector3 direction = playerFurthest.transform.position - rightFork.transform.position;
+            direction.Normalize();
+            rightFork.transform.forward = direction;
+            rightFork.transform.Rotate(90, 0, 0);
+            StartCoroutine(MoveForkTime(rightFork, attackDelay/1.5f, playerFurthest.transform.position));
+        }
+        
+        animator.SetTrigger("LaunchFork");
+    }
+    
+    IEnumerator MoveForkTime(GameObject fork, float time, Vector3 position)
+    {
+        animator.enabled = false;
+        Vector3 initialPosition = fork.transform.position;
+        //Divide time in the time to go and the time to return
+        float timeLeft = 0;
+        while (timeLeft < time)
+        {
+            timeLeft += Time.deltaTime / 0.7f;
+            fork.transform.position = Vector3.Lerp(fork.transform.position, position, timeLeft / time);
+            yield return new WaitForEndOfFrame();
+        }
+        //Lerp back
+        timeLeft = 0;
+        while (timeLeft < time)
+        {
+            timeLeft += Time.deltaTime / 0.3f;
+            fork.transform.position = Vector3.Lerp(position, initialPosition, timeLeft / time);
+            yield return new WaitForEndOfFrame();
+        }
+        animator.enabled = true;
     }
 
     private void Stomp()
     {
-        float span = attackDelay/4f;
-        //Delayed Stomp
-        StompMovement();
-        Invoke("StompMovement", span);
-        Invoke("StompMovement", span*2);
-    }
-    
-    private void StompMovement()
-    {
+        GameObject player = GetNearestPlayer();
+
+        if (player != null)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            direction.y = 0;
+            direction.Normalize();
+            transform.forward = direction;
+            transform.Rotate(0, 90, 0);
+        }
+
         animator.SetTrigger("Stomp");
     }
     
@@ -135,24 +186,21 @@ public class SartenController : MonoBehaviour
     private void MoveToPlayerStomp()
     {
         GameObject player = GetNearestPlayer();
-            
-        if (player != null)
-        {
-            Vector3 direction = player.transform.position - transform.position;
-            direction.y = 0;
-            direction.Normalize();
-            transform.forward = direction;
-            transform.Rotate(0, 90, 0);
 
-            if(stompCoroutine != null)
-                stompCoroutine = StartCoroutine(MoveTime(5f, direction));
-        }
+        Vector3 direction = player.transform.position - transform.position;
+        direction.y = 0;
+        direction.Normalize();
+        if(stompCoroutine == null)
+            stompCoroutine = StartCoroutine(MoveTime(5f, direction));
     }
     
     private void StopStompMovement()
     {
         if(stompCoroutine != null)
+        {
             StopCoroutine(stompCoroutine);
+            stompCoroutine = null;
+        }
     }
 
     private void DashToPlayer()
@@ -197,6 +245,22 @@ public class SartenController : MonoBehaviour
             }
         }
         return nearestPlayer;
+    }
+    
+    private GameObject GetFurthestPlayer()
+    {
+        GameObject furthestPlayer = null;
+        float furthestDistance = 0;
+        foreach (GameObject player in players)
+        {
+            float distance = Vector3.Distance(transform.position, player.transform.position);
+            if (distance > furthestDistance)
+            {
+                furthestDistance = distance;
+                furthestPlayer = player;
+            }
+        }
+        return furthestPlayer;
     }
 
     private void OnTriggerEnter(Collider other)
