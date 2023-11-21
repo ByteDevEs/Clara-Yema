@@ -57,7 +57,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
 
         // Pausar el tiempo y mostrar el menú
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
 
         if (pauseMenu != null)
         {
