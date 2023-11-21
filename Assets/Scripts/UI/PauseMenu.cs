@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     public PlayerController playerController1;
     public PlayerController playerController2;
     public GameObject pauseMenu;
+    public Button singleButton;
 
     void Start()
     {
@@ -18,6 +21,7 @@ public class PauseMenu : MonoBehaviour
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(null);
         }
 
     }
@@ -43,7 +47,7 @@ public class PauseMenu : MonoBehaviour
         // Controlar el menú si está abierto
         if (isMenuOpen)
         {
-            //Provisional
+          //  PrintSelectedButtonName();
 
         }
     }
@@ -53,12 +57,13 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
 
         // Pausar el tiempo y mostrar el menú
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
 
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(true);
             isMenuOpen = true;
+            singleButton.Select();
         }
         // Desactivar el script de movimiento del personaje
         if (playerController1 != null && playerController2 != null)
