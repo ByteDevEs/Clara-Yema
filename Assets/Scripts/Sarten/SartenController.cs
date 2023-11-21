@@ -118,14 +118,41 @@ public class SartenController : MonoBehaviour
 
     private void Stomp()
     {
-        float span = attackDelay/3f;
+        float span = attackDelay/4f;
         //Delayed Stomp
         StompMovement();
+        Invoke("StompMovement", span);
+        Invoke("StompMovement", span*2);
     }
     
     private void StompMovement()
     {
         animator.SetTrigger("Stomp");
+    }
+    
+    
+    Coroutine stompCoroutine;
+    private void MoveToPlayerStomp()
+    {
+        GameObject player = GetNearestPlayer();
+            
+        if (player != null)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            direction.y = 0;
+            direction.Normalize();
+            transform.forward = direction;
+            transform.Rotate(0, 90, 0);
+
+            if(stompCoroutine != null)
+                stompCoroutine = StartCoroutine(MoveTime(5f, direction));
+        }
+    }
+    
+    private void StopStompMovement()
+    {
+        if(stompCoroutine != null)
+            StopCoroutine(stompCoroutine);
     }
 
     private void DashToPlayer()

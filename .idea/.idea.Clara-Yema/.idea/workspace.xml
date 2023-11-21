@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Stomp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Stomp.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camaras/CamaraCambioDeAngulo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camaras/CamaraCambioDeAngulo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/BossHealthController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/BossHealthController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/HealthController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/HealthController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenHealthController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenHealthController.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +126,7 @@
       <workItem from="1699947808976" duration="10457000" />
       <workItem from="1700145357438" duration="1923000" />
       <workItem from="1700494519032" duration="6104000" />
+      <workItem from="1700552930776" duration="4147000" />
     </task>
     <servers />
   </component>
