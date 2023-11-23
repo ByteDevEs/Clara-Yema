@@ -33,66 +33,84 @@ public class SartenController : MonoBehaviour
 
     public enum States
     {
-        Idle,
+        WaitingForPlayers,
         Awake,
-        AttackOutside,
+        Stomp,
+        LauchFork,
         AttackInside,
         Dash,
         Dizzy,
     }
-    
-    public enum OuterAttack {
-        Stomp,
-        LauchFork
-    }
-    
-    public States state = States.Dash;
-    public OuterAttack outerAttack;
+
+    public States state;
     
     private void Start()
     {
         animator = GetComponent<Animator>();
         cController = GetComponent<CharacterController>();
         players = FindObjectsOfType<PlayerController>().ToList().ConvertAll(x => x.gameObject);
+		AI();
+    }
+
+    void GenerateNewAttackState()
+    {
+        int r = Random.Range(0, 2);
+        if (r == 0)
+        {
+            state = States.Stomp;
+        }
+        else
+        {
+            state = States.LauchFork;
+        }
+    }
+
+    void GenerateNewState()
+    {
+        int r = Random.Range(0, 2);
+        if (r == 0)
+        {
+            GenerateNewAttackState();
+        }
+        else
+        {
+            state = States.Dash;
+        }
     }
     
-    private void Update()
+    private void AI()
     {
-
-        timer += Time.deltaTime;
-        
-        if (timer >= attackDelay)
+        print("AI update state");
+        switch (state)
         {
-            timer = 0;
-            switch (state)
-            {
-                case States.Idle:
-                    break;
-                case States.Awake:
-                    break;
-                case States.AttackOutside:
-                    //outerAttack = (OuterAttack) Random.Range(0, 2);
-                    switch (outerAttack)
-                    {
-                        case OuterAttack.Stomp:
-                            Stomp();
-                            break;
-                        case OuterAttack.LauchFork:
-                            LaunchFork();
-                            break;
-                    }
-                    break;
-                case States.AttackInside:
-                    break;
-                case States.Dash:
-                    DashToPlayer();
-                    break;
-                case States.Dizzy:
-                    break;
-            }   
+            case States.WaitingForPlayers:
+                Invoke("AI", 0);
+                return;
+            case States.Awake:
+                GenerateNewState();
+                Invoke("AI", 0);
+                return;
+            case States.Stomp:
+                Stomp();
+                state = States.Awake;
+                break;
+            case States.LauchFork:
+                LaunchFork();
+                state = States.Awake;
+                break;
+            case States.Dash:
+                DashToPlayer();
+                state = States.Awake;
+                break;
+            case States.Dizzy:
+                break;
+            case States.AttackInside:
+                break;
         }
+
+        Invoke("AI", attackDelay);
         
-        animator.SetBool("bothInside", bothInside);
+        /*animator.SetBool("bothInside", bothInside);
         if (bothInside)
         {
             if (timer >= 1)
@@ -112,7 +130,7 @@ public class SartenController : MonoBehaviour
         {
             //TEMP
             SceneManager.LoadScene(0);
-        }
+        }*/
     }
 
     private void LaunchFork()
@@ -123,19 +141,11 @@ public class SartenController : MonoBehaviour
         
         if (playerNearest != null)
         {
-            Vector3 direction = playerNearest.transform.position - leftFork.transform.position;
-            direction.Normalize();
-            leftFork.transform.forward = direction;
-            leftFork.transform.Rotate(90, 0, 0);
             StartCoroutine(MoveForkTime(leftFork, attackDelay/1.5f, playerNearest.transform.position));
         }
         
         if (playerFurthest != null)
         {
-            Vector3 direction = playerFurthest.transform.position - rightFork.transform.position;
-            direction.Normalize();
-            rightFork.transform.forward = direction;
-            rightFork.transform.Rotate(90, 0, 0);
             StartCoroutine(MoveForkTime(rightFork, attackDelay/1.5f, playerFurthest.transform.position));
         }
         
@@ -146,12 +156,20 @@ public class SartenController : MonoBehaviour
     {
         animator.enabled = false;
         Vector3 initialPosition = fork.transform.position;
+        Vector3 direction = position - fork.transform.position;
+        direction.Normalize();
+        position += (direction * 10f);
+        Transform t = fork.transform;
+        t.transform.forward = direction;
+        t.transform.Rotate(90, 0, 0);
         //Divide time in the time to go and the time to return
         float timeLeft = 0;
         while (timeLeft < time)
         {
             timeLeft += Time.deltaTime / 0.7f;
-            fork.transform.position = Vector3.Lerp(fork.transform.position, position, timeLeft / time);
+            
+            fork.transform.rotation = Quaternion.Lerp(fork.transform.rotation, t.transform.rotation, timeLeft / time);
+            fork.transform.position = Vector3.Lerp(fork.transform.position, position - direction * 0.5f, timeLeft / time);
             yield return new WaitForEndOfFrame();
         }
         //Lerp back
@@ -159,7 +177,9 @@ public class SartenController : MonoBehaviour
         while (timeLeft < time)
         {
             timeLeft += Time.deltaTime / 0.3f;
-            fork.transform.position = Vector3.Lerp(position, initialPosition, timeLeft / time);
+            
+            fork.transform.rotation = Quaternion.Lerp(fork.transform.rotation, t.transform.rotation, timeLeft / time);
+            fork.transform.position = Vector3.Lerp(position - direction * 0.5f, initialPosition, timeLeft / time);
             yield return new WaitForEndOfFrame();
         }
         animator.enabled = true;

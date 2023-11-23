@@ -16,12 +16,11 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-
         // Nos aseguramos de desactivar el menú de pausa al inicio
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(false);
-            EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(null);
         }
 
     }
