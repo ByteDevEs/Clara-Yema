@@ -602,10 +602,16 @@ namespace ProjectDawn.SplitScreen
         void UpdatePlaneMatrices()
         {
             // TODO: Cleanup this method
-
             var camera = GetComponent<Camera>();
+            var parentTransform = transform.parent != null ? transform.parent : transform;
 
-            Quaternion rotation = !camera.orthographic ? (Quaternion)quaternion.RotateX(math.radians(90)) : transform.rotation; // transform.rotation
+            // Use the parent's forward and right vectors to construct a rotation
+            Vector3 parentForward = parentTransform.forward;
+            Vector3 parentRight = parentTransform.right;
+
+            Quaternion rotation = Quaternion.LookRotation(parentForward, parentTransform.up);
+            rotation *= Quaternion.Euler(90, 0, 0); // Rotate by 90 degrees around the x-axis
+
             m_PlaneToWorld = float4x4.TRS(rotation * new Vector3(0, 0, -Distance), rotation, 1);
 
             m_PlaneToWorld.c2 = -m_PlaneToWorld.c2;
