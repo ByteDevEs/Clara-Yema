@@ -6,15 +6,14 @@ using UnityEngine.UI;
 
 public class BossHealthController : HealthController
 {
-    [SerializeField] GameObject bossCanvasPrefab;
-    GameObject bossCanvas;
+    [SerializeField]
+    private GameObject bossCanvas;
     
     Slider healthBar;
 
     private void Start()
     {
         base.Start();
-        bossCanvas = Instantiate(bossCanvasPrefab);
         healthBar = bossCanvas.GetComponentInChildren<Slider>();
     }
 

@@ -37,7 +37,8 @@ public class SartenController : MonoBehaviour
         Awake,
         Stomp,
         LauchFork,
-        AttackInside,
+        Mix,
+        Smash,
         Dash,
         Dizzy,
     }
@@ -52,7 +53,7 @@ public class SartenController : MonoBehaviour
 		AI();
     }
 
-    void GenerateNewAttackState()
+    void GenerateNewOuterAttackState()
     {
         int r = Random.Range(0, 2);
         if (r == 0)
@@ -64,13 +65,26 @@ public class SartenController : MonoBehaviour
             state = States.LauchFork;
         }
     }
+    
+    void GenerateNewInnerAttackState()
+    {
+        int r = Random.Range(0, 2);
+        if (r == 0)
+        {
+            state = States.Mix;
+        }
+        else
+        {
+            state = States.Smash;
+        }
+    }
 
     void GenerateNewState()
     {
         int r = Random.Range(0, 2);
         if (r == 0)
         {
-            GenerateNewAttackState();
+            GenerateNewOuterAttackState();
         }
         else
         {
@@ -104,33 +118,14 @@ public class SartenController : MonoBehaviour
                 break;
             case States.Dizzy:
                 break;
-            case States.AttackInside:
+            case States.Mix:
                 break;
+            case States.Smash:
+                break;
+                
         }
 
         Invoke("AI", attackDelay);
-        
-        /*animator.SetBool("bothInside", bothInside);
-        if (bothInside)
-        {
-            if (timer >= 1)
-            {
-                timer = 0;
-                if (healthController.GetHealth() > healthController.GetMaxHealth() / 2f)
-                {
-                    animator.SetInteger("Stage", Random.Range(0, 2));
-                }
-                else
-                {
-                    animator.SetInteger("Stage", Random.Range(0, 3));
-                }
-            }
-        }
-        if(healthController.GetHealth() <= 0)
-        {
-            //TEMP
-            SceneManager.LoadScene(0);
-        }*/
     }
 
     private void LaunchFork()

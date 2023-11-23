@@ -1,19 +1,44 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ProjectDawn.SplitScreen;
 using UnityEngine;
 
 public class ArenaTriggerDetector : MonoBehaviour
 {
     [SerializeField]
     private SartenController sarten;
-    private int playerCount = 0;
+    
+    public GameObject bossCamara;
 
+    [SerializeField]
+    private GameObject walls;
+
+    [SerializeField]
+    private GameObject canvasTransition;
+    [SerializeField]
+    private List<GameObject> spawner;
+    
+    [SerializeField]
+    private List<GameObject> players;
+    private bool once = false;
+    
     private void Update()
     {
-        if (playerCount == 2)
+        if (players.Count == 2 && !once)
         {
-            sarten.state = SartenController.States.Awake;
+            once = true;
+            sarten.bothInside = true;
+            walls.SetActive(true);
+            int count = 0;
+            foreach (var player in players)
+            {
+                GameObject gO = Instantiate(canvasTransition, transform.position, Quaternion.identity);
+                gO.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
+                gO.GetComponent<TransitionCamera>().player = player.transform;
+                gO.GetComponent<TransitionCamera>().spawner = spawner[count].transform;
+                count++;
+            }
         }
     }
 
@@ -21,7 +46,10 @@ public class ArenaTriggerDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerCount++;
+            if (!players.Contains(other.gameObject))
+            {
+                players.Add(other.gameObject);
+            }
         }
     }
 
@@ -29,7 +57,10 @@ public class ArenaTriggerDetector : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerCount--;
+            if (players.Contains(other.gameObject))
+            {
+                players.Remove(other.gameObject);
+            }
         }
     }
 }

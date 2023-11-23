@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(false);
-                EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(null);
         }
 
     }
