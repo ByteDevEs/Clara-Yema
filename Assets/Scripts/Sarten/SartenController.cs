@@ -36,11 +36,12 @@ public class SartenController : MonoBehaviour
         WaitingForPlayers,
         Awake,
         Stomp,
-        LauchFork,
+        LaunchSpatula,
         Mix,
         Smash,
         Dash,
         Dizzy,
+        Defeated
     }
 
     public States state;
@@ -55,21 +56,21 @@ public class SartenController : MonoBehaviour
 
     void GenerateNewOuterAttackState()
     {
-        int r = Random.Range(0, 2);
-        if (r == 0)
+        int rOuterAttack = Random.Range(0, 2);
+        if (rOuterAttack == 0)
         {
             state = States.Stomp;
         }
         else
         {
-            state = States.LauchFork;
+            state = States.LaunchSpatula;
         }
     }
     
     void GenerateNewInnerAttackState()
     {
-        int r = Random.Range(0, 2);
-        if (r == 0)
+        int rInnerAttack = Random.Range(0, 2);
+        if (rInnerAttack == 0)
         {
             state = States.Mix;
         }
@@ -81,8 +82,8 @@ public class SartenController : MonoBehaviour
 
     void GenerateNewState()
     {
-        int r = Random.Range(0, 2);
-        if (r == 0)
+        int rState = Random.Range(0, 2);
+        if (rState == 0)
         {
             GenerateNewOuterAttackState();
         }
@@ -108,7 +109,7 @@ public class SartenController : MonoBehaviour
                 Stomp();
                 state = States.Awake;
                 break;
-            case States.LauchFork:
+            case States.LaunchSpatula:
                 LaunchFork();
                 state = States.Awake;
                 break;
@@ -122,7 +123,8 @@ public class SartenController : MonoBehaviour
                 break;
             case States.Smash:
                 break;
-                
+            case States.Defeated:
+                break;
         }
 
         Invoke("AI", attackDelay);
