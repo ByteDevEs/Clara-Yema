@@ -34,7 +34,7 @@ public class MainMenuController : MonoBehaviour
     
     public void LoadArcade()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
         Play();
     }
 
