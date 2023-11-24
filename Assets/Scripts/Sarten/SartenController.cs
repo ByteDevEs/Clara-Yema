@@ -95,7 +95,6 @@ public class SartenController : MonoBehaviour
     
     private void AI()
     {
-        print("AI update state");
         switch (state)
         {
             case States.WaitingForPlayers:
