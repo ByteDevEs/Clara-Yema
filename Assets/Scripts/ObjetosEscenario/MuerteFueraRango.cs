@@ -10,7 +10,6 @@ public class MuerteFueraRango : MonoBehaviour
     
     private PlayerController playerController;
     private Vector3 lastPosition; // Almacena la �ltima posici�n v�lida del personaje.
-    private bool dead;
 
     void Start()
     {
@@ -28,9 +27,19 @@ public class MuerteFueraRango : MonoBehaviour
         }
     }
     
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("InRange"))
+        {
+            if (playerController.Grounded())
+            {
+                lastPosition = transform.position;
+            }
+        }
+    }
+    
     private void Respawn()
     {
-        dead = true;
         GameObject gO = Instantiate(blackScreenGameObject, transform.position, Quaternion.identity);
         gO.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
         gO.GetComponent<Canvas>().worldCamera = FindObjectOfType<SplitScreenEffect>().Screens.Find(x => x.Target == transform).Camera;
@@ -40,21 +49,5 @@ public class MuerteFueraRango : MonoBehaviour
     public void ResetPosition()
     {
         transform.position = lastPosition;
-        dead = false;
     }
-
-    void Update()
-    {
-        // Actualizamos la �ltima posici�n v�lida en cada frame, pero evitamos actualizarla en el borde.
-        if (playerController.Grounded() && !dead)
-        {
-            if (Vector3.Distance(transform.position, lastPosition) > 1f)
-            {
-                lastPosition = transform.position;
-                //Debug.Log("�ltima posici�n v�lida actualizada: " + lastPosition);
-            }
-        }
-
-    }
-
 }

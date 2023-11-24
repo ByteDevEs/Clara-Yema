@@ -115,7 +115,6 @@ public class SartenController : MonoBehaviour
                 break;
             case States.Dash:
                 DashToPlayer();
-                state = States.Awake;
                 break;
             case States.Dizzy:
                 break;
@@ -246,6 +245,9 @@ public class SartenController : MonoBehaviour
             cController.Move(direction * (dashSpeed * speed * Time.deltaTime));
             yield return new WaitForEndOfFrame();
         }
+        
+        if(state != States.Dizzy)
+            state = States.Awake;
     }
 
     private GameObject GetNearestPlayer()
@@ -291,7 +293,16 @@ public class SartenController : MonoBehaviour
             }
         }
     }
-    
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("BossFightProp"))
+        {
+            if(state == States.Dash)
+                state = States.Dizzy;
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
