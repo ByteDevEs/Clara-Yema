@@ -116,6 +116,7 @@ public class SartenController : MonoBehaviour
                 DashToPlayer();
                 break;
             case States.Dizzy:
+                Invoke("CheckDizzy", 5f);
                 break;
             case States.Mix:
                 break;
@@ -126,6 +127,14 @@ public class SartenController : MonoBehaviour
         }
 
         Invoke("AI", attackDelay);
+    }
+
+    private void CheckDizzy()
+    {
+        if(bothInside)
+            GenerateNewInnerAttackState();
+        else
+            state = States.Awake;
     }
 
     private void LaunchFork()
