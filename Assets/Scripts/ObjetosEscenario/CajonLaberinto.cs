@@ -6,8 +6,8 @@ using UnityEngine;
 public class CajonLaberinto : MonoBehaviour
 {
     //Cambia la escena al laberinto
-    public void onTriggerEnter()
+    public void onTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(3);
+        if (other.gameObject.CompareTag("Player"))  SceneManager.LoadScene(3);
     }
 }
