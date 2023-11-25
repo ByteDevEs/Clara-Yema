@@ -3,7 +3,17 @@ guid: 93ca2d9afc9b149458a8e51e85bc058f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textura cara
+    second: {fileID: 2100000, guid: 9643c976db6786f489806562d661de82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: textura_cuerpo
+    second: {fileID: 2100000, guid: ff2560177a2e86d469d3bd16e77f9e94, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
