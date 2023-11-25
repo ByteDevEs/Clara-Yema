@@ -55,7 +55,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if(SceneManager.GetActiveScene().buildIndex != 0)
+        if(SceneManager.GetActiveScene().buildIndex != 1)
             return;
         int index = players.FindIndex(x => x.input.devices.Contains(context.control.device));
         
@@ -85,7 +85,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex != 0)
+        if(SceneManager.GetActiveScene().buildIndex != 1)
             return;
         
         if(tiempo > 0)
@@ -136,7 +136,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
     {
-        if(scene != SceneManager.GetSceneByBuildIndex(1))
+        if(scene != SceneManager.GetSceneByBuildIndex(2))
             return;
         
         //Set the device to the player

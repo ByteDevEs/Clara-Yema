@@ -28,13 +28,13 @@ public class MainMenuController : MonoBehaviour
     
     public void LoadHistoria()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         Play();
     }
     
     public void LoadArcade()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
         Play();
     }
 
