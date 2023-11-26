@@ -28,17 +28,20 @@ public class Explosion : MonoBehaviour
         // Aplica una fuerza a todos los objetos dentro del radio.
         foreach (Collider obj in objectsInRadius)
         {
-            if (obj.gameObject != gameObject)  // Evita afectar al propio personaje.
+            // Intenta encontrar el Rigidbody en el objeto o en su transformación padre.
+            Rigidbody rb = obj.GetComponent<Rigidbody>();
+            if (rb == null)
             {
-                Rigidbody rb = obj.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    // Calcula la dirección desde el personaje al objeto.
-                    Vector3 direction = obj.transform.position - transform.position;
+                rb = obj.transform.GetComponentInParent<Rigidbody>();
+            }
 
-                    // Aplica la fuerza para lanzar el objeto con componente vertical adicional.
-                    rb.AddForce(direction.normalized * explosionForce + Vector3.up * verticalForce, ForceMode.Impulse);
-                }
+            if (rb != null && rb.gameObject != gameObject)  // Evita afectar al propio personaje.
+            {
+                // Calcula la dirección desde el personaje al objeto.
+                Vector3 direction = obj.transform.position - transform.position;
+
+                // Aplica la fuerza para lanzar el objeto con componente vertical adicional.
+                rb.AddForce(direction.normalized * explosionForce + Vector3.up * verticalForce, ForceMode.Impulse);
             }
         }
     }
