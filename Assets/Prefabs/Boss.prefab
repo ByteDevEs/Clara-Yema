@@ -158,8 +158,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.2319198, y: 0.5298371, z: 0.47787905}
-  m_Center: {x: 0, y: 1.0674536, z: -0.2610605}
+  m_Size: {x: 2.2319198, y: 0.8537723, z: 1.0150667}
+  m_Center: {x: -0, y: 0.90549153, z: -0.007526793}
 --- !u!1 &802766751909449933
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,8 +424,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.2319198, y: 0.5298371, z: 0.47787905}
-  m_Center: {x: 0, y: 1.0674536, z: 0.26106048}
+  m_Size: {x: 2.2319198, y: 0.8537723, z: 1.0150667}
+  m_Center: {x: -0, y: 0.90549153, z: -0.007526793}
 --- !u!1 &4392493695588418716
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f4ddfbae689e04d9800927b1b90765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftFork: {fileID: 0}
+  rightFork: {fileID: 0}
   healthController: {fileID: 3541408048815571570}
   bothInside: 0
   playerCount: 0
@@ -485,7 +487,6 @@ MonoBehaviour:
   attackDelay: 3
   dashSpeed: 20
   state: 4
-  outerAttack: 0
 --- !u!95 &3875539143855405439
 Animator:
   serializedVersion: 5
@@ -544,7 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   health: 100
-  bossCanvasPrefab: {fileID: 424601668254599780, guid: 8839f8f09747e0a4396e14840fa6a053, type: 3}
+  bossCanvas: {fileID: 0}
 --- !u!143 &4876817121828669135
 CharacterController:
   m_ObjectHideFlags: 0

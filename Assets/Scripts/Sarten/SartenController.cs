@@ -53,6 +53,40 @@ public class SartenController : MonoBehaviour
         players = FindObjectsOfType<PlayerController>().ToList().ConvertAll(x => x.gameObject);
 		AI();
     }
+    
+    private void AI()
+    {
+        switch (state)
+        {
+            case States.WaitingForPlayers:
+                Invoke("AI", 0);
+                return;
+            case States.Awake:
+                GenerateNewState();
+                Invoke("AI", 0);
+                return;
+            case States.Stomp:
+                Stomp();
+                break;
+            case States.LaunchSpatula:
+                LaunchFork();
+                break;
+            case States.Dash:
+                DashToPlayer();
+                break;
+            case States.Dizzy:
+                Invoke("CheckDizzy", 5f);
+                break;
+            case States.Mix:
+                Mix();
+                break;
+            case States.Smash:
+                Smash();
+                break;
+            case States.Defeated:
+                break;
+        }
+    }
 
     void GenerateNewOuterAttackState()
     {
@@ -93,40 +127,26 @@ public class SartenController : MonoBehaviour
         }
     }
     
-    private void AI()
+    private void Mix()
     {
-        switch (state)
-        {
-            case States.WaitingForPlayers:
-                Invoke("AI", 0);
-                return;
-            case States.Awake:
-                GenerateNewState();
-                Invoke("AI", 0);
-                return;
-            case States.Stomp:
-                Stomp();
-                state = States.Awake;
-                break;
-            case States.LaunchSpatula:
-                LaunchFork();
-                state = States.Awake;
-                break;
-            case States.Dash:
-                DashToPlayer();
-                break;
-            case States.Dizzy:
-                Invoke("CheckDizzy", 5f);
-                break;
-            case States.Mix:
-                break;
-            case States.Smash:
-                break;
-            case States.Defeated:
-                break;
-        }
-
+        animator.SetTrigger("Mix");
+    }
+    
+    public void EndMix()
+    {
         Invoke("AI", attackDelay);
+        state = States.Awake;
+    }
+    
+    void Smash()
+    {
+        animator.SetTrigger("Smash");
+    }
+    
+    public void EndSmash()
+    {
+        Invoke("AI", attackDelay);
+        state = States.Awake;
     }
 
     private void CheckDizzy()
@@ -135,6 +155,7 @@ public class SartenController : MonoBehaviour
             GenerateNewInnerAttackState();
         else
             state = States.Awake;
+        Invoke("AI", 0);
     }
 
     private void LaunchFork()
@@ -154,6 +175,7 @@ public class SartenController : MonoBehaviour
         }
         
         animator.SetTrigger("LaunchFork");
+        Invoke("AI", attackDelay+1f);
     }
     
     IEnumerator MoveForkTime(GameObject fork, float time, Vector3 position)
@@ -187,6 +209,7 @@ public class SartenController : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         animator.enabled = true;
+        state = States.Awake;
     }
 
     private void Stomp()
@@ -215,7 +238,19 @@ public class SartenController : MonoBehaviour
         direction.y = 0;
         direction.Normalize();
         if(stompCoroutine == null)
-            stompCoroutine = StartCoroutine(MoveTime(5f, direction));
+            stompCoroutine = StartCoroutine(MoveTimeStomp(5f, direction));
+    }
+    
+    IEnumerator MoveTimeStomp(float time, Vector3 direction)
+    {
+        float timeLeft = time;
+        while (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            float speed = 1 - Mathf.Pow((time - timeLeft) / 3, 0.05f);
+            cController.Move(direction * (dashSpeed * speed * Time.deltaTime));
+            yield return new WaitForEndOfFrame();
+        }
     }
     
     private void StopStompMovement()
@@ -225,6 +260,8 @@ public class SartenController : MonoBehaviour
             StopCoroutine(stompCoroutine);
             stompCoroutine = null;
         }
+        state = States.Awake;
+        Invoke("AI", attackDelay);
     }
 
     private void DashToPlayer()
@@ -256,6 +293,7 @@ public class SartenController : MonoBehaviour
         
         if(state != States.Dizzy)
             state = States.Awake;
+        Invoke("AI", attackDelay);
     }
 
     private GameObject GetNearestPlayer()
@@ -298,6 +336,7 @@ public class SartenController : MonoBehaviour
             if (playerCount == 2)
             {
                 bothInside = true;
+                animator.SetBool("BothInside", true);
             }
         }
     }
@@ -319,6 +358,7 @@ public class SartenController : MonoBehaviour
             if (playerCount != 2)
             {
                 bothInside = false;
+                animator.SetBool("BothInside", false);
             }
         }
     }

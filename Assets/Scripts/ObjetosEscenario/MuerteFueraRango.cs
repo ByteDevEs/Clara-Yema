@@ -31,10 +31,7 @@ public class MuerteFueraRango : MonoBehaviour
     {
         if (other.CompareTag("InRange"))
         {
-            if (playerController.Grounded())
-            {
-                lastPosition = transform.position;
-            }
+            lastPosition = transform.position;
         }
     }
     
