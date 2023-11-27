@@ -32,6 +32,11 @@ public class MainMenuController : MonoBehaviour
         Play();
     }
     
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     public void LoadArcade()
     {
         SceneManager.LoadScene(4);
