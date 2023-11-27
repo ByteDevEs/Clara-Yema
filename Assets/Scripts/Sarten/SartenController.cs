@@ -23,6 +23,7 @@ public class SartenController : MonoBehaviour
     [Header("Boss Fight")]
     [SerializeField]
     private GameObject[] fallingProps;
+    private List<GameObject> fallingPropsList = new List<GameObject>();
     
     [HideInInspector]
     public bool bothInside = false;
@@ -117,7 +118,10 @@ public class SartenController : MonoBehaviour
         }
         else
         {
-            state = States.Dash;
+            if(fallingPropsList.Count > 0)
+                state = States.Dash;
+            else
+                state = States.Stomp;
         }
     }
     
@@ -225,14 +229,17 @@ public class SartenController : MonoBehaviour
 
     public void SpawnProp()
     {
+        if(fallingPropsList.Count > 1)
+            return;
         int num = Random.Range(1, fallingProps.Length);
         for (int i = 0; i < num; i++)
         {
             int r = Random.Range(0, fallingProps.Length);
             //Circle spawn
             float angle = Random.Range(0, 360);
-            Vector3 spawnPos = transform.position + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * Random.Range(5,10);
+            Vector3 spawnPos = transform.position + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * Random.Range(10,15);
             GameObject gO = Instantiate(fallingProps[r], spawnPos + Vector3.up * 10, Quaternion.identity);
+            fallingPropsList.Add(gO);
         }
     }
     
@@ -352,6 +359,7 @@ public class SartenController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("BossFightProp"))
         {
+            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(1000, transform.position, 10);
             if(state == States.Dash)
                 state = States.Dizzy;
         }
