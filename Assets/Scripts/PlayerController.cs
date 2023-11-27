@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -104,23 +106,45 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Damager"))
         {
             healthController.TakeDamage(1);
-            MakeInvulnerable();
+            MakeInvulnerable(other.gameObject);
         }
         else if (other.gameObject.CompareTag("Boss"))
         {
-            if(other.GetComponent<SartenController>().state == SartenController.States.Dash)
+            if(other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Dash)
             {
                 healthController.TakeDamage(1);
-                MakeInvulnerable();
+                MakeInvulnerable(other.gameObject);
             }
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        
+    }
+
     private SkinnedMeshRenderer[] vulnerabilityMeshes;
     bool invulnerable = false;
-    void MakeInvulnerable()
+    public void MakeInvulnerable(GameObject other)
     {
-        print("MakeInvulnerable");
+        //Move player to the further spawner which is not blocked by any collision
+        Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
+        
+        //Remove the spawner which is blocked by a collision
+        foreach (Vector3 spawner in spawners)
+        {
+            if (Physics.BoxCast(spawner, Vector3.one * 0.5f, Vector3.up, Quaternion.identity, 1f))
+            {
+                spawners = spawners.Where(x => x != spawner).ToArray();
+            }
+        }
+        
+        //Get the furthest spawner
+        Vector3 furthestSpawner = spawners.OrderByDescending(x => Vector3.Distance(x, transform.position)).First();
+        
+        //Move the player to the furthest spawner
+        transform.position = furthestSpawner;
+        
         vulnerabilityMeshes = GetComponentsInChildren<SkinnedMeshRenderer>();
         invulnerable = true;
         int times = 10;

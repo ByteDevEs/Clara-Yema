@@ -11,6 +11,7 @@ TagManager:
   - BossFightProp
   - Broom
   - Boss
+  - Spawner
   layers:
   - Default
   - TransparentFX
