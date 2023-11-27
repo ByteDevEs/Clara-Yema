@@ -15,6 +15,7 @@ public class SartenController : MonoBehaviour
     [Header("Forks")]
     [SerializeField] private GameObject leftFork;
     [SerializeField] private GameObject rightFork;
+    [SerializeField] private Collider bossCollider;
     
     public HealthController healthController;
     private Rigidbody rb;
@@ -57,7 +58,21 @@ public class SartenController : MonoBehaviour
         players = FindObjectsOfType<PlayerController>().ToList().ConvertAll(x => x.gameObject);
 		AI();
     }
-    
+
+    private void Update()
+    {
+        foreach (var prop in fallingPropsList)
+        {
+            if(prop == null)
+                fallingPropsList.Remove(prop);
+        }
+        
+        if(state is States.Awake or States.Stomp or States.Dash or States.LaunchSpatula)
+            bossCollider.isTrigger = false;
+        else
+            bossCollider.isTrigger = true;
+    }
+
     private void AI()
     {
         switch (state)
@@ -358,7 +373,7 @@ public class SartenController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("BossFightProp"))
         {
-            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(1000, transform.position, 10);
+            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(100000, transform.position, 100);
             if(state == States.Dash)
                 state = States.Dizzy;
         }
