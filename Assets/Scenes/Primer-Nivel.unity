@@ -3222,7 +3222,7 @@ GameObject:
   - component: {fileID: 860392443}
   - component: {fileID: 860392442}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Sombra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
