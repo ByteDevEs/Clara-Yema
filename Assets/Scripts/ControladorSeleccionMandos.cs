@@ -115,7 +115,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
                 StartButton.SetActive(false);
             }
         }
-        else
+        else if(StartButton != null)
         {
             StartButton.SetActive(false);
         }
