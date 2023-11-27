@@ -12,7 +12,7 @@ public class StopBroom : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // Verifica si ha colisionado con el objeto escoba y no está fijado ya.
-        if (collision.gameObject.CompareTag("Escoba") && !fijado)
+        if (collision.gameObject.CompareTag("Broom") && !fijado)
         {
             // Desactiva el Rigidbody del cucharón para que se quede fijo.
             Rigidbody rb = cucharon.GetComponent<Rigidbody>();
