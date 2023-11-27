@@ -62,5 +62,9 @@ public class ArenaTriggerDetector : MonoBehaviour
                 players.Remove(other.gameObject);
             }
         }
+        else if (other.gameObject.CompareTag("BossFightProp"))
+        {
+            Destroy(other.gameObject, 5f);
+        }
     }
 }

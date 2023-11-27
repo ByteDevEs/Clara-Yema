@@ -103,7 +103,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 6c8febc24f0e27f4e8625dc7cfde7c62, type: 3}
 --- !u!1 &802095904902061748
@@ -171,14 +171,13 @@ GameObject:
   - component: {fileID: 5599012947869621856}
   - component: {fileID: 5844315455231772647}
   - component: {fileID: 8650611307151004569}
-  - component: {fileID: 3227487035411753306}
   m_Layer: 0
   m_Name: StompEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5599012947869621856
 Transform:
   m_ObjectHideFlags: 0
@@ -244,28 +243,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3227487035411753306
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802766751909449933}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2096267028493120146
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +416,7 @@ GameObject:
   - component: {fileID: 3875539143855405439}
   - component: {fileID: 2425429780463785433}
   - component: {fileID: 3541408048815571570}
-  - component: {fileID: 4876817121828669135}
+  - component: {fileID: 5721564625430535528}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -456,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 4392493695588418716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4210132615948397974}
@@ -464,7 +441,7 @@ Transform:
   - {fileID: 2773118797532085810}
   - {fileID: 5599012947869621856}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3344461666938857057
 MonoBehaviour:
@@ -478,16 +455,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f4ddfbae689e04d9800927b1b90765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftFork: {fileID: 0}
-  rightFork: {fileID: 0}
+  leftFork: {fileID: 802095904902061748}
+  rightFork: {fileID: 2279639700015903623}
   healthController: {fileID: 3541408048815571570}
-  fallingProps: []
+  fallingProps:
+  - {fileID: 4141396401174428189, guid: 2d2b8429577cf5342882e3ed71a1748d, type: 3}
   bothInside: 0
   playerCount: 0
   timer: 0
   attackDelay: 3
-  dashSpeed: 20
-  state: 4
+  dashSpeed: 150
+  state: 0
 --- !u!95 &3875539143855405439
 Animator:
   serializedVersion: 5
@@ -547,32 +525,33 @@ MonoBehaviour:
   maxHealth: 50
   health: 100
   bossCanvas: {fileID: 0}
---- !u!143 &4876817121828669135
-CharacterController:
+--- !u!54 &5721564625430535528
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4392493695588418716}
-  m_Material: {fileID: 0}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &7086298020612063507
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +655,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1550514412580984892, guid: 6c8febc24f0e27f4e8625dc7cfde7c62, type: 3}
 --- !u!1 &7948149429140668646
@@ -780,9 +759,9 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: 6c8febc24f0e27f4e8625dc7cfde7c62, type: 3}
 --- !u!1 &8449192431230548476

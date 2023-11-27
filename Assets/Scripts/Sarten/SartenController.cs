@@ -9,7 +9,7 @@ using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(HealthController), typeof(CharacterController))]
+[RequireComponent(typeof(HealthController))]
 public class SartenController : MonoBehaviour
 {
     [Header("Forks")]
@@ -17,7 +17,7 @@ public class SartenController : MonoBehaviour
     [SerializeField] private GameObject rightFork;
     
     public HealthController healthController;
-    private CharacterController cController;
+    private Rigidbody rb;
     private Animator animator;
     
     [Header("Boss Fight")]
@@ -53,7 +53,7 @@ public class SartenController : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        cController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
         players = FindObjectsOfType<PlayerController>().ToList().ConvertAll(x => x.gameObject);
 		AI();
     }
@@ -262,7 +262,7 @@ public class SartenController : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
             float speed = 1 - Mathf.Pow((time - timeLeft) / 3, 0.05f);
-            cController.Move(direction * (dashSpeed * speed * Time.deltaTime));
+            rb.MovePosition(transform.position + direction * (dashSpeed * speed * Time.deltaTime));
             yield return new WaitForEndOfFrame();
         }
     }
@@ -301,7 +301,7 @@ public class SartenController : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
             float speed = 1 - Mathf.Pow((time - timeLeft) / 3, 0.05f);
-            cController.Move(direction * (dashSpeed * speed * Time.deltaTime));
+            rb.MovePosition(transform.position + direction * (dashSpeed * speed * Time.deltaTime));
             yield return new WaitForEndOfFrame();
         }
         
@@ -350,7 +350,6 @@ public class SartenController : MonoBehaviour
             if (playerCount == 2)
             {
                 bothInside = true;
-                animator.SetBool("BothInside", true);
             }
         }
     }
@@ -373,7 +372,6 @@ public class SartenController : MonoBehaviour
             if (playerCount != 2)
             {
                 bothInside = false;
-                animator.SetBool("BothInside", false);
             }
         }
     }
