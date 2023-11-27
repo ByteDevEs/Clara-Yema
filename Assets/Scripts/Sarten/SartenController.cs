@@ -20,6 +20,9 @@ public class SartenController : MonoBehaviour
     private CharacterController cController;
     private Animator animator;
     
+    [Header("Boss Fight")]
+    [SerializeField]
+    private GameObject[] fallingProps;
     
     [HideInInspector]
     public bool bothInside = false;
@@ -87,19 +90,6 @@ public class SartenController : MonoBehaviour
                 break;
         }
     }
-
-    void GenerateNewOuterAttackState()
-    {
-        int rOuterAttack = Random.Range(0, 2);
-        if (rOuterAttack == 0)
-        {
-            state = States.Stomp;
-        }
-        else
-        {
-            state = States.LaunchSpatula;
-        }
-    }
     
     void GenerateNewInnerAttackState()
     {
@@ -116,10 +106,14 @@ public class SartenController : MonoBehaviour
 
     void GenerateNewState()
     {
-        int rState = Random.Range(0, 2);
+        int rState = Random.Range(0, 3);
         if (rState == 0)
         {
-            GenerateNewOuterAttackState();
+            state = States.Stomp;
+        }
+        else if (rState == 1)
+        {
+            state = States.LaunchSpatula;
         }
         else
         {
@@ -227,7 +221,20 @@ public class SartenController : MonoBehaviour
 
         animator.SetTrigger("Stomp");
     }
-    
+
+
+    public void SpawnProp()
+    {
+        int num = Random.Range(1, fallingProps.Length);
+        for (int i = 0; i < num; i++)
+        {
+            int r = Random.Range(0, fallingProps.Length);
+            //Circle spawn
+            float angle = Random.Range(0, 360);
+            Vector3 spawnPos = transform.position + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * Random.Range(5,10);
+            GameObject gO = Instantiate(fallingProps[r], spawnPos + Vector3.up * 10, Quaternion.identity);
+        }
+    }
     
     Coroutine stompCoroutine;
     private void MoveToPlayerStomp()
