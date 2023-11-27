@@ -26,7 +26,6 @@ public class SartenController : MonoBehaviour
     private GameObject[] fallingProps;
     private List<GameObject> fallingPropsList = new List<GameObject>();
     
-    [HideInInspector]
     public bool bothInside = false;
     
     [SerializeField] [ReadOnly] int playerCount = 0;
@@ -61,16 +60,24 @@ public class SartenController : MonoBehaviour
 
     private void Update()
     {
-        foreach (var prop in fallingPropsList)
-        {
-            if(prop == null)
-                fallingPropsList.Remove(prop);
-        }
+        fallingPropsList.RemoveAll(item => item == null);
         
         if(state is States.Awake or States.Stomp or States.Dash or States.LaunchSpatula)
             bossCollider.isTrigger = false;
         else
+        {
+            foreach (var player in players)
+            {
+                if (Vector3.Distance(transform.position, player.transform.position) < 10)
+                {
+                    bossCollider.isTrigger = false;
+                    player.GetComponent<PlayerController>().rb.isKinematic = false;
+                    player.GetComponent<PlayerController>().rb.AddExplosionForce(100, transform.position, 10);
+                    break;
+                }
+            }
             bossCollider.isTrigger = true;
+        }
     }
 
     private void AI()
@@ -384,10 +391,17 @@ public class SartenController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerCount--;
+            StartCoroutine(DelayedRecompose(other));
             if (playerCount != 2)
             {
                 bothInside = false;
             }
         }
+    }
+    
+    IEnumerator DelayedRecompose(Collider other)
+    {
+        yield return new WaitForSeconds(0.5f);
+        other.GetComponent<PlayerController>().rb.isKinematic = false;
     }
 }

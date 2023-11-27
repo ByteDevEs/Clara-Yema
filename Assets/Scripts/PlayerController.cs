@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController), typeof(HealthController))]
+[RequireComponent(typeof(CharacterController), typeof(HealthController), typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -13,12 +13,16 @@ public class PlayerController : MonoBehaviour
     private float jumpHeight = 1.0f;
     [SerializeField]
     private float gravityValue = -9.81f;
+    [HideInInspector]
     public CharacterController controller;
+    [HideInInspector]
+    public Rigidbody rb;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     public Vector3 move;
     private Vector2 movementInput = Vector2.zero;
     private bool jumped = false;
+    
     
     [Header("HealthSystem")]
     [SerializeField] protected HealthController healthController;
@@ -29,6 +33,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
+        rb = gameObject.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
     }
 
     public void OnMove(InputAction.CallbackContext context)
