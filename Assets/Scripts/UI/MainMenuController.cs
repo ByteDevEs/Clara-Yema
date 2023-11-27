@@ -43,6 +43,11 @@ public class MainMenuController : MonoBehaviour
         Play();
     }
 
+    public void LoadCredits() 
+    {
+        SceneManager.LoadScene(5);
+    }
+
     public void AbrirOpciones()
     {
         opciones.SetActive(true);
