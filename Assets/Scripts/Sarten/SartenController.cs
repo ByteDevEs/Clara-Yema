@@ -28,7 +28,7 @@ public class SartenController : MonoBehaviour
     
     public bool bothInside = false;
     
-    [SerializeField] [ReadOnly] int playerCount = 0;
+    [SerializeField] [ReadOnly] private List<GameObject> playerInside;
     [SerializeField] [ReadOnly] float timer = 0;
     [SerializeField] float attackDelay = 0;
     [SerializeField] float dashSpeed = 5;
@@ -61,21 +61,9 @@ public class SartenController : MonoBehaviour
     private void Update()
     {
         fallingPropsList.RemoveAll(item => item == null);
-        
-        if(state is States.Awake or States.Stomp or States.Dash or States.LaunchSpatula)
-            bossCollider.isTrigger = false;
-        else
+
+        if (state is not (States.Awake or States.Stomp or States.Dash or States.LaunchSpatula))
         {
-            foreach (var player in players)
-            {
-                if (Vector3.Distance(transform.position, player.transform.position) < 10)
-                {
-                    bossCollider.isTrigger = false;
-                    player.GetComponent<PlayerController>().rb.isKinematic = false;
-                    player.GetComponent<PlayerController>().rb.AddExplosionForce(100, transform.position, 10);
-                    break;
-                }
-            }
             bossCollider.isTrigger = true;
         }
     }
@@ -132,11 +120,17 @@ public class SartenController : MonoBehaviour
         int rState = Random.Range(0, 3);
         if (rState == 0)
         {
-            state = States.Stomp;
+            if(fallingPropsList.Count > 1)
+                state = States.Dash;
+            else
+                state = States.Stomp;
         }
         else if (rState == 1)
         {
-            state = States.LaunchSpatula;
+            if(fallingPropsList.Count == 0)
+                state = States.LaunchSpatula;
+            else
+                state = States.Dash;
         }
         else
         {
@@ -259,7 +253,7 @@ public class SartenController : MonoBehaviour
             int r = Random.Range(0, fallingProps.Length);
             //Circle spawn
             float angle = Random.Range(0, 360);
-            Vector3 spawnPos = transform.position + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * Random.Range(10,15);
+            Vector3 spawnPos = transform.position + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * Random.Range(15,20);
             GameObject gO = Instantiate(fallingProps[r], spawnPos + Vector3.up * 10, Quaternion.identity);
             fallingPropsList.Add(gO);
         }
@@ -364,15 +358,24 @@ public class SartenController : MonoBehaviour
         return furthestPlayer;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            playerCount++;
-            if (playerCount == 2)
+            other.GetComponent<PlayerController>().rb.isKinematic = false;
+            other.GetComponent<PlayerController>().rb.AddExplosionForce(100, transform.position, 10);
+            if (!playerInside.Contains(other.gameObject))
             {
-                bothInside = true;
+                playerInside.Add(other.gameObject);
+                if (playerInside.Count == 2)
+                {
+                    bothInside = true;
+                }
             }
+        }
+        else if(other.CompareTag("Damager"))
+        {
+            healthController.TakeDamage(1);
         }
     }
 
@@ -390,11 +393,16 @@ public class SartenController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerCount--;
-            StartCoroutine(DelayedRecompose(other));
-            if (playerCount != 2)
+            if (playerInside.Contains(other.gameObject))
             {
-                bothInside = false;
+                StartCoroutine(DelayedRecompose(other));
+                playerInside.Remove(other.gameObject);
+                if (playerInside.Count != 2)
+                {
+                    bothInside = false;
+                }
+                if(playerInside.Count == 0)
+                    bossCollider.isTrigger = false;
             }
         }
     }
@@ -402,6 +410,6 @@ public class SartenController : MonoBehaviour
     IEnumerator DelayedRecompose(Collider other)
     {
         yield return new WaitForSeconds(0.5f);
-        other.GetComponent<PlayerController>().rb.isKinematic = false;
+        other.GetComponent<PlayerController>().rb.isKinematic = true;
     }
 }

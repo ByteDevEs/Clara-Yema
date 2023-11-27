@@ -28,7 +28,7 @@ public class MainMenuController : MonoBehaviour
     
     public void LoadHistoria()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("EscenaHistoria");
         Play();
     }
     
@@ -39,8 +39,13 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadArcade()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("SceneLaberinto");
         Play();
+    }
+
+    public void LoadCredits() 
+    {
+        SceneManager.LoadScene("Credits");
     }
 
     public void AbrirOpciones()

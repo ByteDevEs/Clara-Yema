@@ -30,7 +30,6 @@ public class ControladorSeleccionMandos : MonoBehaviour
     {
         if(StartButton != null)
             StartButton.SetActive(false);
-        DontDestroyOnLoad(this.gameObject);
         // StartButton add listener
         if(StartButton != null)
             StartButton.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(StartGame);
@@ -41,6 +40,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
         {
             this.players.Add((player, State.None));
         }
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void OnEnable()
@@ -55,7 +55,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if(SceneManager.GetActiveScene().buildIndex != 1)
+        if(SceneManager.GetActiveScene().name != "MenuPrincipal")
             return;
         int index = players.FindIndex(x => x.input.devices.Contains(context.control.device));
         
@@ -85,7 +85,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex != 1)
+        if(SceneManager.GetActiveScene().name != "MenuPrincipal")
             return;
         
         if(tiempo > 0)
@@ -94,13 +94,15 @@ public class ControladorSeleccionMandos : MonoBehaviour
         }
         
         State playerState1 = players[0].state;
-        if(P1Animator.isActiveAndEnabled)
-            P1Animator.SetInteger("State",(int)playerState1);
+        if(P1Animator != null)
+            if(P1Animator.isActiveAndEnabled)
+                P1Animator.SetInteger("State",(int)playerState1);
         
         
         State playerState2 = players[1].state;
-        if(P2Animator.isActiveAndEnabled)
-            P2Animator.SetInteger("State",(int)playerState2);
+        if(P2Animator != null)
+            if(P2Animator.isActiveAndEnabled)
+                P2Animator.SetInteger("State",(int)playerState2);
 
         if (players.Count >= 2 && playerState1 != State.None && playerState2 != State.None)
         {
@@ -113,7 +115,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
                 StartButton.SetActive(false);
             }
         }
-        else
+        else if(StartButton != null)
         {
             StartButton.SetActive(false);
         }
@@ -136,7 +138,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
     {
-        if(scene != SceneManager.GetSceneByBuildIndex(2))
+        if(scene != SceneManager.GetSceneByName("EscenaHistoria"))
             return;
         
         //Set the device to the player

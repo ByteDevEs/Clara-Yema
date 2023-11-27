@@ -14,7 +14,7 @@ public class PauseMenuController : MonoBehaviour
     public void LoadMainMenu()
     {
         if (mainCanvas) { 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("MenuPrincipal");
             Time.timeScale = 1f;
 
         }

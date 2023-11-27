@@ -7133,7 +7133,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -7294,7 +7294,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -7348,6 +7348,9 @@ MonoBehaviour:
     m_Bits: 4294967295
   markedColor: {r: 0, g: 1, b: 0, a: 1}
   distanceStop: 3
+  objectsToAttract:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2036630841985191367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7411,7 +7414,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5111311077764254347}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

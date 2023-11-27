@@ -16,7 +16,7 @@ public class Atraer : MonoBehaviour
     private Color originalColor;           // Color original del objeto marcado.
     private bool isMarked = false;         // Estado de marcado.
     private bool isAttracting = false;     // Estado de atracción.
-
+    public LayerMask objectsToAttract;        // Capas de los objetos que se lanzarán.
 
     public void SkillSquare(InputAction.CallbackContext context)
     {
@@ -59,7 +59,7 @@ public class Atraer : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, shootingRange, shootableLayer))
+        if (Physics.Raycast(ray, out hit, shootingRange, objectsToAttract))
         {
             GameObject hitObject = hit.transform.gameObject;
             Rigidbody rb = hitObject.GetComponent<Rigidbody>();
@@ -70,6 +70,7 @@ public class Atraer : MonoBehaviour
             }
         }
     }
+
 
     void MarkObject(GameObject objToMark)
     {

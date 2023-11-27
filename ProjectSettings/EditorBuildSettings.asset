@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneLaberinto.unity
     guid: 21a45f2fb23b70e4ba5fea1210a2342b
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: cd8498cb2450d304da51837340cd6e93
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f0d71b4c8154dd44982c623babe777cb, type: 2}

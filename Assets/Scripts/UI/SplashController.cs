@@ -9,6 +9,8 @@ public class SplashController : MonoBehaviour
 {
     private float elapsedTime = 0f;
     private bool loadScene = false;
+    public GameObject controlador1;
+    public GameObject controlador2;
 
     void Update()
     {
@@ -19,13 +21,17 @@ public class SplashController : MonoBehaviour
         if (elapsedTime >= 10f && !loadScene)
         {
             loadScene = true;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("MenuPrincipal");
         }
     }
 
     public void OnButton(InputAction.CallbackContext context)
     {
-        SceneManager.LoadScene(1);
+        Destroy(controlador1);
+        Destroy(controlador2);
+
+        SceneManager.LoadScene("MenuPrincipal");
+
     }
 
 }
