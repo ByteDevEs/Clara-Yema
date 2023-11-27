@@ -373,6 +373,10 @@ public class SartenController : MonoBehaviour
                 }
             }
         }
+        else if(other.CompareTag("Damager"))
+        {
+            healthController.TakeDamage(1);
+        }
     }
 
     private void OnCollisionEnter(Collision other)
