@@ -6,18 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Beat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Beat.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Orbit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Orbit.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DeathCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DeathCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FallingProp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FallingProp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camaras/DeathCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camaras/DeathCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/MuerteFueraRango.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/MuerteFueraRango.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuPrincipal.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuPrincipal.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ControladorSeleccionMandos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ControladorSeleccionMandos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/CajonLaberinto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/CajonLaberinto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuAutoSeleccionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuAutoSeleccionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SplashController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SplashController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/CanvasSizeCorrectInAwakeAndStart.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/00/a09deceb/GOAction.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -139,7 +135,7 @@
       <workItem from="1700648857213" duration="104000" />
       <workItem from="1700748663341" duration="4472000" />
       <workItem from="1700843931616" duration="3011000" />
-      <workItem from="1701094269197" duration="7851000" />
+      <workItem from="1701094269197" duration="9289000" />
     </task>
     <servers />
   </component>

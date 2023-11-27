@@ -21,7 +21,7 @@ public class SplashController : MonoBehaviour
         if (elapsedTime >= 10f && !loadScene)
         {
             loadScene = true;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("MenuPrincipal");
         }
     }
 
@@ -30,7 +30,7 @@ public class SplashController : MonoBehaviour
         Destroy(controlador1);
         Destroy(controlador2);
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MenuPrincipal");
 
     }
 

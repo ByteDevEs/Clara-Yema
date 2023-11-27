@@ -16,7 +16,7 @@ public class CajonLaberinto : MonoBehaviour
 
             if (playersInside >= 2) // Verifica si ambos jugadores están dentro
             {
-                SceneManager.LoadScene(4); // Carga la escena
+                SceneManager.LoadScene("SceneLaberinto"); // Carga la escena
             }
         }
     }

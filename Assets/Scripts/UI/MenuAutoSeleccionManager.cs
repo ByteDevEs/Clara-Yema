@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,8 @@ public class MenuAutoSeleccionManager : MonoBehaviour
 
     public float tiempoEntreBotones = 0.2f;
     public float tiempo;
-    
-    
+
+
     // Update is called once per frame
     public void Update()
     {
