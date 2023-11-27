@@ -1137,7 +1137,7 @@ GameObject:
   - component: {fileID: 5721564625430535528}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1159,7 +1159,7 @@ Transform:
   - {fileID: 2773118797532085810}
   - {fileID: 5599012947869621856}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3344461666938857057
 MonoBehaviour:
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 75
   health: 100
-  bossCanvas: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!54 &5721564625430535528
 Rigidbody:
   m_ObjectHideFlags: 0

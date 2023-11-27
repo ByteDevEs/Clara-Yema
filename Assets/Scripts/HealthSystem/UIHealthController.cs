@@ -4,17 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BossHealthController : HealthController
+public class UIHealthController : HealthController
 {
     [SerializeField]
-    private GameObject bossCanvas;
-    
-    Slider healthBar;
+    private Slider healthBar;
 
     private void Start()
     {
         base.Start();
-        healthBar = bossCanvas.GetComponentInChildren<Slider>();
     }
 
     // Update is called once per frame

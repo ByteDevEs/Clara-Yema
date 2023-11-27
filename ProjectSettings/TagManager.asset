@@ -10,6 +10,7 @@ TagManager:
   - FightWalls
   - BossFightProp
   - Broom
+  - Boss
   layers:
   - Default
   - TransparentFX

@@ -5,24 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3b29046-68ae-483f-be8a-4f1f1457243d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/InRange.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/InRange.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/barraboss-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/barraboss-02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/barraboss-03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/barraboss-03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/vidabossvacio-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/vidabossvacio-02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Orbit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Orbit.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Slam.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Slam.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/REMItexture.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/REMItexture.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/REMItexturewallpaper.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/REMItexturewallpaper.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Idle.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BossCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BossCanvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/MuerteFueraRango.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/MuerteFueraRango.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Diseno_personaje_Sarten.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Diseno_personaje_Sarten.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/BossHealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/UIHealthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/BossHealthController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/UIHealthController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +33,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

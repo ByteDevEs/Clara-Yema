@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 8591975940134689435}
   - component: {fileID: 8496338871801187753}
   - component: {fileID: 4345613725310496899}
-  - component: {fileID: 2740748757481017427}
   - component: {fileID: 3104503841210725266}
   - component: {fileID: 9002082750521608078}
+  - component: {fileID: 6652808800071941264}
   m_Layer: 10
   m_Name: Yema
   m_TagString: Player
@@ -39,7 +39,7 @@ Transform:
   m_Children:
   - {fileID: 6864335724186890744}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1360719557397732787
 CapsuleCollider:
@@ -247,7 +247,7 @@ MonoBehaviour:
   controller: {fileID: 3006661740864700225}
   rb: {fileID: 0}
   move: {x: 0, y: 0, z: 0}
-  healthController: {fileID: 2740748757481017427}
+  healthController: {fileID: 0}
   animator: {fileID: 6910623396269670983}
 --- !u!114 &8496338871801187753
 MonoBehaviour:
@@ -282,20 +282,6 @@ MonoBehaviour:
   dashSpeed: 30
   dashTime: 0.25
   dashCooldown: 1
---- !u!114 &2740748757481017427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5111311077764254347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d37e243de4fcaa47ba423268a6decf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
 --- !u!114 &3104503841210725266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +322,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &6652808800071941264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111311077764254347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81cae8fe10e232418a52f45bc25681c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  health: 3
+  healthBar: {fileID: 0}
 --- !u!1001 &3541200661378200411
 PrefabInstance:
   m_ObjectHideFlags: 0

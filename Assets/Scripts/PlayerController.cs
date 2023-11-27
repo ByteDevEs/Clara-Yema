@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController), typeof(HealthController), typeof(Rigidbody))]
+[RequireComponent(typeof(CharacterController), typeof(UIHealthController), typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
@@ -97,12 +97,60 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
     
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
+        if (invulnerable)
+            return;
         if (other.gameObject.CompareTag("Damager"))
         {
-            print("TriggerStay");
-            healthController.TakeDamage(Time.deltaTime);
+            healthController.TakeDamage(1);
+            MakeInvulnerable();
         }
+        else if (other.gameObject.CompareTag("Boss"))
+        {
+            if(other.GetComponent<SartenController>().state == SartenController.States.Dash)
+            {
+                healthController.TakeDamage(1);
+                MakeInvulnerable();
+            }
+        }
+    }
+
+    private SkinnedMeshRenderer[] vulnerabilityMeshes;
+    bool invulnerable = false;
+    void MakeInvulnerable()
+    {
+        print("MakeInvulnerable");
+        vulnerabilityMeshes = GetComponentsInChildren<SkinnedMeshRenderer>();
+        invulnerable = true;
+        int times = 10;
+        for (int i = 0; i < times; i++)
+        {
+            Invoke("MakeInvisible", 0.2f * i);
+            Invoke("MakeVisible", 0.2f * i + 0.1f);
+        }
+        
+        Invoke("EndInvulnerability", 0.1f * times);
+    }
+    
+    void MakeVisible()
+    {
+        foreach (SkinnedMeshRenderer mesh in vulnerabilityMeshes)
+        {
+            mesh.enabled = true;
+        }
+    }
+    
+    void MakeInvisible()
+    {
+        foreach (SkinnedMeshRenderer mesh in vulnerabilityMeshes)
+        {
+            mesh.enabled = false;
+        }
+    }
+    
+    void EndInvulnerability()
+    {
+        invulnerable = false;
     }
 }
