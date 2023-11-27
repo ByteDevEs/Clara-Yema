@@ -6,9 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Beat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Beat.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Orbit.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Orbit.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DeathCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DeathCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FallingProp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FallingProp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camaras/DeathCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camaras/DeathCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/MuerteFueraRango.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjetosEscenario/MuerteFueraRango.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,26 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Alejandro\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Alejandro\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Alejandro\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Alejandro\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Alejandro\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Alejandro\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Build/Clara Yema.exe" />
@@ -129,7 +139,7 @@
       <workItem from="1700648857213" duration="104000" />
       <workItem from="1700748663341" duration="4472000" />
       <workItem from="1700843931616" duration="3011000" />
-      <workItem from="1701094269197" duration="3424000" />
+      <workItem from="1701094269197" duration="7851000" />
     </task>
     <servers />
   </component>

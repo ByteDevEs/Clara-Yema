@@ -6,6 +6,9 @@ public class DeathCamera : MonoBehaviour
 {
     [HideInInspector]
     public MuerteFueraRango muerteFueraRango;
+    
+    public Canvas canvas;
+    
     public void ResetPosition()
     {
         muerteFueraRango.ResetPosition();
