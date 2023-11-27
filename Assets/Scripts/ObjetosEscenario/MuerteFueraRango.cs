@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using ProjectDawn.SplitScreen;
 using UnityEngine;
 
@@ -55,7 +56,30 @@ public class MuerteFueraRango : MonoBehaviour
     
     public void ResetPosition()
     {
-        transform.position = lastPosition;
+        if (FindObjectOfType<SartenController>().state != SartenController.States.WaitingForPlayers)
+        {
+            //Move player to the further spawner which is not blocked by any collision
+            Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
+        
+            //Remove the spawner which is blocked by a collision
+            foreach (Vector3 spawner in spawners)
+            {
+                if (Physics.BoxCast(spawner, Vector3.one * 0.5f, Vector3.up, Quaternion.identity, 1f))
+                {
+                    spawners = spawners.Where(x => x != spawner).ToArray();
+                }
+            }
+        
+            //Get the furthest spawner
+            Vector3 furthestSpawner = spawners.OrderByDescending(x => Vector3.Distance(x, transform.position)).First();
+        
+            //Move the player to the furthest spawner
+            transform.position = furthestSpawner;
+        }
+        else
+        {
+            transform.position = lastPosition;
+        }
         resetting = false;
     }
 }
