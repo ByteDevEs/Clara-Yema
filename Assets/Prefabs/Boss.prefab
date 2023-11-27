@@ -1159,7 +1159,7 @@ Transform:
   - {fileID: 2773118797532085810}
   - {fileID: 5599012947869621856}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3344461666938857057
 MonoBehaviour:
@@ -1183,7 +1183,7 @@ MonoBehaviour:
   playerInside: []
   timer: 0
   attackDelay: 3
-  dashSpeed: 150
+  dashSpeed: 600
   state: 0
 --- !u!95 &3875539143855405439
 Animator:
@@ -1219,7 +1219,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81cae8fe10e232418a52f45bc25681c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 75
   health: 100
   bossCanvas: {fileID: 0}
 --- !u!54 &5721564625430535528
@@ -1267,7 +1267,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -2341,6 +2341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210132615948397974}
   - component: {fileID: 6928290873296126107}
+  - component: {fileID: 5799013377499742977}
   m_Layer: 0
   m_Name: Sarten
   m_TagString: Untagged
@@ -2377,6 +2378,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8809cd78dc7422249ad68ed9a9f5acd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &5799013377499742977
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449192431230548476}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8732481019048273602
 GameObject:
   m_ObjectHideFlags: 0
