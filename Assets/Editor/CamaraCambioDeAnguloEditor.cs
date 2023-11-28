@@ -10,14 +10,10 @@ public class CamaraCambioDeAnguloEditor : Editor
         serializedObject.Update();
         SerializedProperty angulos = serializedObject.FindProperty("angulos");
         EditorGUILayout.PropertyField(angulos, true);
-        SerializedProperty eje = serializedObject.FindProperty("eje");
-        EditorGUILayout.PropertyField(eje);
-        SerializedProperty ejeMinimo = serializedObject.FindProperty("ejeMinimo");
-        EditorGUILayout.PropertyField(ejeMinimo);
-        SerializedProperty ejeMaximo = serializedObject.FindProperty("ejeMaximo");
-        EditorGUILayout.PropertyField(ejeMaximo);
-        SerializedProperty porciento = serializedObject.FindProperty("porciento");
-        EditorGUILayout.PropertyField(porciento);
+        SerializedProperty constraintMinimo = serializedObject.FindProperty("constraintMinimo");
+        EditorGUILayout.PropertyField(constraintMinimo);
+        SerializedProperty constraintMaximo = serializedObject.FindProperty("constraintMaximo");
+        EditorGUILayout.PropertyField(constraintMaximo);
         SerializedProperty targets = serializedObject.FindProperty("targets");
         EditorGUILayout.PropertyField(targets, true);
         serializedObject.ApplyModifiedProperties();
