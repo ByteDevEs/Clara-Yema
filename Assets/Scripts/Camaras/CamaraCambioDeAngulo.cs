@@ -41,19 +41,17 @@ public class CamaraCambioDeAngulo : MonoBehaviour
         posicion /= targets.Length;
         
         //Get the nearest points to the current position
-        Angulo a = angulos.Where(x => x.posicion.x <= posicion.x).OrderByDescending(x => x.posicion.x).First();
-        Angulo b = angulos.Where(x => x.posicion.x >= posicion.x).OrderBy(x => x.posicion.x).First();
+        Angulo[] angulosOrdenados = angulos.OrderBy(x => Vector3.Distance(x.posicion, posicion)).ToArray();
+        Angulo a = angulosOrdenados[0];
+        Angulo b = angulosOrdenados[1];
         
-        
-        //Interpolate between them based on the current position on every axis
-        Vector3 t = new Vector3(
-            Mathf.InverseLerp(a.posicion.x, b.posicion.x, posicion.x),
-            Mathf.InverseLerp(a.posicion.y, b.posicion.y, posicion.y),
-            Mathf.InverseLerp(a.posicion.z, b.posicion.z, posicion.z)
-        );
-        
-        //Interpolate between the rotations
-        Vector3 rotacion = Vector3.Lerp(a.rotacion, b.rotacion, t.x);
+        //Set the rotation proportional to the value of the nearest points
+        float distanciaA = Vector3.Distance(a.posicion, posicion);
+        float distanciaB = Vector3.Distance(b.posicion, posicion);
+        float distanciaTotal = distanciaA + distanciaB;
+        float porcentajeA = distanciaA / distanciaTotal;
+        float porcentajeB = distanciaB / distanciaTotal;
+        Vector3 rotacion = a.rotacion * porcentajeA + b.rotacion * porcentajeB;
         transform.rotation = Quaternion.Euler(rotacion);
     }
 
