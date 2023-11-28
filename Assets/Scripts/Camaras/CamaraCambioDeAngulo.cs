@@ -28,26 +28,6 @@ public class CamaraCambioDeAngulo : MonoBehaviour
 
     private void Start()
     {
-        Vector3 posicion = Vector3.zero;
-        foreach (var target in targets)
-        {
-            posicion += target.transform.position;
-        }
-        posicion /= targets.Length;
-
-        //Rotate the camera to fit the nearest angle to the current position of the targets, smoothly between the nearest angles depending on the distance
-        float minDistance = float.MaxValue;
-        Angulo anguloMasCercano = null;
-        foreach (var angulo in angulos)
-        {
-            float distancia = Vector3.Distance(posicion, angulo.posicion);
-            if (distancia < minDistance)
-            {
-                minDistance = distancia;
-                anguloMasCercano = angulo;
-            }
-        }
-        transform.rotation = Quaternion.Euler(anguloMasCercano.rotacion);
     }
 
     // Update is called once per frame
@@ -59,19 +39,20 @@ public class CamaraCambioDeAngulo : MonoBehaviour
             posicion += target.transform.position;
         }
         posicion /= targets.Length;
-
-        List<Angulo> angulosOrdenados = angulos.OrderBy(angulo => Vector3.Distance(posicion, angulo.posicion)).ToList();
+        
+        //Get the nearest points to the current position
+        Angulo[] angulosOrdenados = angulos.OrderBy(x => Vector3.Distance(x.posicion, posicion)).ToArray();
         Angulo a = angulosOrdenados[0];
         Angulo b = angulosOrdenados[1];
         
-        //Rotate the camera to fit the nearest angle to the current position of the targets, smoothly between the nearest angles depending on the distance
-        float distanciaA = Vector3.Distance(posicion, a.posicion);
-        float distanciaB = Vector3.Distance(posicion, b.posicion);
+        //Set the rotation proportional to the value of the nearest points
+        float distanciaA = Vector3.Distance(a.posicion, posicion);
+        float distanciaB = Vector3.Distance(b.posicion, posicion);
         float distanciaTotal = distanciaA + distanciaB;
         float porcentajeA = distanciaA / distanciaTotal;
         float porcentajeB = distanciaB / distanciaTotal;
-        Quaternion r = Quaternion.Lerp(Quaternion.Euler(a.rotacion), Quaternion.Euler(b.rotacion), porcentajeA);
-        transform.rotation = Quaternion.Lerp(transform.rotation, r, Time.deltaTime);
+        Vector3 rotacion = a.rotacion * porcentajeA + b.rotacion * porcentajeB;
+        transform.rotation = Quaternion.Euler(rotacion);
     }
 
     private void OnDrawGizmos()

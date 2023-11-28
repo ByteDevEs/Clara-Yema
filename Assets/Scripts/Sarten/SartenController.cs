@@ -66,18 +66,6 @@ public class SartenController : MonoBehaviour
         {
             bossCollider.isTrigger = true;
         }
-
-        if (healthController.health <= 0)
-        {
-            state = States.Defeated;
-            animator.SetTrigger("Defeated");
-            Invoke("GoToCredits", 5f);
-        }
-    }
-    
-    private void GoToCredits()
-    {
-        SceneManager.LoadScene("Credits");
     }
 
     private void AI()
