@@ -4,7 +4,8 @@ Shader "Unlit/ToonShader"
     {
         _Albedo("Albedo", Color) = (1,1,1,1)
         _Shades("Shades",Range(1,20)) = 3
-
+        _InkColor("InkColor", Color) = (0,0,0,0)
+        _InkSize("InkSize", float) = 1.0
        
     }
     SubShader
@@ -12,7 +13,48 @@ Shader "Unlit/ToonShader"
         Tags { "RenderType"="Opaque" }
         LOD 100
         //Esta primera parte se encarga de volver a hacer el modelo para que se haga la línea alrededor de este
-        
+        Tags { "RenderType"="Opaque" }
+        LOD 100
+
+        Pass
+        {
+            //Solo las caras frontales
+            Cull Front
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+            };
+
+            struct v2f
+            {
+                float4 vertex : SV_POSITION;
+            };
+
+            float _InkColor;
+            float _InkSize;
+
+            v2f vert (appdata v)
+            {
+                v2f o;
+                //Esto hace que el objeto sea más grande para que sobresalga del original
+                o.vertex = UnityObjectToClipPos(v.vertex + _InkSize * v.normal);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                return _InkColor;
+            }
+            ENDCG
+        }
+    
         Pass
         {
             CGPROGRAM
