@@ -392,7 +392,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -816,7 +816,6 @@ GameObject:
   - component: {fileID: 2693174167824530552}
   - component: {fileID: 6673563006458989286}
   - component: {fileID: 2998077773482907193}
-  - component: {fileID: 9099744064140387483}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Boss
@@ -919,27 +918,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &9099744064140387483
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096267028493120146}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.012, y: 0.012, z: 0.001}
-  m_Center: {x: 0.0000020146065, y: 0.00017236697, z: 0.0037395058}
 --- !u!1 &2279639700015903623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1495,7 @@ GameObject:
   - component: {fileID: 2425429780463785433}
   - component: {fileID: 3541408048815571570}
   - component: {fileID: 5721564625430535528}
+  - component: {fileID: 945224397884496735}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -1543,7 +1522,7 @@ Transform:
   - {fileID: 5472499319554791643}
   - {fileID: 7753750938036187565}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3344461666938857057
 MonoBehaviour:
@@ -1569,7 +1548,7 @@ MonoBehaviour:
   playerInside: []
   timer: 0
   attackDelay: 3
-  dashSpeed: 600
+  dashSpeed: 300
   state: 0
 --- !u!95 &3875539143855405439
 Animator:
@@ -1606,7 +1585,7 @@ CapsuleCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 1
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -1627,7 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81cae8fe10e232418a52f45bc25681c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 75
+  maxHealth: 200
   health: 100
   healthBar: {fileID: 0}
 --- !u!54 &5721564625430535528
@@ -1653,10 +1632,31 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &945224397884496735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4392493695588418716}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 25, y: 0.1, z: 25}
+  m_Center: {x: 0, y: -3.66, z: 0}
 --- !u!1 &4498705997862036315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,8 +2786,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 1

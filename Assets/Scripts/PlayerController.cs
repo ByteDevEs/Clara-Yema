@@ -36,7 +36,6 @@ public class PlayerController : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         rb = gameObject.GetComponent<Rigidbody>();
-        rb.isKinematic = true;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -103,29 +102,37 @@ public class PlayerController : MonoBehaviour
     {
         if (invulnerable)
             return;
-        if (other.gameObject.CompareTag("Damager"))
+        if (other.gameObject.CompareTag("Damager") && other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.LaunchSpatula)
         {
             healthController.TakeDamage(1);
-            MakeInvulnerable(other.gameObject);
+            MakeInvulnerable(other);
         }
         else if (other.gameObject.CompareTag("Boss"))
         {
-            if(other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Dash)
+            if(other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Dash || other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Stomp)
             {
                 healthController.TakeDamage(1);
-                MakeInvulnerable(other.gameObject);
+                MakeInvulnerable(other);
             }
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject.CompareTag("Boss"))
+        {
+            if(other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Dash || other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Stomp)
+            {
+                Physics.IgnoreCollision(other.collider, GetComponent<Collider>());
+                healthController.TakeDamage(1);
+                MakeInvulnerable(other.collider);
+            }
+        }
     }
 
     private SkinnedMeshRenderer[] vulnerabilityMeshes;
     bool invulnerable = false;
-    public void MakeInvulnerable(GameObject other)
+    public void MakeInvulnerable(Collider other)
     {
         //Move player to the further spawner which is not blocked by any collision
         Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
@@ -155,6 +162,8 @@ public class PlayerController : MonoBehaviour
         }
         
         Invoke("EndInvulnerability", 0.1f * times);
+        
+        Physics.IgnoreCollision(other, GetComponent<Collider>(), false);
     }
     
     void MakeVisible()
