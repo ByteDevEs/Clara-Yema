@@ -966,7 +966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2163912786128396431}
   - component: {fileID: 2440363230815768386}
-  - component: {fileID: 3482194961288868200}
+  - component: {fileID: 8386889216620920751}
   m_Layer: 10
   m_Name: Cube.008
   m_TagString: Untagged
@@ -1265,7 +1265,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00042141043, y: 0.0018388553, z: -0.00013316266}
     m_Extent: {x: 0.0008320478, y: 0.00074139086, z: 0.0010624838}
   m_DirtyAABB: 0
---- !u!114 &3482194961288868200
+--- !u!114 &8386889216620920751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2427,7 +2427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5686649386467646712}
   - component: {fileID: 8767891084790667902}
-  - component: {fileID: 4464760574073447988}
+  - component: {fileID: 8579976453708252327}
   m_Layer: 10
   m_Name: Cube.004
   m_TagString: Untagged
@@ -2726,7 +2726,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00068075553, y: -0.0002967835, z: -0.0015263301}
     m_Extent: {x: 0.0008448993, y: 0.00056331314, z: 0.0014647865}
   m_DirtyAABB: 0
---- !u!114 &4464760574073447988
+--- !u!114 &8579976453708252327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7151,7 +7151,7 @@ Transform:
   m_GameObject: {fileID: 5111311077764254347}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 11.9, y: 62.72, z: 57.769997}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 785207743111383804}
@@ -7171,9 +7171,9 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -7332,7 +7332,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -7358,9 +7358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 0}
-  playerSpeed: 25
-  jumpHeight: 7
-  gravityValue: -163.5
+  playerSpeed: 18
+  jumpHeight: 5.5
+  gravityValue: -120
   controller: {fileID: 3006661740864700225}
   rb: {fileID: 0}
   move: {x: 0, y: 0, z: 0}
@@ -7456,7 +7456,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 126
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &6652808800071941264
 MonoBehaviour:
@@ -10195,7 +10195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3939350161565057126}
   - component: {fileID: 5243192626444554015}
-  - component: {fileID: 7784971604355830019}
+  - component: {fileID: 7359440309888120271}
   m_Layer: 10
   m_Name: Cube.005
   m_TagString: Untagged
@@ -10494,7 +10494,7 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00028669377, y: 0.00035148743, z: -0.0015998813}
     m_Extent: {x: 0.0010457982, y: 0.00068655144, z: 0.0014471335}
   m_DirtyAABB: 0
---- !u!114 &7784971604355830019
+--- !u!114 &7359440309888120271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11580,7 +11580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6917321623333304058}
   - component: {fileID: 4810068717249478944}
-  - component: {fileID: 7364327663909745906}
+  - component: {fileID: 9154252931211288233}
   m_Layer: 10
   m_Name: Cube.007
   m_TagString: Untagged
@@ -11879,7 +11879,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00090283947, y: -0.0016836324, z: 0.0000063071493}
     m_Extent: {x: 0.0006885303, y: 0.00090429554, z: 0.0011108217}
   m_DirtyAABB: 0
---- !u!114 &7364327663909745906
+--- !u!114 &9154252931211288233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12225,7 +12225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8042949047039090390}
   - component: {fileID: 2148458968342795516}
-  - component: {fileID: 8465285867595613368}
+  - component: {fileID: 3386641834219255690}
   m_Layer: 10
   m_Name: Cube.006
   m_TagString: Untagged
@@ -12524,7 +12524,7 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00014142541, y: 0.00044658105, z: 0.0015455451}
     m_Extent: {x: 0.0022045993, y: 0.0036353397, z: 0.0037398427}
   m_DirtyAABB: 0
---- !u!114 &8465285867595613368
+--- !u!114 &3386641834219255690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

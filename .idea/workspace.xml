@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3b29046-68ae-483f-be8a-4f1f1457243d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/REMItexture.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/REMItexture.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/REMItexturewallpaper.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/REMItexturewallpaper.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Boss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BossCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BossCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Clara.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Yema.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/toon textures/cucharon.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/toon textures/cucharon.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/toon textures/toonolla.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/toon textures/toonolla.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/BossHealthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/UIHealthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/BossHealthController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/UIHealthController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/Brown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/Brown.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingGlass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingGlass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingGrey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingGrey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingMetal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingMetal.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingStone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingStone.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingWhite.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/BuildingWhite.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/OilDrums.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/OilDrums.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/TankColour.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/TankColour.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/TankGrey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/TankGrey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/TankLights.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/TankLights.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/YellowDark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/YellowDark.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/YellowLight.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.projectdawn.splitscreen/Samples/Tanks/Materials/YellowLight.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
