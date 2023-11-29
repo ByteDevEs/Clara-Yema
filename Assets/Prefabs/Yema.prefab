@@ -34,12 +34,12 @@ Transform:
   m_GameObject: {fileID: 5111311077764254347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.908936, y: 1.63, z: 2.1950884}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6864335724186890744}
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1360719557397732787
 CapsuleCollider:
@@ -54,7 +54,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -215,7 +215,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -241,13 +241,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 0}
-  playerSpeed: 10
-  jumpHeight: 2
-  gravityValue: -39.24
+  playerSpeed: 25
+  jumpHeight: 7
+  gravityValue: -150
   controller: {fileID: 3006661740864700225}
   rb: {fileID: 0}
   move: {x: 0, y: 0, z: 0}
-  healthController: {fileID: 0}
+  healthController: {fileID: 6652808800071941264}
   animator: {fileID: 6910623396269670983}
 --- !u!114 &8496338871801187753
 MonoBehaviour:
@@ -319,9 +319,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &6652808800071941264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,15 +434,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -486,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8319006090946936923, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
       propertyPath: m_Layer
@@ -896,6 +896,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5163826466964383573}
+    - targetCorrespondingSourceObject: {fileID: 3802076836671180308, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 810127603824508980}
   m_SourcePrefab: {fileID: 100100000, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
 --- !u!4 &1906415773094232435 stripped
 Transform:
@@ -952,6 +955,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
   m_PrefabInstance: {fileID: 6397853127094277651}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7785049442433193991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3802076836671180308, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
+  m_PrefabInstance: {fileID: 6397853127094277651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &810127603824508980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785049442433193991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &7990451134300721859
 PrefabInstance:
   m_ObjectHideFlags: 0

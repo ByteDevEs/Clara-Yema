@@ -14,7 +14,9 @@ public class SartenController : MonoBehaviour
 {
     [Header("Forks")]
     [SerializeField] private GameObject leftFork;
+    [SerializeField] private GameObject leftForkTrial;
     [SerializeField] private GameObject rightFork;
+    [SerializeField] private GameObject rightForkTrial;
     [SerializeField] private Collider bossCollider;
     
     public HealthController healthController;
@@ -113,6 +115,11 @@ public class SartenController : MonoBehaviour
                 break;
         }
     }
+
+    public void EndAnimation()
+    {
+        Invoke("AI", attackDelay);
+    }
     
     void GenerateNewInnerAttackState()
     {
@@ -158,18 +165,12 @@ public class SartenController : MonoBehaviour
         animator.SetTrigger("Mix");
     }
     
-    public void EndMix()
-    {
-        Invoke("AI", attackDelay);
-        state = States.Awake;
-    }
-    
     void Smash()
     {
         animator.SetTrigger("Smash");
     }
     
-    public void EndSmash()
+    public void EndInnerAttack()
     {
         Invoke("AI", attackDelay);
         state = States.Awake;
@@ -189,36 +190,70 @@ public class SartenController : MonoBehaviour
         GameObject playerNearest = GetNearestPlayer();
         GameObject playerFurthest = GetFurthestPlayer();
         
+        animator.enabled = false;
         
         if (playerNearest != null)
         {
-            StartCoroutine(MoveForkTime(leftFork, attackDelay/1.5f, playerNearest.transform.position));
+            Vector3 initialPosition = leftFork.transform.position;
+            Vector3 position = playerNearest.transform.position;
+            Vector3 direction = position - leftFork.transform.position;
+            direction.Normalize();
+            position += (direction * 10f);
+            Transform t = leftFork.transform;
+            t.transform.forward = direction;
+            t.transform.Rotate(90, 0, 0);
+            
+            leftForkTrial.transform.position = leftFork.transform.position;
+            leftForkTrial.SetActive(true);
+            StartCoroutine(MoveForkTime(leftFork, attackDelay/1.5f, playerNearest.transform.position, direction));
         }
         
         if (playerFurthest != null)
         {
-            StartCoroutine(MoveForkTime(rightFork, attackDelay/1.5f, playerFurthest.transform.position));
+            Vector3 initialPosition = rightFork.transform.position;
+            Vector3 position = playerFurthest.transform.position;
+            Vector3 direction = position - rightFork.transform.position;
+            direction.Normalize();
+            position += (direction * 10f);
+            Transform t = rightFork.transform;
+            t.transform.forward = direction;
+            t.transform.Rotate(90, 0, 0);
+            rightForkTrial.transform.position = rightFork.transform.position;
+            rightForkTrial.SetActive(true);
+            leftForkTrial.transform.position = playerFurthest.transform.position;
+            StartCoroutine(MoveForkTime(rightFork, attackDelay/1.5f, playerFurthest.transform.position, direction));
         }
         
         animator.SetTrigger("LaunchFork");
-        Invoke("AI", attackDelay+1f);
+        Invoke("AI", attackDelay+3f);
     }
     
-    IEnumerator MoveForkTime(GameObject fork, float time, Vector3 position)
+    IEnumerator MoveForkTime(GameObject fork, float time, Vector3 position, Vector3 direction)
     {
-        animator.enabled = false;
-        Vector3 initialPosition = fork.transform.position;
-        Vector3 direction = position - fork.transform.position;
-        direction.Normalize();
-        position += (direction * 10f);
-        Transform t = fork.transform;
-        t.transform.forward = direction;
-        t.transform.Rotate(90, 0, 0);
         //Divide time in the time to go and the time to return
-        float timeLeft = 0;
+        float timeLeft = 1;
+        //wait 2 seconds
+        Vector3 playerNearest = GetNearestPlayer().transform.position;
+        Vector3 playerFurthest = GetFurthestPlayer().transform.position;
+        Vector3 initialRightPosition = rightFork.transform.position;
+        Vector3 initialLeftPosition = leftFork.transform.position;
+        while (timeLeft > 0)
+        {
+            //Lerp to the player
+            
+            rightForkTrial.transform.position = Vector3.Lerp(initialRightPosition, playerNearest, (1 - timeLeft) * 1.25f);
+            leftForkTrial.transform.position = Vector3.Lerp(initialLeftPosition, playerFurthest, (1 - timeLeft) * 1.25f);
+            timeLeft -= Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        
+        Vector3 initialPosition = fork.transform.position;
         while (timeLeft < time)
         {
             timeLeft += Time.deltaTime / 0.7f;
+            Transform t = fork.transform;
+            t.transform.forward = direction;
+            t.transform.Rotate(90, 0, 0);
             
             fork.transform.rotation = Quaternion.Lerp(fork.transform.rotation, t.transform.rotation, timeLeft / time);
             fork.transform.position = Vector3.Lerp(fork.transform.position, position - direction * 0.5f, timeLeft / time);
@@ -229,12 +264,19 @@ public class SartenController : MonoBehaviour
         while (timeLeft < time)
         {
             timeLeft += Time.deltaTime / 0.3f;
+            Transform t = fork.transform;
+            t.transform.forward = direction;
+            t.transform.Rotate(90, 0, 0);
             
             fork.transform.rotation = Quaternion.Lerp(fork.transform.rotation, t.transform.rotation, timeLeft / time);
             fork.transform.position = Vector3.Lerp(position - direction * 0.5f, initialPosition, timeLeft / time);
             yield return new WaitForEndOfFrame();
         }
         animator.enabled = true;
+        leftForkTrial.SetActive(false);
+        rightForkTrial.SetActive(false);
+        leftForkTrial.transform.position = leftFork.transform.position;
+        rightForkTrial.transform.position = rightFork.transform.position;
         state = States.Awake;
     }
 
@@ -389,7 +431,8 @@ public class SartenController : MonoBehaviour
         }
         else if(other.CompareTag("Damager"))
         {
-            healthController.TakeDamage(1);
+            if(state == States.Mix || state == States.Smash)
+                healthController.TakeDamage(1);
         }
     }
 
