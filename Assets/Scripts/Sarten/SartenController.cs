@@ -186,6 +186,30 @@ public class SartenController : MonoBehaviour
     {
         Invoke("AI", attackDelay);
         state = States.Awake;
+        //Move all players upwards and make them land in one spawn point of the arena (the furthest one)
+        Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
+        
+        //Remove the spawner which is blocked by a collision
+        foreach (Vector3 spawner in spawners)
+        {
+            if (Physics.BoxCast(spawner, Vector3.one * 0.5f, Vector3.up, Quaternion.identity, 1f))
+            {
+                spawners = spawners.Where(x => x != spawner).ToArray();
+            }
+        }
+        
+        //Get the furthest spawner
+        Vector3 furthestSpawner = spawners.OrderByDescending(x => Vector3.Distance(x, transform.position)).First();
+        
+        //Move the player to the furthest spawner, make an arc to the sky and then fall to the ground, use PlayerController
+        foreach (GameObject player in players)
+        {
+            player.transform.position = furthestSpawner;
+            player.GetComponent<CharacterController>().Move(Vector3.up * 10);
+            //Move to the furthest spawner
+            Vector3 direction = furthestSpawner - player.transform.position;
+            player.GetComponent<CharacterController>().Move(direction.normalized * 10);
+        }
     }
 
     private void CheckDizzy()

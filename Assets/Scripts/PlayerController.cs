@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController), typeof(UIHealthController), typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -28,6 +29,9 @@ public class PlayerController : MonoBehaviour
     float damageDelay = 0.5f;
     float damageDelayTimer = 0f;
     
+    Vector3 initialPosition;
+    
+    static Vector3? spawnPosition = null;
     
     [Header("HealthSystem")]
     [SerializeField] protected HealthController healthController;
@@ -39,6 +43,11 @@ public class PlayerController : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         rb = gameObject.GetComponent<Rigidbody>();
+        initialPosition = transform.position;
+        if(spawnPosition != null)
+        {
+            transform.position = spawnPosition.Value;
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -70,6 +79,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (GameObject.Find("LoadBoss"))
+        {
+            SartenController boss = FindObjectOfType<SartenController>();
+            //Get all players
+            PlayerController[] players = FindObjectsOfType<PlayerController>();
+            //Move all players to the boss
+            foreach (PlayerController player in players)
+            {
+                player.transform.position = boss.transform.position;
+            }
+        }
         if (damageDelayTimer > 0)
         {
             damageDelayTimer -= Time.deltaTime;
@@ -100,7 +120,7 @@ public class PlayerController : MonoBehaviour
         }
         
         animator.SetFloat("Speed", move.sqrMagnitude);
-
+        
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
@@ -113,11 +133,18 @@ public class PlayerController : MonoBehaviour
         {
             SartenController.States state = other.gameObject.GetComponentInParent<SartenController>().state;
 
-            if ((state == SartenController.States.LaunchSpatula ||
-                    state == SartenController.States.Smash ||
-                    state == SartenController.States.Mix))
+            if (state == SartenController.States.LaunchSpatula)
             {
-                MakeInvulnerable(other);
+                MakeInvulnerable(other, true);
+                if(damageDelayTimer > 0)
+                    return;
+                healthController.TakeDamage(1);
+                damageDelayTimer = damageDelay;
+            }
+            else if(state == SartenController.States.Smash ||
+                state == SartenController.States.Mix)
+            {
+                MakeInvulnerable(other, false);
                 if(damageDelayTimer > 0)
                     return;
                 healthController.TakeDamage(1);
@@ -135,6 +162,7 @@ public class PlayerController : MonoBehaviour
                 damageDelayTimer = damageDelay;
             }
         }
+        CheckDeath();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -151,29 +179,61 @@ public class PlayerController : MonoBehaviour
                 damageDelayTimer = damageDelay;
             }
         }
+        CheckDeath();
+    }
+
+    public void CheckDeath()
+    {
+        if(healthController.GetHealth() <= 0)
+        {
+            //Find boss
+            SartenController boss = FindObjectOfType<SartenController>();
+            if(boss != null)
+            {
+                if (boss.state == SartenController.States.WaitingForPlayers)
+                {
+                    foreach (PlayerController player in FindObjectsOfType<PlayerController>())
+                    {
+                        player.transform.position = player.initialPosition;
+                        player.healthController.health = player.healthController.maxHealth;
+                    }
+                }
+                else
+                {
+                    //Get all players
+                    PlayerController[] players = FindObjectsOfType<PlayerController>();
+                    //Move all players to the boss
+                    spawnPosition = boss.transform.position;
+                    SceneManager.LoadScene("Primer-Nivel");
+                }
+            }
+        }
     }
 
     private SkinnedMeshRenderer[] vulnerabilityMeshes;
     bool invulnerable = false;
-    public void MakeInvulnerable(Collider other)
+    public void MakeInvulnerable(Collider other, bool resetPosition = true)
     {
         //Move player to the further spawner which is not blocked by any collision
-        Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
-        
-        //Remove the spawner which is blocked by a collision
-        foreach (Vector3 spawner in spawners)
+        if (resetPosition)
         {
-            if (Physics.BoxCast(spawner, Vector3.one * 0.5f, Vector3.up, Quaternion.identity, 1f))
+            Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
+        
+            //Remove the spawner which is blocked by a collision
+            foreach (Vector3 spawner in spawners)
             {
-                spawners = spawners.Where(x => x != spawner).ToArray();
+                if (Physics.BoxCast(spawner, Vector3.one * 0.5f, Vector3.up, Quaternion.identity, 1f))
+                {
+                    spawners = spawners.Where(x => x != spawner).ToArray();
+                }
             }
+        
+            //Get the furthest spawner
+            Vector3 furthestSpawner = spawners.OrderByDescending(x => Vector3.Distance(x, transform.position)).First();
+        
+            //Move the player to the furthest spawner
+            transform.position = furthestSpawner;
         }
-        
-        //Get the furthest spawner
-        Vector3 furthestSpawner = spawners.OrderByDescending(x => Vector3.Distance(x, transform.position)).First();
-        
-        //Move the player to the furthest spawner
-        transform.position = furthestSpawner;
         
         vulnerabilityMeshes = GetComponentsInChildren<SkinnedMeshRenderer>();
         invulnerable = true;

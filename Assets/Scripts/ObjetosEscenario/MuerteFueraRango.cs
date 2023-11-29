@@ -34,6 +34,7 @@ public class MuerteFueraRango : MonoBehaviour
             // El personaje ha ca�do al agua, as� que lo teleportamos a la �ltima posici�n v�lida.
             Respawn();
             GetComponent<HealthController>().TakeDamage(1);
+            playerController.CheckDeath();
             //Debug.Log("TP fuera del agua");
         }
     }

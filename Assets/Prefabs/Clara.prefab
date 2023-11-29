@@ -966,7 +966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2163912786128396431}
   - component: {fileID: 2440363230815768386}
-  - component: {fileID: 4988662692278325871}
+  - component: {fileID: 5831281265007102095}
   m_Layer: 10
   m_Name: Cube.008
   m_TagString: Untagged
@@ -1265,7 +1265,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00042141043, y: 0.0018388553, z: -0.00013316266}
     m_Extent: {x: 0.0008320478, y: 0.00074139086, z: 0.0010624838}
   m_DirtyAABB: 0
---- !u!114 &4988662692278325871
+--- !u!114 &5831281265007102095
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2427,7 +2427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5686649386467646712}
   - component: {fileID: 8767891084790667902}
-  - component: {fileID: 7884866775721389842}
+  - component: {fileID: 8065207975150695868}
   m_Layer: 10
   m_Name: Cube.004
   m_TagString: Untagged
@@ -2726,7 +2726,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00068075553, y: -0.0002967835, z: -0.0015263301}
     m_Extent: {x: 0.0008448993, y: 0.00056331314, z: 0.0014647865}
   m_DirtyAABB: 0
---- !u!114 &7884866775721389842
+--- !u!114 &8065207975150695868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7455,7 +7455,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &6652808800071941264
@@ -10195,7 +10195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3939350161565057126}
   - component: {fileID: 5243192626444554015}
-  - component: {fileID: 4985263185483778275}
+  - component: {fileID: 8992011628734481648}
   m_Layer: 10
   m_Name: Cube.005
   m_TagString: Untagged
@@ -10494,7 +10494,7 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00028669377, y: 0.00035148743, z: -0.0015998813}
     m_Extent: {x: 0.0010457982, y: 0.00068655144, z: 0.0014471335}
   m_DirtyAABB: 0
---- !u!114 &4985263185483778275
+--- !u!114 &8992011628734481648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11580,7 +11580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6917321623333304058}
   - component: {fileID: 4810068717249478944}
-  - component: {fileID: 5464529978751840345}
+  - component: {fileID: 7812539662129200919}
   m_Layer: 10
   m_Name: Cube.007
   m_TagString: Untagged
@@ -11879,7 +11879,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00090283947, y: -0.0016836324, z: 0.0000063071493}
     m_Extent: {x: 0.0006885303, y: 0.00090429554, z: 0.0011108217}
   m_DirtyAABB: 0
---- !u!114 &5464529978751840345
+--- !u!114 &7812539662129200919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12225,7 +12225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8042949047039090390}
   - component: {fileID: 2148458968342795516}
-  - component: {fileID: 5338758850473749772}
+  - component: {fileID: 5184102214001119464}
   m_Layer: 10
   m_Name: Cube.006
   m_TagString: Untagged
@@ -12524,7 +12524,7 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00014142541, y: 0.00044658105, z: 0.0015455451}
     m_Extent: {x: 0.0022045993, y: 0.0036353397, z: 0.0037398427}
   m_DirtyAABB: 0
---- !u!114 &5338758850473749772
+--- !u!114 &5184102214001119464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
