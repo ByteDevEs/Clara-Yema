@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ToonBody2
+  m_Name: planta1
   m_Shader: {fileID: 4800000, guid: a5dd17561fb0fc84aad3001456c2242e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -61,7 +61,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Brightness: 0.298
+    - _Brightness: 0.265
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _Detail: 0.3
@@ -70,23 +70,17 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _InkSize: 0.00015
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Shades: 11.3
-    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Strength: 0.434
+    - _Strength: 0.324
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Albedo: {r: 0.627451, g: 0.5372549, b: 0.6901961, a: 1}
-    - _Color: {r: 0.50670034, g: 0.44045925, b: 0.9245283, a: 1}
+    - _Color: {r: 0.4799654, g: 0.735849, b: 0.15619439, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _InkColor: {r: 0, g: 0, b: 0, a: 0}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
