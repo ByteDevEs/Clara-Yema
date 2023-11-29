@@ -12,6 +12,7 @@ TagManager:
   - Broom
   - Boss
   - Spawner
+  - Arena
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - FightWalls
   - BossFightProp
   - PushableObjects
-  - 
+  - Arena
   - 
   - 
   - 
