@@ -5,11 +5,11 @@ using UnityEngine.InputSystem;
 
 public class Explosion : MonoBehaviour
 {
-    public float explosionForce = 20f;     // Fuerza de la explosión.
+    public float explosionForce = 20f;     // Fuerza de la explosiï¿½n.
     public float verticalForce = 10f;       // Fuerza vertical adicional.
-    public float explosionRadius = 5f;     // Radio de la explosión.
-    public LayerMask objectsToPush;        // Capas de los objetos que se lanzarán.
-
+    public float explosionRadius = 5f;     // Radio de la explosiï¿½n.
+    public LayerMask objectsToPush;        // Capas de los objetos que se lanzarï¿½n.
+    [SerializeField] protected Animator animator;
     void Update()
     {
 
@@ -22,13 +22,14 @@ public class Explosion : MonoBehaviour
 
     void Explode()
     {
-        // Encuentra todos los objetos dentro del radio de la explosión.
+        animator.SetBool("Explode",true );
+        // Encuentra todos los objetos dentro del radio de la explosiï¿½n.
         Collider[] objectsInRadius = Physics.OverlapSphere(transform.position, explosionRadius, objectsToPush);
 
         // Aplica una fuerza a todos los objetos dentro del radio.
         foreach (Collider obj in objectsInRadius)
         {
-            // Intenta encontrar el Rigidbody en el objeto o en su transformación padre.
+            // Intenta encontrar el Rigidbody en el objeto o en su transformaciï¿½n padre.
             Rigidbody rb = obj.GetComponent<Rigidbody>();
             if (rb == null)
             {
@@ -37,12 +38,20 @@ public class Explosion : MonoBehaviour
 
             if (rb != null && rb.gameObject != gameObject)  // Evita afectar al propio personaje.
             {
-                // Calcula la dirección desde el personaje al objeto.
+                // Calcula la direcciï¿½n desde el personaje al objeto.
                 Vector3 direction = obj.transform.position - transform.position;
 
                 // Aplica la fuerza para lanzar el objeto con componente vertical adicional.
                 rb.AddForce(direction.normalized * explosionForce + Vector3.up * verticalForce, ForceMode.Impulse);
             }
         }
+        Invoke("NoEx",1f);
+        
+    }
+     IEnumerator NoEx()
+    {
+        animator.SetBool("Explode",false );
+        return null;
     }
 }
+
