@@ -192,16 +192,10 @@ public class PlayerController : MonoBehaviour
             {
                 if (boss.state == SartenController.States.WaitingForPlayers)
                 {
-                    foreach (PlayerController player in FindObjectsOfType<PlayerController>())
-                    {
-                        player.transform.position = player.initialPosition;
-                        player.healthController.health = player.healthController.maxHealth;
-                    }
+                    SceneManager.LoadScene("Primer-Nivel");
                 }
                 else
                 {
-                    //Get all players
-                    PlayerController[] players = FindObjectsOfType<PlayerController>();
                     //Move all players to the boss
                     spawnPosition = boss.transform.position;
                     SceneManager.LoadScene("Primer-Nivel");
