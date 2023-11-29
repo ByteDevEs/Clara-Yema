@@ -2,17 +2,72 @@ Shader "Unlit/ToonShader"
 {
     Properties
     {
-        _Albedo("Albedo", Color) = (1,1,1,1)
-        _Shades("Shades", Range(1,20)) = 3
+        _MainTex ("Texture", 2D) = "white" {}
+        _Brightness("Brightness", Range(0,1)) = 0.3
+        _Strength("Strength", Range(0,1)) = 0.5
+        _Color("Color", COLOR) = (1,1,1,1)
+        _Detail("Detail", Range(0,1)) = 0.3
         _InkColor("InkColor", Color) = (0,0,0,1) // Cambiado a Color y valor predeterminado no transparente
         _InkSize("InkSize", float) = 1.0
-       
     }
     SubShader
     {
         Tags { "RenderType"="Opaque" }
         LOD 100
 
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+                float3 normal : NORMAL;
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
+                half3 worldNormal: NORMAL;
+            };
+
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+            float _Brightness;
+            float _Strength;
+            float4 _Color;
+            float _Detail;
+
+            float Toon(float3 normal, float3 lightDir) {
+                float NdotL = max(0.0,dot(normalize(normal), normalize(lightDir)));
+
+                return floor(NdotL / _Detail);
+            }
+
+            v2f vert (appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.worldNormal = UnityObjectToWorldNormal(v.normal);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                // sample the texture
+                fixed4 col = tex2D(_MainTex, i.uv);
+                col *= Toon(i.worldNormal, _WorldSpaceLightPos0.xyz) * _Strength * _Color + _Brightness;
+                return col;
+            }
+            ENDCG
+        }
         Pass
         {
             Cull Front
@@ -50,49 +105,5 @@ Shader "Unlit/ToonShader"
             }
             ENDCG
         }
-    
-        Pass
-        {
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-
-            #include "UnityCG.cginc"
-
-            struct appdata
-            {
-                float4 vertex : POSITION;
-                float3 normal : NORMAL;
-            };
-
-            struct v2f
-            {
-                float4 vertex : SV_POSITION;
-                float3 worldNormal : TEXCOORD0;
-            };
-
-            float4 _Albedo;
-            float _Shades;
-
-            v2f vert (appdata v)
-            {
-                v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.worldNormal = UnityObjectToWorldNormal(v.normal);
-                return o;
-            }
-
-            fixed4 frag (v2f i) : SV_Target
-            {
-                //Calcula el coseno del ángulo entre el vector normal y la dirección de la luz
-                float cosineAngle = dot(normalize(i.worldNormal), normalize(_WorldSpaceLightPos0.xyz));
-
-                cosineAngle = max(cosineAngle, 0.0);
-                cosineAngle = floor(cosineAngle * _Shades) / _Shades;
-                return _Albedo * cosineAngle;
-            }
-            ENDCG
-        }
     }
-    Fallback "VertexLit"
 }
