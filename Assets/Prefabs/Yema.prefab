@@ -54,7 +54,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -215,7 +215,7 @@ CharacterController:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -898,7 +898,7 @@ PrefabInstance:
       addedObject: {fileID: 5163826466964383573}
     - targetCorrespondingSourceObject: {fileID: 3802076836671180308, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2335259684944609614}
+      addedObject: {fileID: 4950179300735920175}
   m_SourcePrefab: {fileID: 100100000, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
 --- !u!4 &1906415773094232435 stripped
 Transform:
@@ -960,7 +960,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3802076836671180308, guid: db00f5c9657c6434a9db1d72c16a6c7e, type: 3}
   m_PrefabInstance: {fileID: 6397853127094277651}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2335259684944609614
+--- !u!114 &4950179300735920175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

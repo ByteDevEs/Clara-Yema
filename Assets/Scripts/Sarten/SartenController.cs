@@ -51,17 +51,26 @@ public class SartenController : MonoBehaviour
     }
 
     public States state;
+    private Vector3 initialPosition;
     
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         players = FindObjectsOfType<PlayerController>().ToList().ConvertAll(x => x.gameObject);
+        initialPosition = transform.position;
 		AI();
     }
 
     private void Update()
     {
+        if(playerInside.Count == 2)
+            bothInside = true;
+        else
+            bothInside = false;
+        
+        fallingPropsList.RemoveAll(item => item == null);
+        
         if(state == States.Dizzy || state == States.Mix || state == States.Smash)
             bossCollider.isTrigger = true;
         
@@ -311,14 +320,12 @@ public class SartenController : MonoBehaviour
         {
             int r = Random.Range(0, fallingProps.Length);
             //Circle spawn
-            float angle = Random.Range(0, 360);
-            Vector3 spawnPos = transform.position + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * Random.Range(15,20);
+            Vector3 spawnPos = new Vector3(Random.Range(-76.99f,-46.726f), 62.92f, Random.Range(-16.888f, 12.9f));
             GameObject gO = Instantiate(fallingProps[r], spawnPos + Vector3.up * 10, Quaternion.identity);
             fallingPropsList.Add(gO);
         }
     }
     
-    Coroutine stompCoroutine;
     private void MoveToPlayerStomp()
     {
         GameObject player = GetNearestPlayer();
@@ -326,8 +333,7 @@ public class SartenController : MonoBehaviour
         Vector3 direction = player.transform.position - transform.position;
         direction.y = 0;
         direction.Normalize();
-        if(stompCoroutine == null)
-            stompCoroutine = StartCoroutine(MoveTimeStomp(5f, direction));
+        StartCoroutine(MoveTimeStomp(0.5f, direction));
     }
     
     IEnumerator MoveTimeStomp(float time, Vector3 direction)
@@ -339,15 +345,6 @@ public class SartenController : MonoBehaviour
             float speed = 1 - Mathf.Pow((time - timeLeft) / 3, 0.05f);
             rb.MovePosition(transform.position + direction * (dashSpeed * speed * Time.deltaTime));
             yield return new WaitForEndOfFrame();
-        }
-    }
-    
-    private void StopStompMovement()
-    {
-        if(stompCoroutine != null)
-        {
-            StopCoroutine(stompCoroutine);
-            stompCoroutine = null;
         }
         state = States.Awake;
         Invoke("AI", attackDelay);
@@ -423,19 +420,9 @@ public class SartenController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (state != States.Dizzy && state != States.Mix && state != States.Smash)
-            {
-                other.GetComponent<CharacterController>().enabled = false;
-                other.GetComponent<PlayerController>().enabled = false;
-                other.GetComponent<Rigidbody>().AddExplosionForce(100, other.transform.position - Vector3.up * 2, 30);
-            }
             if (!playerInside.Contains(other.gameObject))
             {
                 playerInside.Add(other.gameObject);
-                if (playerInside.Count == 2)
-                {
-                    bothInside = true;
-                }
             }
         }
         else if(other.CompareTag("Damager"))
@@ -443,13 +430,19 @@ public class SartenController : MonoBehaviour
             if(state == States.Mix || state == States.Smash)
                 healthController.TakeDamage(1);
         }
+        else if (other.gameObject.CompareTag("BossFightProp"))
+        {
+            Destroy(other.gameObject);
+            if(state == States.Dash)
+                state = States.Dizzy;
+        }
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("BossFightProp"))
         {
-            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(100000, other.contacts[0].point, 100);
+            Destroy(other.gameObject);
             if(state == States.Dash)
                 state = States.Dizzy;
         }
@@ -459,7 +452,7 @@ public class SartenController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("BossFightProp"))
         {
-            other.gameObject.GetComponent<Rigidbody>().AddExplosionForce(100000, transform.position, 100);
+            Destroy(other.gameObject);
             if(state == States.Dash)
                 state = States.Dizzy;
         }
@@ -469,18 +462,13 @@ public class SartenController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<CharacterController>().enabled = true;
-            other.GetComponent<PlayerController>().enabled = true;
-            if (playerInside.Contains(other.gameObject))
-            {
-                playerInside.Remove(other.gameObject);
-                if (playerInside.Count != 2)
-                {
-                    bothInside = false;
-                }
-            }
+            playerInside.Remove(other.gameObject);
             if(playerInside.Count == 0)
                 bossCollider.isTrigger = false;
+        }
+        else if (other.gameObject.CompareTag("Arena"))
+        {
+            transform.position = initialPosition;
         }
     }
 }

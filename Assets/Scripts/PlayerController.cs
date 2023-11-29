@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementInput = Vector2.zero;
     private bool jumped = false;
     
+    float damageDelay = 0.5f;
+    float damageDelayTimer = 0f;
+    
     
     [Header("HealthSystem")]
     [SerializeField] protected HealthController healthController;
@@ -67,6 +70,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (damageDelayTimer > 0)
+        {
+            damageDelayTimer -= Time.deltaTime;
+        }
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -102,17 +109,30 @@ public class PlayerController : MonoBehaviour
     {
         if (invulnerable)
             return;
-        if (other.gameObject.CompareTag("Damager") && other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.LaunchSpatula)
+        if (other.gameObject.CompareTag("Damager"))
         {
-            healthController.TakeDamage(1);
-            MakeInvulnerable(other);
+            SartenController.States state = other.gameObject.GetComponentInParent<SartenController>().state;
+
+            if ((state == SartenController.States.LaunchSpatula ||
+                    state == SartenController.States.Smash ||
+                    state == SartenController.States.Mix))
+            {
+                MakeInvulnerable(other);
+                if(damageDelayTimer > 0)
+                    return;
+                healthController.TakeDamage(1);
+                damageDelayTimer = damageDelay;
+            }
         }
         else if (other.gameObject.CompareTag("Boss"))
         {
             if(other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Dash || other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Stomp)
             {
-                healthController.TakeDamage(1);
                 MakeInvulnerable(other);
+                if(damageDelayTimer > 0)
+                    return;
+                healthController.TakeDamage(1);
+                damageDelayTimer = damageDelay;
             }
         }
     }
@@ -124,8 +144,11 @@ public class PlayerController : MonoBehaviour
             if(other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Dash || other.gameObject.GetComponentInParent<SartenController>().state == SartenController.States.Stomp)
             {
                 Physics.IgnoreCollision(other.collider, GetComponent<Collider>());
-                healthController.TakeDamage(1);
                 MakeInvulnerable(other.collider);
+                if(damageDelayTimer > 0)
+                    return;
+                healthController.TakeDamage(1);
+                damageDelayTimer = damageDelay;
             }
         }
     }

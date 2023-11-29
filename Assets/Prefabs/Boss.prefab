@@ -663,7 +663,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1233,7 +1233,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1581,7 +1581,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32310
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 1
@@ -1590,7 +1590,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 14.5
+  m_Radius: 16.1
   m_Height: 44.824196
   m_Direction: 1
   m_Center: {x: -0, y: 9.492901, z: -0}
@@ -1625,7 +1625,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32310
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1646,7 +1646,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32310
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
