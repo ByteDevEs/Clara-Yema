@@ -7,8 +7,7 @@ Shader "Unlit/ToonShader"
         _Strength("Strength", Range(0,1)) = 0.5
         _Color("Color", COLOR) = (1,1,1,1)
         _Detail("Detail", Range(0,1)) = 0.3
-        _InkColor("InkColor", Color) = (0,0,0,1) // Cambiado a Color y valor predeterminado no transparente
-        _InkSize("InkSize", float) = 1.0
+
     }
     SubShader
     {
