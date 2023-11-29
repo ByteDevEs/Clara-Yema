@@ -17,12 +17,14 @@ public class ClaraEncoger : MonoBehaviour
 
     PlayerController moveScript;
 
+    [SerializeField] protected Animator animator;
+
     private bool isShrinking = false;
 
     void Start()
     {
 
-        // Obtener el collider del personaje (asegúrate de que el GameObject tenga un characterCollider adjunto)
+        // Obtener el collider del personaje (asegï¿½rate de que el GameObject tenga un characterCollider adjunto)
         characterCollider = GetComponent<CapsuleCollider>();
         // Obtener el transform del modelo del personaje
         characterModelTransform = transform.GetChild(0);
@@ -36,32 +38,34 @@ public class ClaraEncoger : MonoBehaviour
 
         if (characterModelTransform == null)
         {
-            Debug.LogError("No se encontró el modelo del personaje. Asegúrate de que el modelo sea el primer hijo del GameObject.");
+            Debug.LogError("No se encontrï¿½ el modelo del personaje. Asegï¿½rate de que el modelo sea el primer hijo del GameObject.");
         }
     }
     public void OnCircle(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            // Comenzar la rutina de encogimiento cuando el botón se presiona
+            // Comenzar la rutina de encogimiento cuando el botï¿½n se presiona
             StartCoroutine(Shrink());
         }
         else if (context.canceled)
         {
-            // Detener el encogimiento cuando el botón se suelta
+            // Detener el encogimiento cuando el botï¿½n se suelta
             StopCoroutine(Shrink());
             isShrinking = false;
 
-            // Volver al tamaño normal
+            // Volver al tamaï¿½o normal
             ResetSize();
         }
     }
     IEnumerator Shrink()
     {
-        // Evitar que se inicie múltiples veces mientras el botón sigue presionado
+        // Evitar que se inicie mï¿½ltiples veces mientras el botï¿½n sigue presionado
         if (!isShrinking)
         {
             isShrinking = true;
+
+            animator.SetBool("Duck", true);
 
             // Encoger
             Vector3 originalScale = characterCollider.transform.localScale;
@@ -78,23 +82,13 @@ public class ClaraEncoger : MonoBehaviour
 
     void ResetSize()
     {
-        // Restablecer al tamaño normal
+        // Restablecer al tamaï¿½o normal
+        animator.SetBool("Duck", false);
         Vector3 originalScale = characterCollider.transform.localScale;
         characterCollider.transform.localScale = new Vector3(originalScale.x, originalScale.y / verticalScale, originalScale.z);
 
         Vector3 scale = characterModelTransform.localScale;
         scale.y /= verticalScale;
         characterModelTransform.localScale = scale;
-    }
-
-
-    //Método para ver que el collider se encoje correctamente
-    private void OnDrawGizmosSelected()
-    {
-        if (characterCollider != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(characterCollider.bounds.center, characterCollider.radius * verticalScale);
-        }
     }
 }
