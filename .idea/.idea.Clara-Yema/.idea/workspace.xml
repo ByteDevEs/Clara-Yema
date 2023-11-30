@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +130,7 @@
       <workItem from="1700748663341" duration="4472000" />
       <workItem from="1700843931616" duration="3011000" />
       <workItem from="1701094269197" duration="9799000" />
+      <workItem from="1701331935154" duration="567000" />
     </task>
     <servers />
   </component>
