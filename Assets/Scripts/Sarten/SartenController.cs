@@ -84,7 +84,7 @@ public class SartenController : MonoBehaviour
         if (healthController.health <= 0)
         {
             state = States.Defeated;
-            animator.SetTrigger("Defeated");
+            animator.SetTrigger("Dead");
             Invoke("GoToCredits", 5f);
         }
     }
