@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/ExpulsarAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/ExpulsarAnimation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimUI/Credits.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimUI/Credits.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogos/REMI.yarn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogos/REMI.yarn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mantequilla.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mantequilla.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuPrincipal.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuPrincipal.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneLaberinto.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneLaberinto.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ControladorSeleccionMandos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ControladorSeleccionMandos.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Cabold Comic demo SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Cabold Comic demo SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +72,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Build/Clara Yema.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build-Funcional/Clara Yema.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Dev\Unity\Clara-Yema\Build" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -130,7 +146,7 @@
       <workItem from="1700843931616" duration="3011000" />
       <workItem from="1701094269197" duration="9799000" />
       <workItem from="1701331935154" duration="997000" />
-      <workItem from="1701339251066" duration="3382000" />
+      <workItem from="1701339251066" duration="6603000" />
     </task>
     <servers />
   </component>

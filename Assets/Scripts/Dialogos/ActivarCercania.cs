@@ -28,7 +28,7 @@ public class ActivarCercania : MonoBehaviour
                     {
                         activated = true;
                         toActivate.SetActive(true);
-                        PlayerController[] playerControllers = new PlayerController[players.Length];
+                        playerControllers = new PlayerController[players.Length];
                         for (int i = 0; i < players.Length; i++)
                         {
                             playerControllers[i] = players[i].GetComponent<PlayerController>();
@@ -47,7 +47,7 @@ public class ActivarCercania : MonoBehaviour
         toActivate.SetActive(false);
         foreach (var p in playerControllers)
         {
-            p.enabled = false;
+            p.enabled = true;
         }
     }
 }

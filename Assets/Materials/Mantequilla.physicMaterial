@@ -9,6 +9,6 @@ PhysicMaterial:
   m_Name: Mantequilla
   dynamicFriction: Infinity
   staticFriction: Infinity
-  bounciness: 0
+  bounciness: 1
   frictionCombine: 2
   bounceCombine: 1

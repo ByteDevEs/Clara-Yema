@@ -115,7 +115,7 @@ public class SartenController : MonoBehaviour
                 DashToPlayer();
                 break;
             case States.Dizzy:
-                Invoke("CheckDizzy", 5f);
+                Invoke("CheckDizzy", 2f);
                 break;
             case States.Mix:
                 Mix();

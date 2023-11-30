@@ -40,18 +40,8 @@ public class ControladorSeleccionMandos : MonoBehaviour
         {
             this.players.Add((player, State.None));
         }
-        DontDestroyOnLoad(this.gameObject);
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-    
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -134,21 +124,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
         PlayerInput yema = players[0].state == State.Yema ? players[0].input : players[1].input;
         yemaScheme = yema.currentControlScheme;
         yemaDevice = yema.GetDevice<Gamepad>();
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode loadMode)
-    {
-        if(scene != SceneManager.GetSceneByName("EscenaHistoria"))
-            return;
-        
-        //Set the device to the player
-        print(claraScheme + " " + yemaScheme);
-        if(claraScheme == "" || yemaScheme == "")
-            return;
-        GameObject.Find("Clara").GetComponent<PlayerInput>().SwitchCurrentControlScheme(claraScheme, claraDevice);
-        GameObject.Find("Yema").GetComponent<PlayerInput>().SwitchCurrentControlScheme(yemaScheme, yemaDevice);
-        
-        //Destroy this object
-        Destroy(this.gameObject);
+        PlayerController.inputs.Add(0, claraDevice);
+        PlayerController.inputs.Add(1, yemaDevice);
     }
 }
