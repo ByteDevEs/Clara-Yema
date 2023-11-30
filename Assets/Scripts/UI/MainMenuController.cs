@@ -28,7 +28,7 @@ public class MainMenuController : MonoBehaviour
     
     public void LoadHistoria()
     {
-        SceneManager.LoadScene("EscenaHistoria");
+        SceneManager.LoadScene("Primer-Nivel");
         Play();
     }
     

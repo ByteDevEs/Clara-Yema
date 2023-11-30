@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -30,8 +31,10 @@ public class PlayerController : MonoBehaviour
     float damageDelayTimer = 0f;
     
     Vector3 initialPosition;
-    
+
+    public int myKey;
     static Vector3? spawnPosition = null;
+    static Dictionary<int, InputDevice> inputs = new Dictionary<int, InputDevice>();
     
     [Header("HealthSystem")]
     [SerializeField] protected HealthController healthController;
@@ -47,6 +50,12 @@ public class PlayerController : MonoBehaviour
         if(spawnPosition != null)
         {
             transform.position = spawnPosition.Value;
+        }
+
+        if (inputs.ContainsKey(myKey))
+        {
+            GetComponent<PlayerInput>().SwitchCurrentControlScheme(inputs[myKey]);
+            inputs.Remove(myKey);
         }
     }
 
@@ -190,6 +199,12 @@ public class PlayerController : MonoBehaviour
             SartenController boss = FindObjectOfType<SartenController>();
             if(boss != null)
             {
+                PlayerController clara = FindObjectOfType<ClaraEncoger>().GetComponent<PlayerController>();
+                PlayerController yema = FindObjectOfType<Explosion>().GetComponent<PlayerController>();
+                if(!inputs.ContainsKey(clara.myKey))
+                    inputs.Add(clara.myKey, clara.GetComponent<PlayerInput>().devices[0]);
+                if(!inputs.ContainsKey(clara.myKey))
+                    inputs.Add(yema.myKey, yema.GetComponent<PlayerInput>().devices[0]);
                 if (boss.state == SartenController.States.WaitingForPlayers)
                 {
                     SceneManager.LoadScene("Primer-Nivel");
