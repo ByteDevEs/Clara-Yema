@@ -8,16 +8,16 @@ public class ActivarCercania : MonoBehaviour
 
     public float cercania = 5;
     bool activated = false;
+    PlayerController[] players;
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerController[] players = FindObjectsOfType<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (var player in players)
         {
             if(Vector3.Distance(player.transform.position, transform.position) < cercania)
@@ -29,7 +29,7 @@ public class ActivarCercania : MonoBehaviour
                         toActivate.SetActive(true);
                         foreach (var p in players)
                         {
-                            p.GetComponent<PlayerController>().controller.enabled = false;
+                            p.enabled = false;
                         }
                     }
             }
@@ -39,10 +39,9 @@ public class ActivarCercania : MonoBehaviour
     public void EndDialogue()
     {
         toActivate.SetActive(false);
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (var p in players)
         {
-            p.GetComponent<PlayerController>().controller.enabled = false;
+            p.enabled = false;
         }
     }
 }
