@@ -1,7 +1,8 @@
 {
   "projectFileVersion": 2,
   "sourceFiles": [
-    "Prueba.yarn"
+    "Prueba.yarn",
+    "REMI.yarn"
   ],
   "excludeFiles": [],
   "localisation": {},
