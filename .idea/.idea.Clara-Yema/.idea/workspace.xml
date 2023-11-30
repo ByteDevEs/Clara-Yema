@@ -7,6 +7,7 @@
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/ExpulsarAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/ExpulsarAnimation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Slam.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Slam.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimUI/Credits.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimUI/Credits.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dialogos/REMI.yarn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogos/REMI.yarn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Mantequilla.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mantequilla.physicMaterial" afterDir="false" />
@@ -146,7 +147,7 @@
       <workItem from="1700843931616" duration="3011000" />
       <workItem from="1701094269197" duration="9799000" />
       <workItem from="1701331935154" duration="997000" />
-      <workItem from="1701339251066" duration="6603000" />
+      <workItem from="1701339251066" duration="7064000" />
     </task>
     <servers />
   </component>
