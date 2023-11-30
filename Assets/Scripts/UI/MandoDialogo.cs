@@ -19,8 +19,9 @@ public class MandoDialogo : MenuAutoSeleccionManager
             tiempo -= Time.unscaledDeltaTime;
         }
         bool isUIOpen = false;
-        foreach (var menu in menus) 
+        foreach (var menu in menus)
         {
+            if (menu == null) return;
             if(menu.gameObject.activeSelf)
             {
                 isUIOpen = true;
