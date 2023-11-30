@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     public int myKey;
     static Vector3? spawnPosition = null;
-    static Dictionary<int, PlayerInput> inputs = new Dictionary<int, PlayerInput>();
+    static Dictionary<int, InputDevice> inputs = new Dictionary<int, InputDevice>();
     
     [Header("HealthSystem")]
     [SerializeField] protected HealthController healthController;
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
         if (inputs.ContainsKey(myKey))
         {
-            GetComponent<PlayerInput>().SwitchCurrentControlScheme(inputs[myKey].currentControlScheme, inputs[myKey].devices.ToArray());
+            GetComponent<PlayerInput>().SwitchCurrentControlScheme(inputs[myKey]);
             inputs.Remove(myKey);
         }
     }
@@ -201,8 +201,10 @@ public class PlayerController : MonoBehaviour
             {
                 PlayerController clara = FindObjectOfType<ClaraEncoger>().GetComponent<PlayerController>();
                 PlayerController yema = FindObjectOfType<Explosion>().GetComponent<PlayerController>();
-                inputs.Add(clara.myKey, clara.GetComponent<PlayerInput>());
-                inputs.Add(yema.myKey, yema.GetComponent<PlayerInput>());
+                if(!inputs.ContainsKey(clara.myKey))
+                    inputs.Add(clara.myKey, clara.GetComponent<PlayerInput>().devices[0]);
+                if(!inputs.ContainsKey(clara.myKey))
+                    inputs.Add(yema.myKey, yema.GetComponent<PlayerInput>().devices[0]);
                 if (boss.state == SartenController.States.WaitingForPlayers)
                 {
                     SceneManager.LoadScene("Primer-Nivel");

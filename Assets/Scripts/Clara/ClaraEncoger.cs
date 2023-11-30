@@ -68,12 +68,12 @@ public class ClaraEncoger : MonoBehaviour
             animator.SetBool("Duck", true);
 
             // Encoger
-            Vector3 originalScale = characterCollider.transform.localScale;
-            characterCollider.transform.localScale = new Vector3(originalScale.x, originalScale.y * verticalScale, originalScale.z);
+            //Vector3 originalScale = characterCollider.transform.localScale;
+            //characterCollider.transform.localScale = new Vector3(originalScale.x, originalScale.y * verticalScale, originalScale.z);
 
-            Vector3 scale = characterModelTransform.localScale;
-            scale.y *= verticalScale;
-            characterModelTransform.localScale = scale;
+            //Vector3 scale = characterModelTransform.localScale;
+            //scale.y *= verticalScale;
+            //characterModelTransform.localScale = scale;
         }
 
         yield return null;

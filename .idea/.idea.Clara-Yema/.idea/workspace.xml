@@ -5,7 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/YemaIDLEfinal.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/YemaIDLEfinal.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yemaexplosion.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yemaexplosion.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yemarunfinal.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yemarunfinal.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yemawalkfinal1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimYema/Yemawalkfinal1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Jumpyema.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Jumpyema.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Jumpyemarreglado.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Jumpyemarreglado.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/JumpyemarregladoJump.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/JumpyemarregladoJump.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PatataIDLE.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PatataIDLE.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/RemiIDLE.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/RemiIDLE.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Runyema.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Runyema.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Standyema.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Standyema.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TomateIDLE.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TomateIDLE.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Tomatedance.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Tomatedance.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Walkyema.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Walkyema.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/SUELO.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/SUELO.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/batidoramanilla.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/batidoramanilla.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/bowl.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/bowl.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/cajas.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/cajas.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/campanaextractora.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/campanaextractora.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/cucharon.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/cucharon.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/encimera.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/encimera.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/estantería.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/estantería.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/fregadero 1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/fregadero 1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/isladecocinacontaburetes.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/isladecocinacontaburetes.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/jarra.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/jarra.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/mantel.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/mantel.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/nevera.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/nevera.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/olla del reves.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/olla del reves.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/olla.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/olla.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/paredes.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/paredes.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/planta1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/planta1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/planta2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/planta2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/platodelreves.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/platodelreves.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/puerta.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/puerta.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/reloj.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/reloj.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/rodillo.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/rodillo.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/salero.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/salero.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/tabla.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/tabla.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/tarro.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/tarro.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/vaso.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/vaso.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/vitrocerámica.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/COCINA FINAL/vitrocerámica.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/ESTANTERIA.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/ESTANTERIA.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/REMIfinal.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/REMIfinal.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/REMIsentadoconwallpaper.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/REMIsentadoconwallpaper.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/SUELO.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/SUELO.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Yema.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Yema.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/clara_animation.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/clara_animation.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/cocina.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/cocina.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/cucharón.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/cucharón.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/escoba.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/escoba.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/ollacontapa.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/ollacontapa.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/patata.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/patata.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/salchicha_modelada.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/salchicha_modelada.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/sarten-temp.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/sarten-temp.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/sartenModificada_modelado.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/sartenModificada_modelado.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/sartenRiggeada.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/sartenRiggeada.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/sarten_modelado.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/sarten_modelado.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/tomate.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/tomate.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/zanahoria_riggeada.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/zanahoria_riggeada.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Clara/ClaraEncoger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Clara/ClaraEncoger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +190,7 @@
       <workItem from="1700748663341" duration="4472000" />
       <workItem from="1700843931616" duration="3011000" />
       <workItem from="1701094269197" duration="9799000" />
-      <workItem from="1701331935154" duration="567000" />
+      <workItem from="1701331935154" duration="997000" />
     </task>
     <servers />
   </component>
