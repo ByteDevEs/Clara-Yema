@@ -59,7 +59,8 @@ public class MandoDialogo : MenuAutoSeleccionManager
         print("Cerrando dialogo");
         foreach (var menu in menus) 
         {
-            menu.gameObject.SetActive(false);
+            if(menu != null)
+                menu.gameObject.SetActive(false);
         }
     }
     

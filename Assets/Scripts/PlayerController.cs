@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     Vector3 initialPosition;
 
     public int myKey;
-    static Vector3? spawnPosition = null;
+    public static Vector3? spawnPosition = null;
     static Dictionary<int, InputDevice> inputs = new Dictionary<int, InputDevice>();
     
     [Header("HealthSystem")]
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         rb = gameObject.GetComponent<Rigidbody>();
         initialPosition = transform.position;
-        if(spawnPosition != null)
+        if(spawnPosition != null && SceneManager.GetActiveScene().name == "Primer-Nivel")
         {
             transform.position = spawnPosition.Value;
         }

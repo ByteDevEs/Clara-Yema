@@ -6,6 +6,7 @@ using UnityEngine;
 public class CajonLaberinto : MonoBehaviour
 {
     private int playersInside = 0; // Variable para contar los jugadores dentro del collider
+    public string sceneName = "SceneLaberinto";
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +17,8 @@ public class CajonLaberinto : MonoBehaviour
 
             if (playersInside >= 2) // Verifica si ambos jugadores están dentro
             {
-                SceneManager.LoadScene("SceneLaberinto"); // Carga la escena
+                PlayerController.spawnPosition = new Vector3(-47,61.91f,25);
+                SceneManager.LoadScene(sceneName); // Carga la escena
             }
         }
     }

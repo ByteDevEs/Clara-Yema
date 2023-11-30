@@ -27,8 +27,22 @@ public class ActivarCercania : MonoBehaviour
                     {
                         activated = true;
                         toActivate.SetActive(true);
+                        foreach (var p in players)
+                        {
+                            p.GetComponent<PlayerController>().controller.enabled = false;
+                        }
                     }
             }
+        }
+    }
+
+    public void EndDialogue()
+    {
+        toActivate.SetActive(false);
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var p in players)
+        {
+            p.GetComponent<PlayerController>().controller.enabled = false;
         }
     }
 }
