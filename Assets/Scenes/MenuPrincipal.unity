@@ -2208,7 +2208,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: 0}
+  m_AnchoredPosition: {x: 250, y: -119}
   m_SizeDelta: {x: 360, y: 82.224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &350293714
@@ -4055,7 +4055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bb77183c562755047a6b1b0afce8928e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ace8b72f07447343b9167f7ca884e10, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4253,7 +4253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 114}
   m_SizeDelta: {x: 360, y: 82.224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &690214506
@@ -7770,6 +7770,7 @@ GameObject:
   - component: {fileID: 1275452234}
   - component: {fileID: 1275452236}
   - component: {fileID: 1275452235}
+  - component: {fileID: 1275452237}
   m_Layer: 0
   m_Name: Yema
   m_TagString: Untagged
@@ -7836,6 +7837,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275452233}
   m_CullTransparentMesh: 1
+--- !u!114 &1275452237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275452233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3.81, y: 2.95}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1278785610
 GameObject:
   m_ObjectHideFlags: 0
@@ -10668,6 +10684,7 @@ GameObject:
   - component: {fileID: 1715967943}
   - component: {fileID: 1715967945}
   - component: {fileID: 1715967944}
+  - component: {fileID: 1715967946}
   m_Layer: 0
   m_Name: Clara
   m_TagString: Untagged
@@ -10734,6 +10751,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715967942}
   m_CullTransparentMesh: 1
+--- !u!114 &1715967946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715967942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 3.82, y: -2.41}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1716975306
 GameObject:
   m_ObjectHideFlags: 0
