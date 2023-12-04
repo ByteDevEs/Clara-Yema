@@ -67,6 +67,6 @@ Shader "Unlit/ToonShader"
             }
             ENDCG
         }
-       
+       UsePass "Legacy Shaders/VertexLit/SHADOWCASTER" 
     }
 }
