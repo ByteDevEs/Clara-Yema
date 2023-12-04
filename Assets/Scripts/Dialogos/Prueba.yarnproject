@@ -2,7 +2,11 @@
   "projectFileVersion": 2,
   "sourceFiles": [
     "Prueba.yarn",
-    "REMI.yarn"
+    "REMI.yarn",
+    "Patata.yarn",
+    "Chicha.yarn",
+    "Nahoria.yarn",
+    "Tomi.yarn"
   ],
   "excludeFiles": [],
   "localisation": {},
