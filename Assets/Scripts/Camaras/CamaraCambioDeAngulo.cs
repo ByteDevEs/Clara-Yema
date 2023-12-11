@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using ProjectDawn.SplitScreen;
 using UnityEngine;
+using Gizmos = UnityEngine.Gizmos;
 
 public class CamaraCambioDeAngulo : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class CamaraCambioDeAngulo : MonoBehaviour
         public Vector3 rotacion;
         [SerializeField]
         public Vector3 posicion;
+        [SerializeField]
+        public float distancia = 15f;
     }
     
     [SerializeField]
@@ -25,9 +29,12 @@ public class CamaraCambioDeAngulo : MonoBehaviour
     
     [SerializeField]
     GameObject[] targets;
+    
+    private SplitScreenEffect splitScreenEffect;
 
     private void Start()
     {
+        splitScreenEffect = GetComponentInChildren<SplitScreenEffect>();
         Vector3 posicion = Vector3.zero;
         foreach (var target in targets)
         {
@@ -48,6 +55,7 @@ public class CamaraCambioDeAngulo : MonoBehaviour
             }
         }
         transform.rotation = Quaternion.Euler(anguloMasCercano.rotacion);
+        splitScreenEffect.Distance = anguloMasCercano.distancia;
     }
 
     // Update is called once per frame
@@ -71,7 +79,9 @@ public class CamaraCambioDeAngulo : MonoBehaviour
         float porcentajeA = distanciaA / distanciaTotal;
         float porcentajeB = distanciaB / distanciaTotal;
         Quaternion r = Quaternion.Lerp(Quaternion.Euler(a.rotacion), Quaternion.Euler(b.rotacion), porcentajeA);
+        float d = Mathf.Lerp(a.distancia, b.distancia, porcentajeA);
         transform.rotation = Quaternion.Lerp(transform.rotation, r, Time.deltaTime);
+        splitScreenEffect.Distance = Mathf.Lerp(splitScreenEffect.Distance, d, Time.deltaTime);;
     }
 
     private void OnDrawGizmos()
