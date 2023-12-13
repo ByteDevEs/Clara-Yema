@@ -54,13 +54,13 @@ public class ActivarCercania : MonoBehaviour
 
     public void StartTalking()
     {
-        animator.SetBool("Talk", true);
+        animator.SetBool("Hablando", true);
         Invoke("NoTalk", 1f);
     }
 
     IEnumerator NoTalk()
     {
-        animator.SetBool("Talk", false);
+        animator.SetBool("Hablando", false);
         return null;
     }
 }
