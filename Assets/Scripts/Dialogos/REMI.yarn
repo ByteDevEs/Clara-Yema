@@ -1,11 +1,22 @@
-﻿title: REMI
-tags:
+﻿title: Start
 ---
 REMI: Buenos días, veo que habéis logrado salir del bowl. Os veo un poco perdidas, quizá deberíais buscar a vuestra progenitora… aunque parece que ya teníais la intención de hacerlo.
+    <<jump Cont1>>
+===
 
-¿Cómo que no sabeis por donde empezar? Pues probad a  hablar con los alimentos que os encontréis por la cocina, tendrán información de interes para vosotras.
+title: Cont1
+---
+REMI: ¿Cómo que no sabeis por donde empezar? Pues probad a  hablar con los alimentos que os encontréis por la cocina, tendrán información de interes para vosotras.
+    <<jump Cont2>>
+===
 
-Técnicamente no tengo por qué ayudaros, pero os veo bastante perdidas, así que haré el esfuerzo de explicaros los controles
+title: Cont2
+---
+REMI: Técnicamente no tengo por qué ayudaros, pero os veo bastante perdidas, así que haré el esfuerzo de explicaros los controles
+    <<jump Fin>>
+===
 
-Es sencillo: con el Joystick  podéis caminar y correr, con la B, saltáis, con la A teneis vuestras respectivas habilidades de movimiento y con Y las habilidades especiales. 
+title: Fin
+---
+REMI: Es sencillo: con el Joystick  podéis caminar y correr, con la B, saltáis, con la A teneis vuestras respectivas habilidades de movimiento y con Y las habilidades especiales. 
 ===

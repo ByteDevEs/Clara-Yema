@@ -4,9 +4,9 @@
     "Prueba.yarn",
     "REMI.yarn",
     "Patata.yarn",
-    "Chicha.yarn",
     "Nahoria.yarn",
-    "Tomi.yarn"
+    "Tomi.yarn",
+    "Chicha.yarn"
   ],
   "excludeFiles": [],
   "localisation": {},

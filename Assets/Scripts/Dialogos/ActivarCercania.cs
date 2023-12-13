@@ -5,6 +5,7 @@ using UnityEngine;
 public class ActivarCercania : MonoBehaviour
 {
     public GameObject toActivate;
+    [SerializeField] protected Animator animator;
 
     public float cercania = 5;
     bool activated = false;
@@ -49,5 +50,17 @@ public class ActivarCercania : MonoBehaviour
         {
             p.enabled = true;
         }
+    }
+
+    public void StartTalking()
+    {
+        animator.SetBool("Talk", true);
+        Invoke("NoTalk", 1f);
+    }
+
+    IEnumerator NoTalk()
+    {
+        animator.SetBool("Talk", false);
+        return null;
     }
 }
