@@ -1,19 +1,19 @@
 ﻿title: Chicha
 ---
-Chicha: ¡POR FIN ME ENCUENTRA ALGUIEN! Llevo aquí semanas, jolín.
+¡POR FIN ME ENCUENTRA ALGUIEN! Llevo aquí semanas, jolín.
     <<jump Cont1Chicha>>
 ===
 title: Cont1Chicha
 ---
-Chicha: Un día la humana hizo perritos calientes y llevo aquí desde entonces, creo que se ha olvidado de mí.
+Un día la humana hizo perritos calientes y llevo aquí desde entonces, creo que se ha olvidado de mí.
     <<jump Cont2Chicha>>
 ===
 title: Cont2Chicha
 ---
-Chicha: Me quedaré esperando hasta que me encuentre, ¡seguro que pronto se da cuenta de que estoy aqui!
+Me quedaré esperando hasta que me encuentre, ¡seguro que pronto se da cuenta de que estoy aqui!
 <<jump FinalChicha>>
 ===
 title: FinalChicha
 ---
-Chicha: Solo espero que no me encuentre el perro primero…
+Solo espero que no me encuentre el perro primero…
 ===
