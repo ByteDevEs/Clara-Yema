@@ -29,15 +29,13 @@ public class ActivarCercania1 : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         playerControllers = new PlayerController[players.Length];
         dash = new Dash[players.Length];
-        explosion = new Explosion();
-        claraEncoger = new ClaraEncoger();
+        explosion = FindObjectOfType<Explosion>();
+        claraEncoger = FindObjectOfType<ClaraEncoger>();
         for (int i = 0; i < players.Length; i++)
         {
             playerControllers[i] = players[i].GetComponent<PlayerController>();
             dash[i] = players[i].GetComponent<Dash>();
         }
-        explosion = FindObjectOfType<Explosion>();
-        claraEncoger = FindObjectOfType<ClaraEncoger>();
         foreach (var p in playerControllers)
         {
             p.enabled = false;
