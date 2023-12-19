@@ -397,7 +397,7 @@ namespace ProjectDawn.SplitScreen
                 // Update command buffer if there any modifiers that will change it
                 foreach (var component in m_Components)
                 {
-                    if (component is ISplitScreenCommandBuffer hook && component.isActiveAndEnabled)
+                    if (component is ISplitScreenCommandBuffer hook && component.isActiveAndEnabled) 
                     {
                         updateCommandBuffer = true;
                         m_CommandBufferModified = true;

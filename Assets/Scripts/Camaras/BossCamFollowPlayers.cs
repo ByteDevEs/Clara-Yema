@@ -30,6 +30,5 @@ public class BossCamFollowPlayers : MonoBehaviour
         GetComponent<Animator>().enabled = false;
         animCam.Priority = 0;
         bossCam.Priority = 1;
-        FindObjectOfType<SartenController>().state = SartenController.States.Awake;
     }
 }

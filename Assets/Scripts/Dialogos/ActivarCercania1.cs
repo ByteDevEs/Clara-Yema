@@ -10,7 +10,10 @@ public class ActivarCercania1 : MonoBehaviour
     public float cercania = 5;
     bool activated = false;
     private GameObject[] players;
-    PlayerController[] playerControllers;
+    PlayerController[] playerControllers = new PlayerController[2];
+    Dash[] dash;
+    ClaraEncoger claraEncoger;
+    Explosion explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,15 +26,28 @@ public class ActivarCercania1 : MonoBehaviour
 
     public void StartDialogue()
     {
+        players = GameObject.FindGameObjectsWithTag("Player");
         playerControllers = new PlayerController[players.Length];
-            for (int i = 0; i < players.Length; i++)
-            {
-                playerControllers[i] = players[i].GetComponent<PlayerController>();
-            }
-            foreach (var p in playerControllers)
-            {
-                p.enabled = false;
-            }
+        dash = new Dash[players.Length];
+        explosion = new Explosion();
+        claraEncoger = new ClaraEncoger();
+        for (int i = 0; i < players.Length; i++)
+        {
+            playerControllers[i] = players[i].GetComponent<PlayerController>();
+            dash[i] = players[i].GetComponent<Dash>();
+        }
+        explosion = FindObjectOfType<Explosion>();
+        claraEncoger = FindObjectOfType<ClaraEncoger>();
+        foreach (var p in playerControllers)
+        {
+            p.enabled = false;
+        }
+        foreach (var d in dash)
+        {
+            d.enabled = false;
+        }
+        explosion.enabled = false;
+        claraEncoger.enabled = false;
     }
 
     public void EndDialogue()
@@ -40,8 +56,19 @@ public class ActivarCercania1 : MonoBehaviour
         foreach (var p in playerControllers)
         {
             p.enabled = true;
+            p.gameObject.GetComponentInChildren<Animator>().SetFloat("Speed", 0);
+            p.gameObject.GetComponentInChildren<Animator>().SetBool("Jump", false);
+            p.gameObject.GetComponentInChildren<Animator>().SetBool("Duck", false);
+            p.gameObject.GetComponentInChildren<Animator>().SetBool("Explode", false);
         }
+        foreach (var d in dash)
+        {
+            d.enabled = true;
+        }
+        explosion.enabled = true;
+        claraEncoger.enabled = true;
         animator.SetBool("Alejar", true);
+        FindObjectOfType<SartenController>().state = SartenController.States.Awake;
     }
 
     /*public void StartTalking()

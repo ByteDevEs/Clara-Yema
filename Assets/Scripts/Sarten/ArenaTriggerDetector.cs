@@ -41,7 +41,6 @@ public class ArenaTriggerDetector : MonoBehaviour
                 gO.GetComponent<TransitionCamera>().spawner = spawner[count].transform;
                 count++;
             }
-            System.Threading.Thread.Sleep(1000);
             Dialogo.SetActive(true);
         }
     }

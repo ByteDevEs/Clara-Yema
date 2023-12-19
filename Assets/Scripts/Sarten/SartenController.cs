@@ -373,6 +373,8 @@ public class SartenController : MonoBehaviour
         state = States.Awake;
         Invoke("AI", attackDelay);
     }
+    
+    Coroutine dashCoroutine;
 
     private void DashToPlayer()
     {
@@ -386,7 +388,7 @@ public class SartenController : MonoBehaviour
             transform.forward = direction;
             transform.Rotate(0, 90, 0);
             animator.SetTrigger("Dash");
-            StartCoroutine(MoveTime(attackDelay/1.5f, direction));
+            dashCoroutine = StartCoroutine(MoveTime(attackDelay/1.5f, direction));
         }
     }
     
@@ -459,6 +461,12 @@ public class SartenController : MonoBehaviour
             Destroy(other.gameObject);
             if(state == States.Dash)
                 state = States.Dizzy;
+        }
+        else if (other.gameObject.CompareTag("FightWalls"))
+        {
+            StopCoroutine(dashCoroutine);
+            state = States.Awake;
+            Invoke("AI", attackDelay);
         }
     }
 
