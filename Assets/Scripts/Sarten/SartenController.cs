@@ -53,6 +53,13 @@ public class SartenController : MonoBehaviour
     public States state;
     private Vector3 initialPosition;
     
+    bool busy = false;
+    
+    public void SetUnBusy()
+    {
+        busy = false;
+    }
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -96,54 +103,46 @@ public class SartenController : MonoBehaviour
 
     private void AI()
     {
-        switch (state)
+        if (!busy)
         {
-            case States.WaitingForPlayers:
-                Invoke("AI", 0);
-                return;
-            case States.Awake:
-                GenerateNewState();
-                Invoke("AI", 0);
-                return;
-            case States.Stomp:
-                Stomp();
-                break;
-            case States.LaunchSpatula:
-                LaunchFork();
-                break;
-            case States.Dash:
-                DashToPlayer();
-                break;
-            case States.Dizzy:
-                Invoke("CheckDizzy", 2f);
-                break;
-            case States.Mix:
-                Mix();
-                break;
-            case States.Smash:
-                Smash();
-                break;
-            case States.Defeated:
-                break;
+            switch (state)
+            {
+                case States.WaitingForPlayers:
+                    break;
+                case States.Awake:
+                    busy = true;
+                    GenerateNewState();
+                    break;
+                case States.Stomp:
+                    busy = true;
+                    Stomp();
+                    break;
+                case States.LaunchSpatula:
+                    busy = true;
+                    LaunchFork();
+                    break;
+                case States.Dash:
+                    busy = true;
+                    DashToPlayer();
+                    break;
+                case States.Dizzy:
+                    busy = true;
+                    Invoke("CheckDizzy", 2f);
+                    break;
+                case States.Mix:
+                    busy = true;
+                    Mix();
+                    break;
+                case States.Smash:
+                    busy = true;
+                    Smash();
+                    break;
+                case States.Defeated:
+                    return;
+            }
         }
-    }
-
-    public void EndAnimation()
-    {
-        Invoke("AI", attackDelay);
-    }
-    
-    void GenerateNewInnerAttackState()
-    {
-        int rInnerAttack = Random.Range(0, 2);
-        if (rInnerAttack == 0)
-        {
-            state = States.Mix;
-        }
-        else
-        {
-            state = States.Smash;
-        }
+        
+        AI();
     }
 
     void GenerateNewState()
@@ -170,6 +169,8 @@ public class SartenController : MonoBehaviour
             else
                 state = States.Stomp;
         }
+        
+        SetUnBusy();
     }
     
     private void Mix()
@@ -184,7 +185,6 @@ public class SartenController : MonoBehaviour
     
     public void EndInnerAttack()
     {
-        Invoke("AI", attackDelay);
         state = States.Awake;
         //Move all players upwards and make them land in one spawn point of the arena (the furthest one)
         Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
@@ -214,11 +214,20 @@ public class SartenController : MonoBehaviour
 
     private void CheckDizzy()
     {
-        if(bothInside)
-            GenerateNewInnerAttackState();
+        if (bothInside)
+        {
+            int rInnerAttack = Random.Range(0, 2);
+            if (rInnerAttack == 0)
+            {
+                state = States.Mix;
+            }
+            else
+            {
+                state = States.Smash;
+            }
+        }
         else
             state = States.Awake;
-        Invoke("AI", 0);
     }
 
     private void LaunchFork()
@@ -261,7 +270,7 @@ public class SartenController : MonoBehaviour
         }
         
         animator.SetTrigger("LaunchFork");
-        Invoke("AI", attackDelay+3f);
+        Invoke("SetUnBusy", attackDelay+3f);
     }
     
     IEnumerator MoveForkTime(GameObject fork, float time, Vector3 position, Vector3 direction)
@@ -332,8 +341,7 @@ public class SartenController : MonoBehaviour
         animator.SetTrigger("Stomp");
         Invoke("SpawnProp", 1.5f);
     }
-
-
+    
     public void SpawnProp()
     {
         print("SpawnProp");
