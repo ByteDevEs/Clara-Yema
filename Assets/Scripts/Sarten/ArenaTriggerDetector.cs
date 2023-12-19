@@ -15,6 +15,10 @@ public class ArenaTriggerDetector : MonoBehaviour
 
     [SerializeField]
     private GameObject walls;
+    [SerializeField]
+    AudioSource background;
+    [SerializeField]
+    AudioClip music;
 
     [SerializeField]
     private GameObject canvasTransition;
@@ -41,6 +45,9 @@ public class ArenaTriggerDetector : MonoBehaviour
                 gO.GetComponent<TransitionCamera>().spawner = spawner[count].transform;
                 count++;
             }
+            background.Stop();
+            background.clip = music;
+            background.Play();
             Dialogo.SetActive(true);
         }
     }
