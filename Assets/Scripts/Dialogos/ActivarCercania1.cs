@@ -37,6 +37,7 @@ public class ActivarCercania1 : MonoBehaviour
         foreach (var p in playerControllers)
         {
             p.enabled = false;
+            p.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             p.animator.SetFloat("Speed", 0);
             p.animator.SetBool("Jump", false);
             p.animator.SetBool("Duck", false);
@@ -53,6 +54,7 @@ public class ActivarCercania1 : MonoBehaviour
         foreach (var p in playerControllers)
         {
             p.enabled = true;
+            p.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             p.animator.SetFloat("Speed", 0);
             p.animator.SetBool("Jump", false);
             p.animator.SetBool("Duck", false);

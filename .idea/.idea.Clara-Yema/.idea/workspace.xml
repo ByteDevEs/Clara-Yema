@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="" />
+    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
