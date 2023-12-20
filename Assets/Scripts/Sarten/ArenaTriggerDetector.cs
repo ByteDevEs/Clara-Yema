@@ -35,7 +35,6 @@ public class ArenaTriggerDetector : MonoBehaviour
         {
             once = true;
             sarten.bothInside = true;
-            walls.SetActive(true);
             int count = 0;
             foreach (var player in players)
             {
@@ -55,6 +54,7 @@ public class ArenaTriggerDetector : MonoBehaviour
     IEnumerator SetDialog()
     {
         yield return new WaitForSeconds(0.3f);
+        walls.SetActive(true);
      
         bossCamara.SetActive(true);
         bossCamara.GetComponent<Animator>().enabled = true;
@@ -80,7 +80,6 @@ public class ArenaTriggerDetector : MonoBehaviour
     {
         once = true;
         sarten.bothInside = true;
-        walls.SetActive(true);
         int count = 0;
         foreach (var player in players)
         {

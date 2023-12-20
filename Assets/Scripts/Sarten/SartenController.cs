@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 [RequireComponent(typeof(HealthController))]
 public class SartenController : MonoBehaviour
@@ -36,6 +37,7 @@ public class SartenController : MonoBehaviour
     
     [SerializeField] [ReadOnly] private List<GameObject> playerInside;
     [SerializeField] float attackDelay = 0;
+    private float timer;
     [SerializeField] float dashSpeed = 5;
 
     private List<GameObject> players;
@@ -59,6 +61,8 @@ public class SartenController : MonoBehaviour
     private Quaternion initialRotation;
     
     List<Coroutine> coroutines = new List<Coroutine>();
+    
+    public VideoClip videoClipEnd;
     
     public void StartFight()
     {
@@ -104,8 +108,14 @@ public class SartenController : MonoBehaviour
         rightForkInitialRotation = rightFork.transform.rotation;
     }
     
-    private void GoToCredits()
+    IEnumerator GoToCredits()
     {
+        CinematicPlayer cinematicPlayer = GameObject.Find("CinematicPlayer").GetComponent<CinematicPlayer>();
+        cinematicPlayer.PlayVideo(videoClipEnd);
+        while (cinematicPlayer.GetComponent<VideoPlayer>().isPlaying)
+        {
+            yield return new WaitForEndOfFrame();
+        }
         SceneManager.LoadScene("Credits");
     }
     
@@ -135,7 +145,7 @@ public class SartenController : MonoBehaviour
     
     IEnumerator SpawnProp()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         print("SpawnProp");
         if(fallingPropsList.Count > 1)
             yield break;
@@ -159,155 +169,7 @@ public class SartenController : MonoBehaviour
             fallingPropsList.Add(gO);
         }
     }
-
-    private void Update()
-    {
-        if(playerInside.Count == 2)
-            bothInside = true;
-        else
-            bothInside = false;
-        
-        fallingPropsList.RemoveAll(item => item == null);
-        
-        if(state == States.Dizzy || state == States.Mix || state == States.Smash)
-            bossCollider.isTrigger = true;
-
-        if(state == States.Dizzy)
-            animator.SetBool("Dizzy", true);
-        else
-            animator.SetBool("Dizzy", false);
-
-        if (healthController.health <= 0)
-        {
-            state = States.Defeated;
-            animator.SetTrigger("Dead");
-            Invoke("GoToCredits", 5f);
-        }
-        
-        
-        if (!semaphore)
-        {
-            switch (state)
-            {
-                case States.WaitingForPlayers:
-                    break;
-                case States.Awake:
-                    semaphore = true;
-                    state = States.LaunchSpatula;
-                    /*int rState = Random.Range(0, 3);
-                    if (rState == 0)
-                    {
-                        if(fallingPropsList.Count > 1)
-                            state = States.Dash;
-                        else
-                            state = States.Stomp;
-                    }
-                    else if (rState == 1)
-                    {
-                        if(fallingPropsList.Count == 0)
-                            state = States.LaunchSpatula;
-                        else
-                            state = States.Dash;
-                    }
-                    else
-                    {
-                        if(fallingPropsList.Count > 0)
-                            state = States.Dash;
-                        else
-                            state = States.Stomp;
-                    }*/
-                    semaphore = false;
-                    return;
-                case States.Stomp:
-                    semaphore = true;
-                    Stomp();
-                    return;
-                ///Checked code
-                case States.LaunchSpatula:
-                    semaphore = true;
-                    LaunchFork();
-                    return;
-                case States.Dash:
-                    // semaphore = true;
-                    // DashToPlayer();
-                    return;
-                case States.Dizzy:
-                    // semaphore = true;
-                    // Invoke("CheckDizzy", 2f);
-                    return;
-                case States.Mix:
-                    // semaphore = true;
-                    // Mix();
-                    return;
-                case States.Smash:
-                    // semaphore = true;
-                    // Smash();
-                    return;
-                case States.Defeated:
-                    return;
-            }
-        }
-    }
     
-    private void Mix()
-    {
-        animator.SetTrigger("Mix");
-    }
-    
-    void Smash()
-    {
-        animator.SetTrigger("Smash");
-    }
-    
-    public void EndInnerAttack()
-    {
-        state = States.Awake;
-        //Move all players upwards and make them land in one spawn point of the arena (the furthest one)
-        Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
-        
-        //Remove the spawner which is blocked by a collision
-        foreach (Vector3 spawner in spawners)
-        {
-            if (Physics.BoxCast(spawner, Vector3.one * 0.5f, Vector3.up, Quaternion.identity, 1f))
-            {
-                spawners = spawners.Where(x => x != spawner).ToArray();
-            }
-        }
-        
-        //Get the furthest spawner
-        Vector3 furthestSpawner = spawners.OrderByDescending(x => Vector3.Distance(x, transform.position)).First();
-        
-        //Move the player to the furthest spawner, make an arc to the sky and then fall to the ground, use PlayerController
-        foreach (GameObject player in players)
-        {
-            player.transform.position = furthestSpawner;
-            player.GetComponent<CharacterController>().Move(Vector3.up * 10);
-            //Move to the furthest spawner
-            Vector3 direction = furthestSpawner - player.transform.position;
-            player.GetComponent<CharacterController>().Move(direction.normalized * 10);
-        }
-    }
-
-    private void CheckDizzy()
-    {
-        if (bothInside)
-        {
-            int rInnerAttack = Random.Range(0, 2);
-            if (rInnerAttack == 0)
-            {
-                state = States.Mix;
-            }
-            else
-            {
-                state = States.Smash;
-            }
-        }
-        else
-        {
-            state = States.Awake;
-        }
-    }
-
     private void LaunchFork()
     {
         GameObject playerNearest = GetNearestPlayer();
@@ -365,14 +227,14 @@ public class SartenController : MonoBehaviour
             
             rightForkTrial.transform.position = Vector3.Lerp(initialRightPosition, playerNearest, (1 - timeLeft) * 1.25f);
             leftForkTrial.transform.position = Vector3.Lerp(initialLeftPosition, playerFurthest, (1 - timeLeft) * 1.25f);
-            timeLeft -= Time.deltaTime;
+            timeLeft -= Time.fixedDeltaTime;
             yield return new WaitForEndOfFrame();
         }
         
         Vector3 initialPosition = fork.transform.position;
         while (timeLeft < time)
         {
-            timeLeft += Time.deltaTime / 0.7f;
+            timeLeft += Time.fixedDeltaTime / 0.7f;
             Transform t = fork.transform;
             t.transform.forward = direction;
             t.transform.Rotate(90, 0, 0);
@@ -385,7 +247,7 @@ public class SartenController : MonoBehaviour
         timeLeft = 0;
         while (timeLeft < time)
         {
-            timeLeft += Time.deltaTime / 0.3f;
+            timeLeft += Time.fixedDeltaTime / 0.3f;
             Transform t = fork.transform;
             t.transform.forward = direction;
             t.transform.Rotate(90, 0, 0);
@@ -418,16 +280,14 @@ public class SartenController : MonoBehaviour
         float timeLeft = time;
         while (timeLeft > 0)
         {
-            timeLeft -= Time.deltaTime;
+            timeLeft -= Time.fixedDeltaTime;
             float speed = 1 - Mathf.Pow((time - timeLeft) / 3, 0.05f);
-            rb.MovePosition(transform.position + direction * (dashSpeed * speed * Time.deltaTime));
+            rb.MovePosition(transform.position + direction * (dashSpeed * speed * Time.fixedDeltaTime));
             yield return new WaitForEndOfFrame();
         }
         state = States.Awake;
     }
     
-    Coroutine dashCoroutine;
-
     private void DashToPlayer()
     {
         GameObject player = GetNearestPlayer();
@@ -439,7 +299,7 @@ public class SartenController : MonoBehaviour
             direction.Normalize();
             transform.forward = direction;
             transform.Rotate(0, 90, 0);
-            dashCoroutine = StartCoroutine(MoveTime(attackDelay/1.5f, direction));
+            coroutines.Add(StartCoroutine(MoveTime(attackDelay, direction)));
         }
     }
     
@@ -448,18 +308,174 @@ public class SartenController : MonoBehaviour
         float timeLeft = time;
         while (timeLeft > 0)
         {
-            timeLeft -= Time.deltaTime;
+            timeLeft -= Time.fixedDeltaTime;
             float speed = 1 - Mathf.Pow((time - timeLeft) / 3, 0.05f);
-            rb.MovePosition(transform.position + direction * (dashSpeed * speed * Time.deltaTime));
+            rb.MovePosition(transform.position + direction * (dashSpeed * speed * Time.fixedDeltaTime));
             yield return new WaitForEndOfFrame();
         }
         
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         
         if(state != States.Dizzy)
         {
             state = States.Awake;
         }
+        semaphore = false;
+    }
+
+    private void Update()
+    {
+        if(playerInside.Count == 2)
+            bothInside = true;
+        else
+            bothInside = false;
+        
+        fallingPropsList.RemoveAll(item => item == null);
+        
+        if(state == States.Dizzy || state == States.Mix || state == States.Smash)
+            bossCollider.isTrigger = true;
+
+        if(state == States.Dizzy)
+            animator.SetBool("Dizzy", true);
+        else
+            animator.SetBool("Dizzy", false);
+
+        if (healthController.health <= 0)
+        {
+            state = States.Defeated;
+            animator.SetTrigger("Dead");
+            StartCoroutine(GoToCredits());
+        }
+        
+        
+        if (!semaphore)
+        {
+            timer += Time.fixedDeltaTime;
+            if(timer > attackDelay)
+            {
+                timer = 0;
+                switch (state)
+                {
+                    case States.WaitingForPlayers:
+                        break;
+                    case States.Awake:
+                        semaphore = true;
+                        int rState = Random.Range(0, 3);
+                        if (rState == 0)
+                        {
+                            if(fallingPropsList.Count > 1)
+                                state = States.Dash;
+                            else
+                                state = States.Stomp;
+                        }
+                        else if (rState == 1)
+                        {
+                            if(fallingPropsList.Count == 0)
+                                state = States.LaunchSpatula;
+                            else
+                                state = States.Dash;
+                        }
+                        else
+                        {
+                            if(fallingPropsList.Count > 0)
+                                state = States.Dash;
+                            else
+                                state = States.Stomp;
+                        }
+                        semaphore = false;
+                        return;
+                    case States.Stomp:
+                        semaphore = true;
+                        Stomp();
+                        return;
+                    case States.LaunchSpatula:
+                        semaphore = true;
+                        LaunchFork();
+                        return;
+                    case States.Dash:
+                        semaphore = true;
+                        DashToPlayer();
+                        return;
+                    ///Checked code
+                    case States.Dizzy:
+                        semaphore = true;
+                        Invoke("CheckDizzy", 2.5f);
+                        return;
+                    case States.Mix:
+                        semaphore = true;
+                        Mix();
+                        return;
+                    case States.Smash:
+                        semaphore = true;
+                        Smash();
+                        return;
+                    case States.Defeated:
+                        return;
+                }
+            }
+        }
+    }
+    
+    private void Mix()
+    {
+        animator.SetTrigger("Mix");
+    }
+    
+    void Smash()
+    {
+        animator.SetTrigger("Smash");
+    }
+    
+    public void EndInnerAttack()
+    {
+        state = States.Awake;
+        //Move all players upwards and make them land in one spawn point of the arena (the furthest one)
+        Vector3[] spawners = GameObject.FindGameObjectsWithTag("Spawner").Select(x => x.transform.position).ToArray();
+        
+        //Remove the spawner which is blocked by a collision
+        foreach (Vector3 spawner in spawners)
+        {
+            if (Physics.BoxCast(spawner, Vector3.one * 0.5f, Vector3.up, Quaternion.identity, 1f))
+            {
+                spawners = spawners.Where(x => x != spawner).ToArray();
+            }
+        }
+        
+        //Get the furthest spawner
+        Vector3 furthestSpawner = spawners.OrderByDescending(x => Vector3.Distance(x, transform.position)).First();
+        
+        //Move the player to the furthest spawner, make an arc to the sky and then fall to the ground, use PlayerController
+        foreach (GameObject player in players)
+        {
+            player.transform.position = furthestSpawner;
+            player.GetComponent<CharacterController>().Move(Vector3.up * 10);
+            //Move to the furthest spawner
+            Vector3 direction = furthestSpawner - player.transform.position;
+            player.GetComponent<CharacterController>().Move(direction.normalized * 10);
+        }
+        
+        semaphore = false;
+    }
+
+    private void CheckDizzy()
+    {
+        if (bothInside)
+        {
+            int rInnerAttack = Random.Range(0, 2);
+            if (rInnerAttack == 0)
+            {
+                state = States.Mix;
+            }
+            else
+            {
+                state = States.Smash;
+            }
+        }
+        else
+        {
+            state = States.Awake;
+        }
+        semaphore = false;
     }
 
     private GameObject GetNearestPlayer()
@@ -516,6 +532,27 @@ public class SartenController : MonoBehaviour
                 state = States.Dizzy;
             }
         }
+        else if (other.gameObject.CompareTag("FightWalls"))
+        {
+            state = States.Awake;
+            foreach (var coroutine in coroutines)
+            {
+                StopCoroutine(coroutine);
+            }
+            coroutines.Clear();
+            semaphore = false;
+        }
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (!playerInside.Contains(other.gameObject))
+            {
+                playerInside.Add(other.gameObject);
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -542,8 +579,13 @@ public class SartenController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("FightWalls"))
         {
-            rb.velocity = Vector3.zero;
             state = States.Awake;
+            foreach (var coroutine in coroutines)
+            {
+                StopCoroutine(coroutine);
+            }
+            coroutines.Clear();
+            semaphore = false;
         }
     }
 
@@ -558,6 +600,16 @@ public class SartenController : MonoBehaviour
         else if (other.gameObject.CompareTag("Arena"))
         {
             transform.position = initialPosition;
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerInside.Remove(other.gameObject);
+            if(playerInside.Count == 0)
+                bossCollider.isTrigger = false;
         }
     }
 }

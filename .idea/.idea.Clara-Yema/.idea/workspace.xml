@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Beat.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Beat.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Slam.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Slam.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamAlejar.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamAlejar.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamAnimation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamera.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamera.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FallingProp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FallingProp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/ArenaTriggerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/ArenaTriggerDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AudioVolume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AudioVolume.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +36,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/VideoPlayers/CinematicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/CanvasSizeCorrectInAwakeAndStart.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed6c4020915a41e1b5eb5e4c6a560e952d400/00/a09deceb/GOAction.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
