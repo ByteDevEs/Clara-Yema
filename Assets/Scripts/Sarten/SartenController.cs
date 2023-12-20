@@ -14,8 +14,12 @@ public class SartenController : MonoBehaviour
 {
     [Header("Forks")]
     [SerializeField] private GameObject leftFork;
+    private Vector3 leftForkInitialPosition;
+    private Quaternion leftForkInitialRotation;
     [SerializeField] private GameObject leftForkTrial;
     [SerializeField] private GameObject rightFork;
+    private Vector3 rightForkInitialPosition;
+    private Quaternion rightForkInitialRotation;
     [SerializeField] private GameObject rightForkTrial;
     [SerializeField] private Collider bossCollider;
     
@@ -54,11 +58,22 @@ public class SartenController : MonoBehaviour
     private Vector3 initialPosition;
     private Quaternion initialRotation;
     
+    List<Coroutine> coroutines = new List<Coroutine>();
+    
     public void StartFight()
     {
+        foreach (Coroutine coroutine in coroutines)
+        {
+            StopCoroutine(coroutine);
+        }
+        animator.Play("Idle");
         state = States.Awake;
         transform.position = initialPosition;
         transform.rotation = initialRotation;
+        leftFork.transform.position = leftForkInitialPosition;
+        leftFork.transform.rotation = leftForkInitialRotation;
+        rightFork.transform.position = rightForkInitialPosition;
+        rightFork.transform.rotation = rightForkInitialRotation;
         //Destroy all props
         foreach (GameObject fallingProp in fallingPropsList)
         {
@@ -75,6 +90,10 @@ public class SartenController : MonoBehaviour
         players = FindObjectsOfType<PlayerController>().ToList().ConvertAll(x => x.gameObject);
         initialPosition = transform.position;
         initialRotation = transform.rotation;
+        leftForkInitialPosition = leftFork.transform.position;
+        leftForkInitialRotation = leftFork.transform.rotation;
+        rightForkInitialPosition = rightFork.transform.position;
+        rightForkInitialRotation = rightFork.transform.rotation;
     }
     
     private void GoToCredits()
@@ -96,7 +115,7 @@ public class SartenController : MonoBehaviour
         }
 
         animator.SetTrigger("Stomp");
-        StartCoroutine(SpawnProp());
+        coroutines.Add(StartCoroutine(SpawnProp()));
     }
     
     private void EndStomp()
@@ -301,7 +320,7 @@ public class SartenController : MonoBehaviour
             
             leftForkTrial.transform.position = leftFork.transform.position;
             leftForkTrial.SetActive(true);
-            StartCoroutine(MoveForkTime(leftFork, attackDelay/1.5f, playerNearest.transform.position, direction));
+            coroutines.Add(StartCoroutine(MoveForkTime(leftFork, attackDelay / 1.5f, playerNearest.transform.position, direction)));
         }
         
         if (playerFurthest != null)
@@ -317,7 +336,7 @@ public class SartenController : MonoBehaviour
             rightForkTrial.transform.position = rightFork.transform.position;
             rightForkTrial.SetActive(true);
             leftForkTrial.transform.position = playerFurthest.transform.position;
-            StartCoroutine(MoveForkTime(rightFork, attackDelay/1.5f, playerFurthest.transform.position, direction));
+            coroutines.Add(StartCoroutine(MoveForkTime(rightFork, attackDelay/1.5f, playerFurthest.transform.position, direction)));
         }
         
         animator.SetTrigger("LaunchFork");

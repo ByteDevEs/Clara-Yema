@@ -200,7 +200,8 @@ namespace ProjectDawn.SplitScreen
                 for (int i = 0; i < Screens.Count; ++i)
                 {
                     cmd.SetGlobalTexture("_SplitScreenTexture", Screens[i].RenderTarget);
-                    cmd.DrawMesh(Screens[i].Mesh, Matrix4x4.identity, Material, 0, 0);
+                    if(Screens[i].Mesh != null)
+                        cmd.DrawMesh(Screens[i].Mesh, Matrix4x4.identity, Material, 0, 0);
                 }
 
                 foreach (var component in m_Components)
@@ -422,7 +423,8 @@ namespace ProjectDawn.SplitScreen
             if (updateCommandBuffer)
             {
                 m_Cmd.Clear();
-                UpdateCommandBuffer(m_Cmd);
+                if (m_Cmd != null)
+                    UpdateCommandBuffer(m_Cmd);
             }
         }
 

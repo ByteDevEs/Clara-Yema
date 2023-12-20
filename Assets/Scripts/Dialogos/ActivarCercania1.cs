@@ -61,7 +61,7 @@ public class ActivarCercania1 : MonoBehaviour
         dash.enabled = true;
         explosion.enabled = true;
         claraEncoger.enabled = true;
-        animator.SetBool("Alejar", true);
+        animator.SetTrigger("Alejar");
         FindObjectOfType<SartenController>().StartFight();
     }
 

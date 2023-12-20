@@ -51,7 +51,8 @@ public class PlayerController : MonoBehaviour
         initialPosition = transform.position;
         if(spawnPosition != null && SceneManager.GetActiveScene().name == "Primer-Nivel")
         {
-            transform.position = spawnPosition.GetValueOrDefault(myKey);
+            if(spawnPosition.ContainsKey(myKey))
+                transform.position = spawnPosition.GetValueOrDefault(myKey);
         }
 
         if (inputs.ContainsKey(myKey))
@@ -224,7 +225,7 @@ public class PlayerController : MonoBehaviour
                     PlayerController[] players = FindObjectsOfType<PlayerController>();
                     foreach (PlayerController player in players)
                     {
-                        spawnPosition.Add(player.myKey, boss.transform.position);
+                        player.healthController.ResetHealth();
                     }
                     FindObjectOfType<ArenaTriggerDetector>().ResetBossFight();
                 }

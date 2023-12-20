@@ -57,6 +57,7 @@ public class ArenaTriggerDetector : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
      
         bossCamara.SetActive(true);
+        bossCamara.GetComponent<Animator>().enabled = true;
         //Teleport players
         foreach (var player in players)
         {
@@ -68,6 +69,7 @@ public class ArenaTriggerDetector : MonoBehaviour
     
     public void ResetBossFight()
     {
+        once = true;
         sarten.bothInside = true;
         walls.SetActive(true);
         int count = 0;
@@ -82,9 +84,11 @@ public class ArenaTriggerDetector : MonoBehaviour
         background.Stop();
         background.clip = music;
         background.Play();
-        Dialogo.GetComponent<DialogueRunner>().StartDialogue("Sarten");
-        Dialogo.SetActive(true);
-        sarten.StartFight();
+        Dialogo.GetComponent<DialogueRunner>().Stop();
+        Dialogo.GetComponent<DialogueRunner>().ResetDialogue();
+        StartCoroutine("SetDialog");
+        
+        //sarten.StartFight();
     }
 
     private void OnTriggerEnter(Collider other)
