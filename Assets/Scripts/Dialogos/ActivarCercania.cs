@@ -38,7 +38,8 @@ public class ActivarCercania : MonoBehaviour
                         toActivate.SetActive(true);
                         try
                         {
-                            toActivate.GetComponent<DialogueRunner>().Stop();
+                            if(toActivate.GetComponent<DialogueRunner>().IsDialogueRunning)
+                                toActivate.GetComponent<DialogueRunner>().Stop();
                             toActivate.GetComponent<DialogueRunner>().ResetDialogue();
                         }
                         catch (Exception e) { }
