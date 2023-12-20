@@ -68,10 +68,12 @@ public class ArenaTriggerDetector : MonoBehaviour
         Dialogo.SetActive(true);
         try
         {
-            Dialogo.GetComponent<DialogueRunner>().Stop();
+            if(Dialogo.GetComponent<DialogueRunner>().IsDialogueRunning)
+                Dialogo.GetComponent<DialogueRunner>().Stop();
             Dialogo.GetComponent<DialogueRunner>().ResetDialogue();
         }
-        catch (Exception e) { }
+        catch (Exception e) 
+        { }
     }
     
     public void ResetBossFight()

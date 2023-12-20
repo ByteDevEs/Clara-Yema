@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Boss.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Stomp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimSarten/Stomp.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamAnimation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamAnimation.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamera.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CanvasAnim/BossCamera.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camaras/BossCamFollowPlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camaras/BossCamFollowPlayers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/ArenaTriggerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/ArenaTriggerDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
