@@ -44,6 +44,18 @@ public class CinematicPlayer : MonoBehaviour
         FindObjectOfType<ClaraEncoger>().enabled = true;
     }
 
+    private void Update()
+    {
+        if (Input.anyKey)
+        {
+            GetComponent<VideoPlayer>().playbackSpeed = 3;
+        }
+        else
+        {
+            GetComponent<VideoPlayer>().playbackSpeed = 1;
+        }
+    }
+
     public void PlayVideo(VideoClip clip)
     {
         GetComponent<VideoPlayer>().clip = clip;

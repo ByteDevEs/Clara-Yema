@@ -108,14 +108,15 @@ public class SartenController : MonoBehaviour
         rightForkInitialRotation = rightFork.transform.rotation;
     }
     
-    IEnumerator GoToCredits()
+    void GoToCredits()
     {
         CinematicPlayer cinematicPlayer = GameObject.Find("CinematicPlayer").GetComponent<CinematicPlayer>();
         cinematicPlayer.PlayVideo(videoClipEnd);
-        while (cinematicPlayer.GetComponent<VideoPlayer>().isPlaying)
-        {
-            yield return new WaitForEndOfFrame();
-        }
+        cinematicPlayer.GetComponent<VideoPlayer>().loopPointReached += LoadCredits;
+    }
+    
+    void LoadCredits(UnityEngine.Video.VideoPlayer vp)
+    {
         SceneManager.LoadScene("Credits");
     }
     
@@ -344,7 +345,7 @@ public class SartenController : MonoBehaviour
         {
             state = States.Defeated;
             animator.SetTrigger("Dead");
-            StartCoroutine(GoToCredits());
+            GoToCredits();
         }
         
         
