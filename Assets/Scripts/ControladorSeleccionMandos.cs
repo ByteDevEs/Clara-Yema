@@ -124,6 +124,7 @@ public class ControladorSeleccionMandos : MonoBehaviour
         PlayerInput yema = players[0].state == State.Yema ? players[0].input : players[1].input;
         yemaScheme = yema.currentControlScheme;
         yemaDevice = yema.GetDevice<Gamepad>();
+        PlayerController.inputs.Clear();
         PlayerController.inputs.Add(0, claraDevice);
         PlayerController.inputs.Add(1, yemaDevice);
     }

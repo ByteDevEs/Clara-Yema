@@ -115,9 +115,19 @@ public class SartenController : MonoBehaviour
         cinematicPlayer.GetComponent<VideoPlayer>().loopPointReached += LoadCredits;
     }
     
+    bool doOnceLoadCredits = false;
     void LoadCredits(UnityEngine.Video.VideoPlayer vp)
     {
-        SceneManager.LoadScene("Credits");
+        if (doOnceLoadCredits)
+            return;
+        doOnceLoadCredits = true;
+        StartCoroutine(LoadCreditsE());
+    }
+    
+    IEnumerator LoadCreditsE()
+    {
+        SceneManager.LoadSceneAsync("Credits");
+        yield return null;
     }
     
     private void Stomp()
