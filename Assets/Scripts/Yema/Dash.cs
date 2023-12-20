@@ -1,35 +1,33 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-
 
 public class Dash : MonoBehaviour
 {
     PlayerController moveScript;
-
     public float dashSpeed;
     public float dashTime;
     public float dashCooldown = 1;
-    float timer;
+    public GameObject dashParticle; // Referencia al objeto DashParticle
 
-    //Guarda en moveScript el script de PlayerController
+    float timer;
+    bool isDashing = false;
+
     private void Start()
     {
         moveScript = GetComponent<PlayerController>();
-
+        dashParticle.SetActive(false); // AsegÃºrate de que el objeto DashParticle estÃ© desactivado al inicio
     }
 
-    //Cuando se le da al círculo comienza la subrutina de dash
     public void CircleDash(InputAction.CallbackContext context)
     {
-        if(timer >= dashCooldown)
+        if (timer >= dashCooldown && !isDashing)
         {
             StartCoroutine(DashI());
             timer = 0;
         }
     }
+
     private void Update()
     {
         timer += Time.deltaTime;
@@ -37,14 +35,17 @@ public class Dash : MonoBehaviour
 
     IEnumerator DashI()
     {
+        isDashing = true;
         float startTime = Time.time;
+        dashParticle.SetActive(true); // Activa el objeto DashParticle al iniciar el dash
 
-        //Mientras que el Tiempo del dash efectuado sea menor al que queremos que dure le aplica una fuerza al personaje en la dirección en la que se mueve
         while (Time.time < startTime + dashTime)
         {
             moveScript.controller.Move(moveScript.move * dashSpeed * Time.deltaTime);
             yield return null;
         }
-    }
 
+        isDashing = false;
+        dashParticle.SetActive(false); // Desactiva el objeto DashParticle al finalizar el dash
+    }
 }
