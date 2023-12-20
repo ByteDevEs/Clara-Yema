@@ -62,12 +62,18 @@ public class SartenController : MonoBehaviour
     
     public void StartFight()
     {
+        state = States.Awake;
+        semaphore = false;
+    }
+    
+    public void StopFight()
+    {
+        semaphore = true;
         foreach (Coroutine coroutine in coroutines)
         {
             StopCoroutine(coroutine);
         }
         animator.Play("Idle");
-        state = States.Awake;
         transform.position = initialPosition;
         transform.rotation = initialRotation;
         leftFork.transform.position = leftForkInitialPosition;
@@ -82,7 +88,9 @@ public class SartenController : MonoBehaviour
         fallingPropsList.Clear();
         healthController.health = healthController.maxHealth;
         bothInside = false;
+        state = States.WaitingForPlayers;
     }
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
