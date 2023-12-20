@@ -9,7 +9,6 @@ public class ActivarCercania1 : MonoBehaviour
 
     public float cercania = 5;
     bool activated = false;
-    private GameObject[] players;
     PlayerController[] playerControllers = new PlayerController[2];
     Dash[] dash;
     ClaraEncoger claraEncoger;
@@ -26,7 +25,7 @@ public class ActivarCercania1 : MonoBehaviour
 
     public void StartDialogue()
     {
-        players = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         playerControllers = new PlayerController[players.Length];
         dash = new Dash[players.Length];
         explosion = FindObjectOfType<Explosion>();
@@ -39,6 +38,10 @@ public class ActivarCercania1 : MonoBehaviour
         foreach (var p in playerControllers)
         {
             p.enabled = false;
+            p.animator.SetFloat("Speed", 0);
+            p.animator.SetBool("Jump", false);
+            p.animator.SetBool("Duck", false);
+            p.animator.SetBool("Explode", false);
         }
         foreach (var d in dash)
         {

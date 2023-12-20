@@ -58,6 +58,7 @@ public class SartenController : MonoBehaviour
     public void SetUnBusy()
     {
         busy = false;
+        print("Unbusy");
     }
 
     public void StartFight()
@@ -281,7 +282,6 @@ public class SartenController : MonoBehaviour
         }
         
         animator.SetTrigger("LaunchFork");
-        Invoke("SetUnBusy", attackDelay+3f);
     }
     
     IEnumerator MoveForkTime(GameObject fork, float time, Vector3 position, Vector3 direction)
@@ -334,6 +334,7 @@ public class SartenController : MonoBehaviour
         leftForkTrial.transform.position = leftFork.transform.position;
         rightForkTrial.transform.position = rightFork.transform.position;
         state = States.Awake;
+        SetUnBusy();
     }
 
     private void Stomp()
@@ -405,7 +406,6 @@ public class SartenController : MonoBehaviour
             direction.Normalize();
             transform.forward = direction;
             transform.Rotate(0, 90, 0);
-            animator.SetTrigger("Dash");
             dashCoroutine = StartCoroutine(MoveTime(attackDelay/1.5f, direction));
         }
     }
@@ -424,7 +424,10 @@ public class SartenController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         
         if(state != States.Dizzy)
+        {
+            busy = false;
             state = States.Awake;
+        }
     }
 
     private GameObject GetNearestPlayer()
@@ -477,12 +480,16 @@ public class SartenController : MonoBehaviour
         {
             Destroy(other.gameObject);
             if(state == States.Dash)
+            {
+                busy = false;
                 state = States.Dizzy;
+            }
         }
         else if (other.gameObject.CompareTag("FightWalls"))
         {
             if(dashCoroutine != null)
                 StopCoroutine(dashCoroutine);
+            busy = false;
             state = States.Awake;
         }
     }
@@ -493,7 +500,10 @@ public class SartenController : MonoBehaviour
         {
             Destroy(other.gameObject);
             if(state == States.Dash)
+            {
+                busy = false;
                 state = States.Dizzy;
+            }
         }
     }
 
@@ -503,7 +513,10 @@ public class SartenController : MonoBehaviour
         {
             Destroy(other.gameObject);
             if(state == States.Dash)
+            {
+                busy = false;
                 state = States.Dizzy;
+            }
         }
     }
 

@@ -48,8 +48,22 @@ public class ArenaTriggerDetector : MonoBehaviour
             background.Stop();
             background.clip = music;
             background.Play();
-            Dialogo.SetActive(true);
+            StartCoroutine("SetDialog");
         }
+    }
+    
+    IEnumerator SetDialog()
+    {
+        yield return new WaitForSeconds(0.3f);
+     
+        bossCamara.SetActive(true);
+        //Teleport players
+        foreach (var player in players)
+        {
+            player.transform.position = spawner[players.IndexOf(player)].transform.position;
+            player.transform.rotation = spawner[players.IndexOf(player)].transform.rotation;
+        }
+        Dialogo.SetActive(true);
     }
     
     public void ResetBossFight()
