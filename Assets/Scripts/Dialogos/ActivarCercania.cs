@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,8 +36,11 @@ public class ActivarCercania : MonoBehaviour
                     {
                         activated = true;
                         toActivate.SetActive(true);
-                        if(!toActivate.GetComponent<DialogueRunner>().IsDialogueRunning)
+                        try
+                        {
                             toActivate.GetComponent<DialogueRunner>().ResetDialogue();
+                        }
+                        catch (Exception e) { }
                         playerControllers = new PlayerController[players.Length];
                         dash = new Dash[players.Length];
                         explosion = FindObjectOfType<Explosion>();
@@ -71,7 +75,18 @@ public class ActivarCercania : MonoBehaviour
         foreach (var p in playerControllers)
         {
             p.enabled = true;
+            p.animator.SetFloat("Speed", 0);
+            p.animator.SetBool("Jump", false);
+            p.animator.SetBool("Duck", false);
+            p.animator.SetBool("Explode", false);
         }
+        foreach (var d in dash)
+        {
+            d.enabled = true;
+        }
+        explosion.enabled = true;
+        claraEncoger.enabled = true;
+        
     }
 
     public void StartTalking()
