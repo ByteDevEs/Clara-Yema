@@ -54,15 +54,6 @@ public class SartenController : MonoBehaviour
     private Vector3 initialPosition;
     private Quaternion initialRotation;
     
-    
-    public void SetUnBusy()
-    {
-        semaphore = false;
-        animator.StopPlayback();
-        animator.Play("Idle");
-        print("Unbusy");
-    }
-
     public void StartFight()
     {
         state = States.Awake;
@@ -77,7 +68,6 @@ public class SartenController : MonoBehaviour
         healthController.health = healthController.maxHealth;
         bothInside = false;
     }
-    
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -91,6 +81,57 @@ public class SartenController : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    
+    private void Stomp()
+    {
+        GameObject player = GetNearestPlayer();
+
+        if (player != null)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            direction.y = 0;
+            direction.Normalize();
+            transform.forward = direction;
+            transform.Rotate(0, 90, 0);
+        }
+
+        animator.SetTrigger("Stomp");
+        StartCoroutine(SpawnProp());
+    }
+    
+    private void EndStomp()
+    {
+        print("EndStomp");
+        semaphore = false;
+        state = States.Awake;
+    }
+    
+    IEnumerator SpawnProp()
+    {
+        yield return new WaitForSeconds(1.5f);
+        print("SpawnProp");
+        if(fallingPropsList.Count > 1)
+            yield break;
+        int num = Random.Range(1, fallingProps.Length);
+        for (int i = 0; i < num; i++)
+        {
+            int r = Random.Range(0, fallingProps.Length);
+            //Circle spawn
+            Vector3[] spawnRange = new Vector3[2];
+            spawnRange[0] = new Vector3(-76.99f, 62.92f, -16.888f);
+            spawnRange[1] = new Vector3(-46.726f, 62.92f, 12.9f);
+            
+            //Spawn in a circle around the boss without passing the arena limits
+            Vector3 spawnPos = new Vector3(Random.Range(spawnRange[0].x, spawnRange[1].x), 62.92f, Random.Range(spawnRange[0].z, spawnRange[1].z));
+            while (Vector3.Distance(spawnPos, transform.position) < 20)
+            {
+                spawnPos = new Vector3(Random.Range(spawnRange[0].x, spawnRange[1].x), 62.92f, Random.Range(spawnRange[0].z, spawnRange[1].z));
+            }
+            
+            GameObject gO = Instantiate(fallingProps[r], spawnPos + Vector3.up * 10, Quaternion.identity);
+            fallingPropsList.Add(gO);
+        }
+    }
 
     private void Update()
     {
@@ -103,8 +144,6 @@ public class SartenController : MonoBehaviour
         
         if(state == States.Dizzy || state == States.Mix || state == States.Smash)
             bossCollider.isTrigger = true;
-        
-        fallingPropsList.RemoveAll(item => item == null);
 
         if(state == States.Dizzy)
             animator.SetBool("Dizzy", true);
@@ -119,7 +158,7 @@ public class SartenController : MonoBehaviour
         }
         
         
-        if (semaphore)
+        if (!semaphore)
         {
             switch (state)
             {
@@ -127,64 +166,60 @@ public class SartenController : MonoBehaviour
                     break;
                 case States.Awake:
                     semaphore = true;
-                    GenerateNewState();
+                    state = States.LaunchSpatula;
+                    /*int rState = Random.Range(0, 3);
+                    if (rState == 0)
+                    {
+                        if(fallingPropsList.Count > 1)
+                            state = States.Dash;
+                        else
+                            state = States.Stomp;
+                    }
+                    else if (rState == 1)
+                    {
+                        if(fallingPropsList.Count == 0)
+                            state = States.LaunchSpatula;
+                        else
+                            state = States.Dash;
+                    }
+                    else
+                    {
+                        if(fallingPropsList.Count > 0)
+                            state = States.Dash;
+                        else
+                            state = States.Stomp;
+                    }*/
+                    semaphore = false;
                     return;
                 case States.Stomp:
                     semaphore = true;
                     Stomp();
                     return;
+                ///Checked code
                 case States.LaunchSpatula:
                     semaphore = true;
                     LaunchFork();
                     return;
                 case States.Dash:
-                    semaphore = true;
-                    DashToPlayer();
+                    // semaphore = true;
+                    // DashToPlayer();
                     return;
                 case States.Dizzy:
-                    semaphore = true;
-                    Invoke("CheckDizzy", 2f);
+                    // semaphore = true;
+                    // Invoke("CheckDizzy", 2f);
                     return;
                 case States.Mix:
-                    semaphore = true;
-                    Mix();
+                    // semaphore = true;
+                    // Mix();
                     return;
                 case States.Smash:
-                    semaphore = true;
-                    Smash();
+                    // semaphore = true;
+                    // Smash();
                     return;
                 case States.Defeated:
                     return;
             }
         }
-    }
-
-    void GenerateNewState()
-    {
-        int rState = Random.Range(0, 3);
-        if (rState == 0)
-        {
-            if(fallingPropsList.Count > 1)
-                state = States.Dash;
-            else
-                state = States.Stomp;
-        }
-        else if (rState == 1)
-        {
-            if(fallingPropsList.Count == 0)
-                state = States.LaunchSpatula;
-            else
-                state = States.Dash;
-        }
-        else
-        {
-            if(fallingPropsList.Count > 0)
-                state = States.Dash;
-            else
-                state = States.Stomp;
-        }
-        
-        SetUnBusy();
     }
     
     private void Mix()
@@ -244,7 +279,6 @@ public class SartenController : MonoBehaviour
         {
             state = States.Awake;
         }
-        SetUnBusy();
     }
 
     private void LaunchFork()
@@ -338,52 +372,8 @@ public class SartenController : MonoBehaviour
         rightForkTrial.SetActive(false);
         leftForkTrial.transform.position = leftFork.transform.position;
         rightForkTrial.transform.position = rightFork.transform.position;
+        semaphore = false;
         state = States.Awake;
-        SetUnBusy();
-    }
-
-    private void Stomp()
-    {
-        GameObject player = GetNearestPlayer();
-
-        if (player != null)
-        {
-            Vector3 direction = player.transform.position - transform.position;
-            direction.y = 0;
-            direction.Normalize();
-            transform.forward = direction;
-            transform.Rotate(0, 90, 0);
-        }
-
-        animator.SetTrigger("Stomp");
-        StartCoroutine(SpawnProp());
-    }
-    
-    IEnumerator SpawnProp()
-    {
-        yield return new WaitForSeconds(1.5f);
-        print("SpawnProp");
-        if(fallingPropsList.Count > 1)
-            yield break;
-        int num = Random.Range(1, fallingProps.Length);
-        for (int i = 0; i < num; i++)
-        {
-            int r = Random.Range(0, fallingProps.Length);
-            //Circle spawn
-            Vector3[] spawnRange = new Vector3[2];
-            spawnRange[0] = new Vector3(-76.99f, 62.92f, -16.888f);
-            spawnRange[1] = new Vector3(-46.726f, 62.92f, 12.9f);
-            
-            //Spawn in a circle around the boss without passing the arena limits
-            Vector3 spawnPos = new Vector3(Random.Range(spawnRange[0].x, spawnRange[1].x), 62.92f, Random.Range(spawnRange[0].z, spawnRange[1].z));
-            while (Vector3.Distance(spawnPos, transform.position) < 20)
-            {
-                spawnPos = new Vector3(Random.Range(spawnRange[0].x, spawnRange[1].x), 62.92f, Random.Range(spawnRange[0].z, spawnRange[1].z));
-            }
-            
-            GameObject gO = Instantiate(fallingProps[r], spawnPos + Vector3.up * 10, Quaternion.identity);
-            fallingPropsList.Add(gO);
-        }
     }
     
     private void MoveToPlayerStomp()
@@ -441,7 +431,6 @@ public class SartenController : MonoBehaviour
         
         if(state != States.Dizzy)
         {
-            SetUnBusy();
             state = States.Awake;
         }
     }
@@ -497,7 +486,6 @@ public class SartenController : MonoBehaviour
             Destroy(other.gameObject);
             if(state == States.Dash)
             {
-                SetUnBusy();
                 state = States.Dizzy;
             }
         }
@@ -510,7 +498,6 @@ public class SartenController : MonoBehaviour
             Destroy(other.gameObject);
             if(state == States.Dash)
             {
-                SetUnBusy();
                 state = States.Dizzy;
             }
         }
@@ -523,13 +510,11 @@ public class SartenController : MonoBehaviour
             Destroy(other.gameObject);
             if(state == States.Dash)
             {
-                SetUnBusy();
                 state = States.Dizzy;
             }
         }
         else if (other.gameObject.CompareTag("FightWalls"))
         {
-            SetUnBusy();
             rb.velocity = Vector3.zero;
             state = States.Awake;
         }

@@ -226,7 +226,7 @@ public class PlayerController : MonoBehaviour
                     {
                         spawnPosition.Add(player.myKey, boss.transform.position);
                     }
-                    boss.StartFight();
+                    FindObjectOfType<ArenaTriggerDetector>().ResetBossFight();
                 }
                 
                 try

@@ -1585,9 +1585,9 @@ MonoBehaviour:
   bothInside: 0
   playerInside: []
   attackDelay: 3
-  dashSpeed: 300
+  dashSpeed: 250
   state: 0
-  busy: 0
+  semaphore: 0
 --- !u!95 &3875539143855405439
 Animator:
   serializedVersion: 5

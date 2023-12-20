@@ -10,7 +10,7 @@ public class ActivarCercania1 : MonoBehaviour
     public float cercania = 5;
     bool activated = false;
     PlayerController[] playerControllers = new PlayerController[2];
-    Dash[] dash;
+    Dash dash;
     ClaraEncoger claraEncoger;
     Explosion explosion;
     // Start is called before the first frame update
@@ -27,13 +27,12 @@ public class ActivarCercania1 : MonoBehaviour
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         playerControllers = new PlayerController[players.Length];
-        dash = new Dash[players.Length];
+        dash = FindObjectOfType<Dash>();
         explosion = FindObjectOfType<Explosion>();
         claraEncoger = FindObjectOfType<ClaraEncoger>();
         for (int i = 0; i < players.Length; i++)
         {
             playerControllers[i] = players[i].GetComponent<PlayerController>();
-            dash[i] = players[i].GetComponent<Dash>();
         }
         foreach (var p in playerControllers)
         {
@@ -43,10 +42,7 @@ public class ActivarCercania1 : MonoBehaviour
             p.animator.SetBool("Duck", false);
             p.animator.SetBool("Explode", false);
         }
-        foreach (var d in dash)
-        {
-            d.enabled = false;
-        }
+        dash.enabled = false;
         explosion.enabled = false;
         claraEncoger.enabled = false;
     }
@@ -62,10 +58,7 @@ public class ActivarCercania1 : MonoBehaviour
             p.animator.SetBool("Duck", false);
             p.animator.SetBool("Explode", false);
         }
-        foreach (var d in dash)
-        {
-            d.enabled = true;
-        }
+        dash.enabled = true;
         explosion.enabled = true;
         claraEncoger.enabled = true;
         animator.SetBool("Alejar", true);

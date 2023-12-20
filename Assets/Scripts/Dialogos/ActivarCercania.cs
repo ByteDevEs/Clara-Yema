@@ -14,7 +14,7 @@ public class ActivarCercania : MonoBehaviour
     private GameObject[] players;
     PlayerController[] playerControllers;
     
-    Dash[] dash;
+    Dash dash;
     ClaraEncoger claraEncoger;
     Explosion explosion;
     
@@ -42,13 +42,12 @@ public class ActivarCercania : MonoBehaviour
                         }
                         catch (Exception e) { }
                         playerControllers = new PlayerController[players.Length];
-                        dash = new Dash[players.Length];
+                        dash = FindObjectOfType<Dash>();
                         explosion = FindObjectOfType<Explosion>();
                         claraEncoger = FindObjectOfType<ClaraEncoger>();
                         for (int i = 0; i < players.Length; i++)
                         {
                             playerControllers[i] = players[i].GetComponent<PlayerController>();
-                            dash[i] = players[i].GetComponent<Dash>();
                         }
                         foreach (var p in playerControllers)
                         {
@@ -58,10 +57,7 @@ public class ActivarCercania : MonoBehaviour
                             p.animator.SetBool("Duck", false);
                             p.animator.SetBool("Explode", false);
                         }
-                        foreach (var d in dash)
-                        {
-                            d.enabled = false;
-                        }
+                        dash.enabled = false;
                         explosion.enabled = false;
                         claraEncoger.enabled = false;
                     }
@@ -80,10 +76,7 @@ public class ActivarCercania : MonoBehaviour
             p.animator.SetBool("Duck", false);
             p.animator.SetBool("Explode", false);
         }
-        foreach (var d in dash)
-        {
-            d.enabled = true;
-        }
+        dash.enabled = true;
         explosion.enabled = true;
         claraEncoger.enabled = true;
         
