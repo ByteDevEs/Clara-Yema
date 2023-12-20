@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Yarn.Unity;
 
 public class ActivarCercania : MonoBehaviour
@@ -13,6 +14,7 @@ public class ActivarCercania : MonoBehaviour
     public bool activated = false;
     private GameObject[] players;
     PlayerController[] playerControllers;
+    PlayerInput[] playerInputs;
     
     Dash dash;
     ClaraEncoger claraEncoger;
@@ -44,21 +46,27 @@ public class ActivarCercania : MonoBehaviour
                         }
                         catch (Exception e) { }
                         playerControllers = new PlayerController[players.Length];
+                        playerInputs = new PlayerInput[players.Length];
                         dash = FindObjectOfType<Dash>();
                         explosion = FindObjectOfType<Explosion>();
                         claraEncoger = FindObjectOfType<ClaraEncoger>();
                         for (int i = 0; i < players.Length; i++)
                         {
                             playerControllers[i] = players[i].GetComponent<PlayerController>();
+                            playerInputs[i] = players[i].GetComponent<PlayerInput>();
                         }
                         foreach (var p in playerControllers)
                         {
-                            p.enabled = false;
                             p.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                             p.animator.SetFloat("Speed", 0);
                             p.animator.SetBool("Jump", false);
                             p.animator.SetBool("Duck", false);
                             p.animator.SetBool("Explode", false);
+                            p.enabled = false;
+                        }
+                        foreach (var p in playerInputs)
+                        {
+                            p.enabled = false;
                         }
                         dash.enabled = false;
                         explosion.enabled = false;
@@ -79,6 +87,10 @@ public class ActivarCercania : MonoBehaviour
             p.animator.SetBool("Jump", false);
             p.animator.SetBool("Duck", false);
             p.animator.SetBool("Explode", false);
+        }
+        foreach (var p in playerInputs)
+        {
+            p.enabled = true;
         }
         dash.enabled = true;
         explosion.enabled = true;
