@@ -17,7 +17,8 @@ public class TransitionCamera : MonoBehaviour
         //Disable all cameras
         foreach (var cam in FindObjectsOfType<Camera>())
         {
-            cam.gameObject.SetActive(false);
+            if(cam.gameObject.layer != 16)
+                cam.gameObject.SetActive(false);
         }
         FindObjectOfType<ArenaTriggerDetector>().bossCamara.SetActive(true);
         Camera camera = FindObjectOfType<ArenaTriggerDetector>().bossCamara.GetComponent<BossCamFollowPlayers>().cam;

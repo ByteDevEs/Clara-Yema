@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8655722974529677137}
   - component: {fileID: 6591548554236472248}
   - component: {fileID: 3209863311308308108}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BlackPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 135105950713337669}
   - component: {fileID: 5794762696526314951}
   - component: {fileID: 7910559172850568562}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TransitionCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,4 +209,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7aca5c408de1094187b19aa7470d1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muerteFueraRango: {fileID: 0}
+  player: {fileID: 0}
+  spawner: {fileID: 0}
