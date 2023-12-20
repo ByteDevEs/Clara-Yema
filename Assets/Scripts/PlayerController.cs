@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ProjectDawn.SplitScreen;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 [RequireComponent(typeof(CharacterController), typeof(UIHealthController), typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -33,15 +35,15 @@ public class PlayerController : MonoBehaviour
     Vector3 initialPosition;
 
     public int myKey;
-    public static Vector3? spawnPosition = null;
+    public static Dictionary<int, Vector3>? spawnPosition = null;
     public static Dictionary<int, InputDevice> inputs = new Dictionary<int, InputDevice>();
     
     [Header("HealthSystem")]
     [SerializeField] protected HealthController healthController;
     
-    [Header("Animations")]
-    [SerializeField] protected Animator animator;
-
+    [Header("Animations")] 
+    public Animator animator;
+    
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
         initialPosition = transform.position;
         if(spawnPosition != null && SceneManager.GetActiveScene().name == "Primer-Nivel")
         {
-            transform.position = spawnPosition.Value;
+            transform.position = spawnPosition.GetValueOrDefault(myKey);
         }
 
         if (inputs.ContainsKey(myKey))
@@ -200,13 +202,43 @@ public class PlayerController : MonoBehaviour
             {
                 if (boss.state == SartenController.States.WaitingForPlayers)
                 {
-                    SceneManager.LoadScene("Primer-Nivel");
+                    //Add both players to the spawn position dictionary
+                    PlayerController[] players = FindObjectsOfType<PlayerController>();
+                    foreach (PlayerController player in players)
+                    {
+                        player.transform.position = player.initialPosition;
+                        player.healthController.ResetHealth();
+                    }
+                    //Reset all dialogues
+                    ActivarCercania[] dialogues = FindObjectsOfType<ActivarCercania>();
+                    foreach (ActivarCercania dialogue in dialogues)
+                    {
+                        dialogue.toActivate.SetActive(false);
+                        dialogue.activated = false;
+                    }
                 }
                 else
                 {
                     //Move all players to the boss
-                    spawnPosition = boss.transform.position;
-                    SceneManager.LoadScene("Primer-Nivel");
+                    spawnPosition = new Dictionary<int, Vector3>();
+                    PlayerController[] players = FindObjectsOfType<PlayerController>();
+                    foreach (PlayerController player in players)
+                    {
+                        spawnPosition.Add(player.myKey, boss.transform.position);
+                    }
+                    boss.StartFight();
+                }
+                
+                try
+                {
+                    Camera cam = FindObjectOfType<SplitScreenEffect>().Screens.Find(x => x.Target == transform).Camera;
+                    GameObject gO = Instantiate(FindObjectOfType<ArenaTriggerDetector>().canvasTransition, transform.position, Quaternion.identity);
+                    gO.GetComponent<DeathCamera>().canvas.renderMode = RenderMode.ScreenSpaceCamera;
+                    gO.GetComponent<DeathCamera>().canvas.worldCamera = cam;
+                }
+                catch(System.Exception e)
+                {
+                    
                 }
             }
         }

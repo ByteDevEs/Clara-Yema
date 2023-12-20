@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using ProjectDawn.SplitScreen;
 using UnityEngine;
+using Yarn.Unity;
 
 public class ArenaTriggerDetector : MonoBehaviour
 {
@@ -20,8 +21,7 @@ public class ArenaTriggerDetector : MonoBehaviour
     [SerializeField]
     AudioClip music;
 
-    [SerializeField]
-    private GameObject canvasTransition;
+    public GameObject canvasTransition;
     [SerializeField]
     private List<GameObject> spawner;
     
@@ -50,6 +50,27 @@ public class ArenaTriggerDetector : MonoBehaviour
             background.Play();
             Dialogo.SetActive(true);
         }
+    }
+    
+    public void ResetBossFight()
+    {
+        sarten.bothInside = true;
+        walls.SetActive(true);
+        int count = 0;
+        foreach (var player in players)
+        {
+            GameObject gO = Instantiate(canvasTransition, transform.position, Quaternion.identity);
+            gO.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
+            gO.GetComponent<TransitionCamera>().player = player.transform;
+            gO.GetComponent<TransitionCamera>().spawner = spawner[count].transform;
+            count++;
+        }
+        background.Stop();
+        background.clip = music;
+        background.Play();
+        Dialogo.GetComponent<DialogueRunner>().StartDialogue("Sarten");
+        Dialogo.SetActive(true);
+        sarten.StartFight();
     }
 
     private void OnTriggerEnter(Collider other)

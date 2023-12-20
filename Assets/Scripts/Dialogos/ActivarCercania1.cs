@@ -54,10 +54,10 @@ public class ActivarCercania1 : MonoBehaviour
         foreach (var p in playerControllers)
         {
             p.enabled = true;
-            p.gameObject.GetComponentInChildren<Animator>().SetFloat("Speed", 0);
-            p.gameObject.GetComponentInChildren<Animator>().SetBool("Jump", false);
-            p.gameObject.GetComponentInChildren<Animator>().SetBool("Duck", false);
-            p.gameObject.GetComponentInChildren<Animator>().SetBool("Explode", false);
+            p.animator.SetFloat("Speed", 0);
+            p.animator.SetBool("Jump", false);
+            p.animator.SetBool("Duck", false);
+            p.animator.SetBool("Explode", false);
         }
         foreach (var d in dash)
         {
@@ -66,7 +66,7 @@ public class ActivarCercania1 : MonoBehaviour
         explosion.enabled = true;
         claraEncoger.enabled = true;
         animator.SetBool("Alejar", true);
-        FindObjectOfType<SartenController>().state = SartenController.States.Awake;
+        FindObjectOfType<SartenController>().StartFight();
     }
 
     /*public void StartTalking()

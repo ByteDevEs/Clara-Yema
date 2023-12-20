@@ -11,7 +11,10 @@ public class DeathCamera : MonoBehaviour
     
     public void ResetPosition()
     {
-        muerteFueraRango.ResetPosition();
+        if (muerteFueraRango != null)
+        {
+            muerteFueraRango.ResetPosition();
+        }
     }
     
     public void DestroyMe()

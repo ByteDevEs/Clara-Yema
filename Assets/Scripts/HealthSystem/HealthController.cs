@@ -22,6 +22,11 @@ public class HealthController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    public void ResetHealth()
+    {
+        health = maxHealth;
+    }
 
     public void TakeDamage(float deltaTime)
     {

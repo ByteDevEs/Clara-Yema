@@ -31,7 +31,6 @@ public class SartenController : MonoBehaviour
     public bool bothInside = false;
     
     [SerializeField] [ReadOnly] private List<GameObject> playerInside;
-    [SerializeField] [ReadOnly] float timer = 0;
     [SerializeField] float attackDelay = 0;
     [SerializeField] float dashSpeed = 5;
 
@@ -52,12 +51,28 @@ public class SartenController : MonoBehaviour
 
     public States state;
     private Vector3 initialPosition;
+    private Quaternion initialRotation;
     
     bool busy = false;
     
     public void SetUnBusy()
     {
         busy = false;
+    }
+
+    public void StartFight()
+    {
+        state = States.Awake;
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+        //Destroy all props
+        foreach (GameObject fallingProp in fallingPropsList)
+        {
+            Destroy(fallingProp);
+        }
+        fallingPropsList.Clear();
+        healthController.health = healthController.maxHealth;
+        bothInside = false;
     }
     
     private void Start()
@@ -66,7 +81,12 @@ public class SartenController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         players = FindObjectsOfType<PlayerController>().ToList().ConvertAll(x => x.gameObject);
         initialPosition = transform.position;
-		AI();
+        initialRotation = transform.rotation;
+    }
+    
+    private void GoToCredits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 
     private void Update()
@@ -94,15 +114,8 @@ public class SartenController : MonoBehaviour
             animator.SetTrigger("Dead");
             Invoke("GoToCredits", 5f);
         }
-    }
-    
-    private void GoToCredits()
-    {
-        SceneManager.LoadScene("Credits");
-    }
-
-    private void AI()
-    {
+        
+        
         if (!busy)
         {
             switch (state)
@@ -141,8 +154,6 @@ public class SartenController : MonoBehaviour
                     return;
             }
         }
-        
-        AI();
     }
 
     void GenerateNewState()
@@ -379,7 +390,6 @@ public class SartenController : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         state = States.Awake;
-        Invoke("AI", attackDelay);
     }
     
     Coroutine dashCoroutine;
@@ -415,7 +425,6 @@ public class SartenController : MonoBehaviour
         
         if(state != States.Dizzy)
             state = States.Awake;
-        Invoke("AI", attackDelay);
     }
 
     private GameObject GetNearestPlayer()
@@ -472,9 +481,9 @@ public class SartenController : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("FightWalls"))
         {
-            StopCoroutine(dashCoroutine);
+            if(dashCoroutine != null)
+                StopCoroutine(dashCoroutine);
             state = States.Awake;
-            Invoke("AI", attackDelay);
         }
     }
 

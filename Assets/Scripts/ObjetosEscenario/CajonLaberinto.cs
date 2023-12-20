@@ -17,7 +17,12 @@ public class CajonLaberinto : MonoBehaviour
 
             if (playersInside >= 2) // Verifica si ambos jugadores están dentro
             {
-                PlayerController.spawnPosition = new Vector3(-47,61.91f,25);
+                PlayerController.spawnPosition = new Dictionary<int, Vector3>();
+                PlayerController[] players = FindObjectsOfType<PlayerController>();
+                foreach (PlayerController player in players)
+                {
+                    PlayerController.spawnPosition.Add(player.myKey, new Vector3(-47, 61.91f, 25));
+                }
                 SceneManager.LoadScene(sceneName); // Carga la escena
             }
         }

@@ -391,7 +391,14 @@ namespace ProjectDawn.SplitScreen
             {
                 for (int i = 0; i < screenRegions.Length; ++i)
                 {
-                    updateCommandBuffer |= UpdateScreen(i, screenRegions.GetRegion(i), screenRegions.GetRegionPoints(i), screenRegions.GetRegionRect(i));
+                    try
+                    {
+                        updateCommandBuffer |= UpdateScreen(i, screenRegions.GetRegion(i), screenRegions.GetRegionPoints(i), screenRegions.GetRegionRect(i));
+                    }
+                    catch (Exception e)
+                    {
+                        
+                    }
                 }
 
                 // Update command buffer if there any modifiers that will change it
