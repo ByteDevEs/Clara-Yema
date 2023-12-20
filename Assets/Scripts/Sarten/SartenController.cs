@@ -119,38 +119,38 @@ public class SartenController : MonoBehaviour
         }
         
         
-        if (semaphoreState == States.UnBusy)
+        if (semaphore)
         {
             switch (state)
             {
                 case States.WaitingForPlayers:
                     break;
                 case States.Awake:
-                    semaphoreState = States.Awake;
+                    semaphore = true;
                     GenerateNewState();
                     return;
                 case States.Stomp:
-                    semaphoreState = States.Stomp;
+                    semaphore = true;
                     Stomp();
                     return;
                 case States.LaunchSpatula:
-                    semaphoreState = States.LaunchSpatula;
+                    semaphore = true;
                     LaunchFork();
                     return;
                 case States.Dash:
-                    semaphoreState = States.Dash;
+                    semaphore = true;
                     DashToPlayer();
                     return;
                 case States.Dizzy:
-                    semaphoreState = States.Dizzy;
+                    semaphore = true;
                     Invoke("CheckDizzy", 2f);
                     return;
                 case States.Mix:
-                    semaphoreState = States.Mix;
+                    semaphore = true;
                     Mix();
                     return;
                 case States.Smash:
-                    semaphoreState = States.Smash;
+                    semaphore = true;
                     Smash();
                     return;
                 case States.Defeated:
