@@ -58,6 +58,7 @@ public class ArenaTriggerDetector : MonoBehaviour
      
         bossCamara.SetActive(true);
         bossCamara.GetComponent<Animator>().enabled = true;
+        bossCamara.GetComponent<Animator>().SetTrigger("Start");
         //Teleport players
         foreach (var player in players)
         {
@@ -65,6 +66,12 @@ public class ArenaTriggerDetector : MonoBehaviour
             player.transform.rotation = spawner[players.IndexOf(player)].transform.rotation;
         }
         Dialogo.SetActive(true);
+        try
+        {
+            Dialogo.GetComponent<DialogueRunner>().Stop();
+            Dialogo.GetComponent<DialogueRunner>().ResetDialogue();
+        }
+        catch (Exception e) { }
     }
     
     public void ResetBossFight()
@@ -84,8 +91,8 @@ public class ArenaTriggerDetector : MonoBehaviour
         background.Stop();
         background.clip = music;
         background.Play();
-        Dialogo.GetComponent<DialogueRunner>().Stop();
-        Dialogo.GetComponent<DialogueRunner>().ResetDialogue();
+        FindObjectOfType<BossCamFollowPlayers>().DisableMovement();
+        FindObjectOfType<SartenController>().StopFight();
         StartCoroutine("SetDialog");
         
         //sarten.StartFight();

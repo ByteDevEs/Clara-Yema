@@ -21,6 +21,7 @@ public class BossCamFollowPlayers : MonoBehaviour
     
     public void DisableMovement()
     {
+        GetComponent<Animator>().enabled = false;
         GetComponent<Animator>().enabled = true;
         animCam.Priority = 1;
         bossCam.Priority = 0;
