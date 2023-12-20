@@ -11,6 +11,7 @@ public class CinematicPlayer : MonoBehaviour
     public GameObject bgMusic;
     
     public VideoClip videoClipStart;
+    private GameObject[] players;
 
     private void Awake()
     {
@@ -25,6 +26,22 @@ public class CinematicPlayer : MonoBehaviour
         
         vp.Stop();
         vp.clip = null;
+        
+        //Enable player movement
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var player in players)
+        {
+            player.GetComponent<PlayerController>().enabled = true;
+        }
+        
+        //Enable dash
+        FindObjectOfType<Dash>().enabled = true;
+        
+        //Enable explosion
+        FindObjectOfType<Explosion>().enabled = true;
+        
+        //Enable clara encoger
+        FindObjectOfType<ClaraEncoger>().enabled = true;
     }
 
     public void PlayVideo(VideoClip clip)
@@ -33,5 +50,21 @@ public class CinematicPlayer : MonoBehaviour
         GetComponent<VideoPlayer>().Play();
         GetComponent<VideoPlayer>().SetDirectAudioVolume(0, GameSettings.musicVolume * GameSettings.masterVolume);
         bgMusic.GetComponent<AudioVolume>().multiplier = 0;
+        
+        //Disable player movement
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var player in players)
+        {
+            player.GetComponent<PlayerController>().enabled = false;
+        }
+        
+        //Disable dash
+        FindObjectOfType<Dash>().enabled = false;
+        
+        //Disable explosion
+        FindObjectOfType<Explosion>().enabled = false;
+        
+        //Disable clara encoger
+        FindObjectOfType<ClaraEncoger>().enabled = false;
     }
 }
