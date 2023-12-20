@@ -1584,10 +1584,10 @@ MonoBehaviour:
   - {fileID: 4141396401174428189, guid: 2d2b8429577cf5342882e3ed71a1748d, type: 3}
   bothInside: 0
   playerInside: []
-  timer: 0
   attackDelay: 3
-  dashSpeed: 400
+  dashSpeed: 300
   state: 0
+  busy: 0
 --- !u!95 &3875539143855405439
 Animator:
   serializedVersion: 5

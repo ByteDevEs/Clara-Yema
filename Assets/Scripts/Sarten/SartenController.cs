@@ -50,14 +50,14 @@ public class SartenController : MonoBehaviour
     }
 
     public States state;
+    public bool semaphore = false;
     private Vector3 initialPosition;
     private Quaternion initialRotation;
     
-    public bool busy = false;
     
     public void SetUnBusy()
     {
-        busy = false;
+        semaphore = false;
         animator.StopPlayback();
         animator.Play("Idle");
         print("Unbusy");
@@ -119,38 +119,38 @@ public class SartenController : MonoBehaviour
         }
         
         
-        if (!busy)
+        if (semaphoreState == States.UnBusy)
         {
             switch (state)
             {
                 case States.WaitingForPlayers:
                     break;
                 case States.Awake:
-                    busy = true;
+                    semaphoreState = States.Awake;
                     GenerateNewState();
                     return;
                 case States.Stomp:
-                    busy = true;
+                    semaphoreState = States.Stomp;
                     Stomp();
                     return;
                 case States.LaunchSpatula:
-                    busy = true;
+                    semaphoreState = States.LaunchSpatula;
                     LaunchFork();
                     return;
                 case States.Dash:
-                    busy = true;
+                    semaphoreState = States.Dash;
                     DashToPlayer();
                     return;
                 case States.Dizzy:
-                    busy = true;
+                    semaphoreState = States.Dizzy;
                     Invoke("CheckDizzy", 2f);
                     return;
                 case States.Mix:
-                    busy = true;
+                    semaphoreState = States.Mix;
                     Mix();
                     return;
                 case States.Smash:
-                    busy = true;
+                    semaphoreState = States.Smash;
                     Smash();
                     return;
                 case States.Defeated:
@@ -356,20 +356,31 @@ public class SartenController : MonoBehaviour
         }
 
         animator.SetTrigger("Stomp");
-        Invoke("SpawnProp", 1.5f);
+        StartCoroutine(SpawnProp());
     }
     
-    public void SpawnProp()
+    IEnumerator SpawnProp()
     {
+        yield return new WaitForSeconds(1.5f);
         print("SpawnProp");
         if(fallingPropsList.Count > 1)
-            return;
+            yield break;
         int num = Random.Range(1, fallingProps.Length);
         for (int i = 0; i < num; i++)
         {
             int r = Random.Range(0, fallingProps.Length);
             //Circle spawn
-            Vector3 spawnPos = new Vector3(Random.Range(-76.99f,-46.726f), 62.92f, Random.Range(-16.888f, 12.9f));
+            Vector3[] spawnRange = new Vector3[2];
+            spawnRange[0] = new Vector3(-76.99f, 62.92f, -16.888f);
+            spawnRange[1] = new Vector3(-46.726f, 62.92f, 12.9f);
+            
+            //Spawn in a circle around the boss without passing the arena limits
+            Vector3 spawnPos = new Vector3(Random.Range(spawnRange[0].x, spawnRange[1].x), 62.92f, Random.Range(spawnRange[0].z, spawnRange[1].z));
+            while (Vector3.Distance(spawnPos, transform.position) < 20)
+            {
+                spawnPos = new Vector3(Random.Range(spawnRange[0].x, spawnRange[1].x), 62.92f, Random.Range(spawnRange[0].z, spawnRange[1].z));
+            }
+            
             GameObject gO = Instantiate(fallingProps[r], spawnPos + Vector3.up * 10, Quaternion.identity);
             fallingPropsList.Add(gO);
         }
@@ -515,6 +526,12 @@ public class SartenController : MonoBehaviour
                 SetUnBusy();
                 state = States.Dizzy;
             }
+        }
+        else if (other.gameObject.CompareTag("FightWalls"))
+        {
+            SetUnBusy();
+            rb.velocity = Vector3.zero;
+            state = States.Awake;
         }
     }
 
