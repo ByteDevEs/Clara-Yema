@@ -1,0 +1,36 @@
+﻿title: Bacin
+---
+¡Hola! ¿Buscáis a Gallina? Esa tía es mi ídola, logró escapar de este sitio lleno de torturas.
+    <<jump Cont1B>>
+===
+
+title: Cont1B
+---
+Yo he intentado seguir sus pasos y mirad donde he acabado…
+    <<jump Cont2B>>
+===
+
+title: Cont2B
+---
+Si queréis salir de aquí para encontrarla tendréis que vencer a Sartén, no permite que se desperdicie ni un alimento. 
+
+    <<jump Cont3B>>
+===
+
+title: Cont3B
+---
+Da muchísimo miedo, la verdad, pero es bastante despistado.  Gallina venció a la anterior tan solo con meterse dentro varias veces y esquivar las espátulas. 
+    <<jump Cont4B>>
+===
+
+title: Cont4B
+---
+¡Se acabó rayando a ella misma y la humana la tuvo que tirar a la basura!
+
+    <<jump FinB>>
+===
+
+title: FinB
+---
+Yo no lo conseguí, pero parece que vosotras sabéis lo que hacéis. ¡Mucha suerte! 
+===
