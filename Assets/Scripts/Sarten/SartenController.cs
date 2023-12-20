@@ -53,11 +53,13 @@ public class SartenController : MonoBehaviour
     private Vector3 initialPosition;
     private Quaternion initialRotation;
     
-    bool busy = false;
+    public bool busy = false;
     
     public void SetUnBusy()
     {
         busy = false;
+        animator.StopPlayback();
+        animator.Play("Idle");
         print("Unbusy");
     }
 
@@ -126,31 +128,31 @@ public class SartenController : MonoBehaviour
                 case States.Awake:
                     busy = true;
                     GenerateNewState();
-                    break;
+                    return;
                 case States.Stomp:
                     busy = true;
                     Stomp();
-                    break;
+                    return;
                 case States.LaunchSpatula:
                     busy = true;
                     LaunchFork();
-                    break;
+                    return;
                 case States.Dash:
                     busy = true;
                     DashToPlayer();
-                    break;
+                    return;
                 case States.Dizzy:
                     busy = true;
                     Invoke("CheckDizzy", 2f);
-                    break;
+                    return;
                 case States.Mix:
                     busy = true;
                     Mix();
-                    break;
+                    return;
                 case States.Smash:
                     busy = true;
                     Smash();
-                    break;
+                    return;
                 case States.Defeated:
                     return;
             }
@@ -239,7 +241,10 @@ public class SartenController : MonoBehaviour
             }
         }
         else
+        {
             state = States.Awake;
+        }
+        SetUnBusy();
     }
 
     private void LaunchFork()
@@ -425,7 +430,7 @@ public class SartenController : MonoBehaviour
         
         if(state != States.Dizzy)
         {
-            busy = false;
+            SetUnBusy();
             state = States.Awake;
         }
     }
@@ -481,16 +486,9 @@ public class SartenController : MonoBehaviour
             Destroy(other.gameObject);
             if(state == States.Dash)
             {
-                busy = false;
+                SetUnBusy();
                 state = States.Dizzy;
             }
-        }
-        else if (other.gameObject.CompareTag("FightWalls"))
-        {
-            if(dashCoroutine != null)
-                StopCoroutine(dashCoroutine);
-            busy = false;
-            state = States.Awake;
         }
     }
 
@@ -501,7 +499,7 @@ public class SartenController : MonoBehaviour
             Destroy(other.gameObject);
             if(state == States.Dash)
             {
-                busy = false;
+                SetUnBusy();
                 state = States.Dizzy;
             }
         }
@@ -514,7 +512,7 @@ public class SartenController : MonoBehaviour
             Destroy(other.gameObject);
             if(state == States.Dash)
             {
-                busy = false;
+                SetUnBusy();
                 state = States.Dizzy;
             }
         }
