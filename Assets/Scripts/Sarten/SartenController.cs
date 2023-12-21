@@ -241,6 +241,8 @@ public class SartenController : MonoBehaviour
             timeLeft -= Time.fixedDeltaTime;
             yield return new WaitForEndOfFrame();
         }
+
+        yield return new WaitForSeconds(0.5f);
         
         Vector3 initialPosition = fork.transform.position;
         while (timeLeft < time)
@@ -336,6 +338,7 @@ public class SartenController : MonoBehaviour
 
     private void Update()
     {
+        
         if(playerInside.Count == 2)
             bothInside = true;
         else
@@ -357,8 +360,10 @@ public class SartenController : MonoBehaviour
             animator.SetTrigger("Dead");
             GoToCredits();
         }
-        
-        
+    }
+
+    private void FixedUpdate()
+    {
         if (!semaphore)
         {
             timer += Time.fixedDeltaTime;

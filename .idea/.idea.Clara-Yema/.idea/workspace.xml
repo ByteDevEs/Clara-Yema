@@ -4,7 +4,748 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="" />
+    <list default="true" id="288c81f5-e296-4e1c-8646-1d347bf7ede7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Assembly-CSharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Cinemachine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Microsoft.CSharp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Mono.Security.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/ProjectDawn.SplitScreen.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/System.Configuration.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/System.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/System.Data.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/System.Numerics.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/System.Xml.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/System.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.2D.Animation.Runtime.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.2D.PixelPerfect.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.Burst.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.Burst.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.Collections.LowLevel.ILSupport.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.Collections.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.InputSystem.ForUI.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.InputSystem.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.InternalAPIEngineBridge.001.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.Mathematics.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.RenderPipelines.Core.Runtime.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.TextMeshPro.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Unity.Timeline.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.AIModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.AndroidJNIModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.AnimationModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.AssetBundleModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.AudioModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.CoreModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.DirectorModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.GridModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.IMGUIModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.InputLegacyModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.InputModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.JSONSerializeModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.ParticleSystemModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.Physics2DModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.PhysicsModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.PropertiesModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.SharedInternalsModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.SpriteShapeModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.SubsystemsModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.TerrainModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.TextCoreFontEngineModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.TextCoreTextEngineModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.TextRenderingModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.TilemapModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.UI.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.UIElementsModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.UIModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.UnityAnalyticsModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.UnityWebRequestModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.VFXModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.VRModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.VideoModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.XRModule.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityLinkerToEditorData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Yarn.CsvHelper.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Yarn.Google.Protobuf.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Yarn.System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Yarn.System.Memory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Yarn.System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Yarn.System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/YarnSpinner.Unity.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/YarnSpinner.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/analytics.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/Managed/mscorlib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Assembly-CSharp.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Assembly-CSharp_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Assembly-CSharp__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Cinemachine.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Cinemachine_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Cinemachine__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Cinemachine__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Cinemachine__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Cinemachine__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__10.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__11.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__12.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__13.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__14.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__15.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__16.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__17.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__18.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__19.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__20.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__21.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__22.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__23.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__24.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__25.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__26.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/GenericMethods__9.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__10.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__100.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__101.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__102.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__103.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__104.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__105.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__106.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__107.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__108.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__109.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__11.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__110.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__111.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__112.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__12.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__13.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__14.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__15.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__16.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__17.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__18.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__19.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__20.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__21.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__22.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__23.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__24.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__25.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__26.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__27.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__28.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__29.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__30.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__31.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__32.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__33.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__34.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__35.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__36.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__37.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__38.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__39.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__40.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__41.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__42.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__43.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__44.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__45.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__46.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__47.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__48.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__49.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__50.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__51.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__52.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__53.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__54.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__55.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__56.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__57.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__58.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__59.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__60.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__61.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__62.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__63.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__64.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__65.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__66.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__67.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__68.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__69.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__70.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__71.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__72.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__73.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__74.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__75.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__76.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__77.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__78.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__79.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__80.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__81.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__82.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__83.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__84.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__85.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__86.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__87.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__88.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__89.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__9.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__90.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__91.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__92.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__93.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__94.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__95.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__96.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__97.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__98.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Generics__99.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCFieldValuesTable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCTypeValuesTable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateFieldValues.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateFieldValues1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateFieldValues2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateFieldValues3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateTypeValues.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateTypeValues1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCodeRegistration.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericAdjustorThunkTable.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericClassTable.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericInstDefinitions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericMethodDefinitions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericMethodPointerTable.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericMethodTable.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppInteropDataTable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppInvokerTable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppMetadataRegistration.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppMetadataUsage.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppReversePInvokeWrapperTable.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppRgctxTable.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppTypeDefinitions.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppUnresolvedIndirectCallStubs.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Microsoft.CSharp.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Microsoft.CSharp_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Microsoft.CSharp__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Microsoft.CSharp__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Microsoft.CSharp__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Mono.Security.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Mono.Security_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Mono.Security__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/ProjectDawn.SplitScreen.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/ProjectDawn.SplitScreen_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/ProjectDawn.SplitScreen__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Configuration.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Configuration_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Core.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Core_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Core__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Core__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Core__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Core__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Data__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Numerics.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Numerics_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__10.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__11.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__12.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__13.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__14.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.Xml__9.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__10.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__11.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/System__9.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.2D.Animation.Runtime.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.2D.Animation.Runtime_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.2D.PixelPerfect.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.2D.PixelPerfect_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Burst.Unsafe.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Burst.Unsafe_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Burst.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Burst_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Burst__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Burst__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Collections.LowLevel.ILSupport.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Collections.LowLevel.ILSupport_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Collections.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Collections_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Collections__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Collections__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem.ForUI.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem.ForUI_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__10.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__11.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InputSystem__9.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InternalAPIEngineBridge.001.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.InternalAPIEngineBridge.001_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__10.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__11.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Mathematics__9.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.RenderPipelines.Core.Runtime.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.RenderPipelines.Core.Runtime_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.RenderPipelines.Core.Runtime__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.RenderPipelines.Core.Runtime__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.RenderPipelines.Core.Runtime__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.RenderPipelines.Core.Runtime__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.RenderPipelines.Core.Runtime__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.RenderPipelines.Core.Runtime__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.TextMeshPro.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.TextMeshPro_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.TextMeshPro__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.TextMeshPro__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.TextMeshPro__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.TextMeshPro__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.TextMeshPro__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.TextMeshPro__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Timeline.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Timeline_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Unity.Timeline__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AIModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AIModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AndroidJNIModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AndroidJNIModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AnimationModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AnimationModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AssetBundleModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AssetBundleModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AudioModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.AudioModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.DirectorModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.DirectorModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.GridModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.GridModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.IMGUIModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.IMGUIModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.IMGUIModule__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.InputLegacyModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.InputLegacyModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.InputModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.InputModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.JSONSerializeModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.JSONSerializeModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.ParticleSystemModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.ParticleSystemModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.Physics2DModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.Physics2DModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.PhysicsModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.PhysicsModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.PropertiesModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.PropertiesModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.SharedInternalsModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.SharedInternalsModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.SpriteShapeModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.SpriteShapeModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.SubsystemsModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.SubsystemsModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TerrainModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TerrainModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextCoreFontEngineModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextCoreFontEngineModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextCoreTextEngineModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextCoreTextEngineModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextCoreTextEngineModule__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextCoreTextEngineModule__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextCoreTextEngineModule__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextRenderingModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TextRenderingModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TilemapModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TilemapModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UI.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__10.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__11.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__12.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__13.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__14.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIElementsModule__9.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UIModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UI_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UI__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UI__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UI__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UnityAnalyticsModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UnityAnalyticsModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UnityWebRequestModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.UnityWebRequestModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.VFXModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.VFXModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.VRModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.VRModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.VideoModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.VideoModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.XRModule.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.XRModule_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.CsvHelper.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.CsvHelper_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.CsvHelper__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.Google.Protobuf.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.Google.Protobuf_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.Google.Protobuf__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.Google.Protobuf__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.Google.Protobuf__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.Google.Protobuf__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Buffers.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Buffers_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Memory.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Memory_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Memory__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Numerics.Vectors.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Numerics.Vectors_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Numerics.Vectors__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Runtime.CompilerServices.Unsafe.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Yarn.System.Runtime.CompilerServices.Unsafe_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/YarnSpinner.Unity.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/YarnSpinner.Unity_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/YarnSpinner.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/YarnSpinner_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/YarnSpinner__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/__Generated.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/__Generated_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/analytics.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib_CodeGen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__10.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__11.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__12.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__13.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__14.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__15.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__16.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__17.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__18.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__19.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__20.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__21.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__22.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__23.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__5.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__6.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__7.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__8.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/mscorlib__9.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/il2cpp_data/Metadata/global-metadata.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/il2cpp_data/Resources/System.Data.dll-resources.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/il2cpp_data/Resources/Yarn.System.Buffers.dll-resources.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/il2cpp_data/Resources/Yarn.System.Memory.dll-resources.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/il2cpp_data/Resources/Yarn.System.Numerics.Vectors.dll-resources.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/il2cpp_data/Resources/mscorlib.dll-resources.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level2.resS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets1.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets2.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets4.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/GameAssembly.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build-Funcional/baselib.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Clara-Yema/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bakery/shader/Bakery_ShaderGraphHDRP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Bakery/shader/Bakery_ShaderGraphURP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FallingProp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FallingProp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Primer-Nivel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogos/ActivarCercania.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sarten/SartenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Build-Funcional.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BurstDebugInformation_DoNotShip/Data/Plugins/x86_64/lib_burst_generated.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_BurstDebugInformation_DoNotShip/Data/Plugins/x86_64/lib_burst_generated.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Assembly-CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Cinemachine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Microsoft.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Mono.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/ProjectDawn.SplitScreen.Demo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/ProjectDawn.SplitScreen.HighDefinition.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/ProjectDawn.SplitScreen.Universal.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/ProjectDawn.SplitScreen.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Collections.Concurrent.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Collections.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.ComponentModel.Composition.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Configuration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Console.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Data.DataSetExtensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Data.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Diagnostics.Debug.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Diagnostics.Tools.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Drawing.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.EnterpriseServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Globalization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.IO.Compression.FileSystem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.IO.Compression.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.IO.FileSystem.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.IO.FileSystem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Linq.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Numerics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.ObjectModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Reflection.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Reflection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Resources.ResourceManager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Runtime.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Runtime.InteropServices.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Runtime.Serialization.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Security.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.ServiceModel.Internals.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Text.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Threading.Tasks.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Threading.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Transactions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Xml.Linq.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Xml.ReaderWriter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.Xml.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/System.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Tanks.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.2D.Animation.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.2D.Common.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.2D.IK.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.2D.PixelPerfect.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.2D.Tilemap.Extras.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.AI.Navigation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.Burst.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.Burst.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.Collections.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.InputSystem.ForUI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.InputSystem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.Mathematics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.Timeline.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.VisualScripting.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.VisualScripting.Flow.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Unity.VisualScripting.State.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.AIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ARModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.AccessibilityModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.AndroidJNIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.AnimationModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.AssetBundleModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.AudioModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ClothModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ClusterInputModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ClusterRendererModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ContentLoadModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.CoreModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.CrashReportingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.DSPGraphModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.DirectorModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.GIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.GameCenterModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.GridModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.HotReloadModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.IMGUIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ImageConversionModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.InputLegacyModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.InputModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.JSONSerializeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.LocalizationModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.NVIDIAModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ParticleSystemModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.PerformanceReportingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.Physics2DModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.PhysicsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ProfilerModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.PropertiesModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.ScreenCaptureModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.SharedInternalsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.SpriteMaskModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.SpriteShapeModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.StreamingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.SubstanceModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.SubsystemsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.TLSModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.TerrainModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.TextRenderingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.TilemapModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UIElementsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UIModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UmbraModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityConnectModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityCurlModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityWebRequestModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.VFXModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.VRModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.VehiclesModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.VideoModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.VirtualTexturingModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.WindModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.XRModule.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/UnityEngine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.Antlr4.Runtime.Standard.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.CsvHelper.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.Google.Protobuf.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.Microsoft.Extensions.FileSystemGlobbing.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Buffers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.CommandLine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.IO.Packaging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Numerics.Vectors.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Reflection.TypeExtensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Text.Encodings.Web.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Text.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/Yarn.System.Threading.Tasks.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/YarnSpinner.Compiler.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/YarnSpinner.Unity.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/YarnSpinner.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/YarnSpinnerTests.CommandsInAnAssemblyDefinition.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/mscorlib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Managed/netstandard.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Plugins/x86_64/lib_burst_generated.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/Plugins/x86_64/lib_burst_generated.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/RuntimeInitializeOnLoads.json" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/RuntimeInitializeOnLoads.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/ScriptingAssemblies.json" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/ScriptingAssemblies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/boot.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/globalgamemanagers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/globalgamemanagers.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level2" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level3" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level4" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level5" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/level5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/resources.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/resources.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/resources.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets0.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets0.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets1.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets1.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets1.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets2.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets2.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets2.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets2.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets3.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets3.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets4.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets4.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets5.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/Clara Yema_Data/sharedassets5.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/2.0/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/2.0/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/2.0/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.0/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.0/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.0/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.5/machine.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.5/settings.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/4.5/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/browscap.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/MonoBleedingEdge/etc/mono/mconfig/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/UnityCrashHandler64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/UnityCrashHandler64.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build-Funcional/UnityPlayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Build-Funcional/UnityPlayer.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +764,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/VideoPlayers/CinematicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shortcut.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/CanvasSizeCorrectInAwakeAndStart.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -140,6 +882,7 @@
       <workItem from="1702310375897" duration="1257000" />
       <workItem from="1703003386742" duration="3235000" />
       <workItem from="1703109992980" duration="1040000" />
+      <workItem from="1703152152638" duration="4852000" />
     </task>
     <servers />
   </component>
