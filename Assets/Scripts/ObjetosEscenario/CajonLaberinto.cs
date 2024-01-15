@@ -5,28 +5,29 @@ using UnityEngine;
 
 public class CajonLaberinto : MonoBehaviour
 {
-    private int playersInside = 0; // Variable para contar los jugadores dentro del collider
-    public string sceneName = "SceneLaberinto";
+ public Transform spawnPoint1;
+    public Transform spawnPoint2;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        // Verifica si el objeto que entra en el collider es uno de los personajes
+        if (other.CompareTag("Player"))
         {
-            playersInside++; // Incrementa el contador cuando un jugador entra
-            Debug.Log("Player entered. Total players inside: " + playersInside);
+            // Teletransporta a ambos personajes a sus respectivos spawnPoints
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
-            if (playersInside >= 2) // Verifica si ambos jugadores están dentro
+            foreach (GameObject player in players)
             {
-                PlayerController.spawnPosition = new Dictionary<int, Vector3>();
-                PlayerController[] players = FindObjectsOfType<PlayerController>();
-                foreach (PlayerController player in players)
+                if (player.name == "Clara")
                 {
-                    PlayerController.spawnPosition.Add(player.myKey, new Vector3(-47, 61.91f, 25));
+                    player.transform.position = spawnPoint1.position;
                 }
-                SceneManager.LoadScene(sceneName); // Carga la escena
+                else if (player.name == "Yema")
+                {
+                    player.transform.position = spawnPoint2.position;
+                }
             }
         }
     }
-
    
 }
