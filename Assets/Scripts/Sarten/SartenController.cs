@@ -112,21 +112,21 @@ public class SartenController : MonoBehaviour
     {
         CinematicPlayer cinematicPlayer = GameObject.Find("CinematicPlayer").GetComponent<CinematicPlayer>();
         cinematicPlayer.PlayVideo(videoClipEnd);
-        cinematicPlayer.GetComponent<VideoPlayer>().loopPointReached += LoadCredits;
+        cinematicPlayer.GetComponent<VideoPlayer>().loopPointReached += LoadScene2;
     }
     
-    bool doOnceLoadCredits = false;
-    void LoadCredits(UnityEngine.Video.VideoPlayer vp)
+    bool doOnceLoadScene2 = false;
+    void LoadScene2(UnityEngine.Video.VideoPlayer vp)
     {
-        if (doOnceLoadCredits)
+        if (doOnceLoadScene2)
             return;
-        doOnceLoadCredits = true;
-        StartCoroutine(LoadCreditsE());
+        doOnceLoadScene2 = true;
+        StartCoroutine(LoadScene2E());
     }
     
-    IEnumerator LoadCreditsE()
+    IEnumerator LoadScene2E()
     {
-        SceneManager.LoadSceneAsync("Credits");
+        SceneManager.LoadSceneAsync("Segundo-Nivel");
         yield return null;
     }
     
